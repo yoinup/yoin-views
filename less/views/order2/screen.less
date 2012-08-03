@@ -1,0 +1,27 @@
+@import 'sizes';
+@import 'colors';
+
+.screen {
+
+	position:absolute; 
+	left:0;
+	top: 0; 
+	bottom: 0; 
+	height:100%;
+	width:100%;
+
+	overflow: hidden; 
+
+	background-repeat: repeat;
+
+	background: url(assets/images/main_bg.png), -webkit-gradient(linear, left top, left bottom, color-stop(0%,@grey00), color-stop(87%,@grey01), color-stop(99%,@grey00));
+	background: url(assets/images/main_bg.png), -webkit-linear-gradient(top, @grey00 0%,@grey01 87%,@grey00 99%); 
+
+	> .screen-container {
+		width: 100%;
+		/*min-height: dinamically*/
+		background-color: @grey02;
+		position: absolute;
+	}
+	
+}

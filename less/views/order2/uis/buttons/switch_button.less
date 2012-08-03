@@ -1,0 +1,101 @@
+
+
+@slider-height: 42px;
+@slider-width: 80px;
+
+
+.button_corner() {
+  
+  // backgrounds extends into the padding, not the border. 
+  -webkit-background-clip: padding-box;
+  -webkit-border-radius: @slider-height/2 ;
+
+}
+
+
+
+.switch-button {
+
+  overflow: visible;
+
+  position: relative;
+  height: @slider-height;
+  width: @slider-width;
+
+  .button_corner();
+
+  border: 1px solid #BBB;
+  background: #D6D6D6;
+  background-image: -webkit-linear-gradient(#D0D0D0, #DFDFDF);
+
+
+  > .sb-label-left {
+
+    z-index: 1;
+    left: 0;
+
+
+    border: 1px solid #2373A5;
+    background: #5393C5;
+    background-image: -webkit-linear-gradient(#5393C5 , #6FACD5);
+
+  }
+
+
+  > .sb-label-right {
+
+    z-index: 0;
+    right: 0;
+
+    border: 1px solid #BBB;
+    background: #D6D6D6;
+    background-image: -webkit-linear-gradient( #D0D0D0, #DFDFDF);
+
+  }
+
+
+  > .sb-label {
+
+    position: absolute;
+    min-height: 100%;
+    overflow: hidden;
+
+    border-width: 0;
+
+    .button_corner();
+
+  }
+
+  > .sb-inner {
+
+    margin: 0 @slider-height/2;
+    position: relative;
+    z-index: 1;
+
+    > .sb-inner-button {
+
+      position: absolute;
+      z-index: 1;
+      top: 50%;
+
+      width: @slider-height - 4px;
+      height: @slider-height - 4px;
+
+      margin-top: 1px;
+      margin-left: -1*(@slider-height/2 - 1px);
+
+
+      .button_corner();
+
+      border: 1px solid #CCC;
+      background: #EEE;
+      background-image: -webkit-linear-gradient( white , #F1F1F1);
+
+
+      -webkit-box-shadow: 0px 1px 4px rgba(0, 0, 0, .3);
+
+    }
+
+  }
+
+} 

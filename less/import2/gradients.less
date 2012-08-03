@@ -1,0 +1,49 @@
+@import 'colors';
+
+// this code still belongs to old YOIN DESIGN
+
+// THIS should not be reused
+// it is placed here to be reused between apps
+.gradient_header() {
+	background: -moz-linear-gradient(top, @orange00 0%, @orange01 5%, @orange02 95%, @orange03 100%); /* HHJ FF3.6+ */
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,@orange00), color-stop(5%,@orange01), color-stop(95%,@orange02), color-stop(100%,@orange03)); /* Chrome,Safari4+ */
+	background: -webkit-linear-gradient(top, @orange00 0%,@orange01 5%,@orange02 95%,@orange03 100%); /* Chrome10+,Safari5.1+ */
+}
+
+.gradient_orange() {
+
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,@orange00), color-stop(90%,@orange01), color-stop(100%,@orange01), color-stop(100%,@orange01), color-stop(100%,@orange03)); 
+  background: -webkit-linear-gradient(top, @orange00 0%,@orange01 90%,@orange01 100%,@orange01 100%,@orange03 100%); 
+
+}
+
+
+.gradient_orange_button_in () {
+
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, @orange_button_in), color-stop(100%, @orange_button_out));
+  background: -webkit-linear-gradient(top, @orange_button_in 0%, @orange_button_out 100%);
+
+}
+
+.gradient_orange_button_in_hover () {
+
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, @orange_button_in), color-stop(100%, @orange02));
+  background: -webkit-linear-gradient(top, @orange_button_in 0%, @orange02 100%);
+
+}
+
+
+.gradient_orange_button_out () {
+
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, @orange_button_out), color-stop(100%, @orange_button_in));
+  background: -webkit-linear-gradient(top, @orange_button_out 0%, @orange_button_in 100%);
+
+}
+
+.gradient_orange_bg () {
+
+  background-repeat: repeat;
+  background: url(assets/images/main_bg.png), -webkit-gradient(radial, center center, 0px, center center, 100%, color-stop(0%,@orange00), color-stop(99%,@orange02)); 
+  background: url(assets/images/main_bg.png), -webkit-radial-gradient(center, ellipse cover, @orange00 0%,@orange02 99%); 
+
+}

@@ -1,0 +1,42 @@
+
+{{#with view}}
+
+	<div class="user-interaction-block-content">
+		
+		<div class="user-interaction-block-content-image inline">
+		
+			{{view Yn.SquareImageView contentBinding="content.toUser" isUp=true class="is-small" }}
+
+		</div>
+
+		<div class="user-interaction-block-content-name inline">
+
+			{{content.toUser.showName}} recibió
+
+			<div class="user-interaction-block-content-product">
+
+				<div class="icon is-icon-small inline" icon="v">
+
+				</div>
+
+				<div class="product-name inline">
+
+					{{content.product.name}}
+
+				</div>
+
+			</div>
+
+		</div>
+		
+		<div style="border-bottom:1px solid grey;"></div>
+		
+		<div>
+		
+			{{view Yn.UserShortBlockView contentBinding="content.fromUser" imagetype="is-x-small" }}
+		
+		</div>
+
+	</div>
+
+{{/with}}

@@ -1,0 +1,56 @@
+@import 'borders';
+
+.square-skin (@size) {
+
+  height: @size;
+  width: @size;
+  border-radius: (0.05454*@size); 
+  background-size: @size;
+
+}
+
+
+.square-image {
+
+	.border-square-style();
+
+  > .square-image-bg {
+
+    width: 100%;
+    height: 100%;
+
+  }
+
+}
+
+
+.square-image.is-big {
+
+	.square-skin (55px);
+
+}  
+
+.square-image.is-normal {
+
+	.square-skin (44px);
+}  
+
+
+.square-image.is-small {
+
+	.square-skin (29px);
+
+}  
+
+
+.square-image.is-x-small {
+
+	.square-skin (25px);
+
+}
+
+// resource is loading
+.square-image.is-loading {
+  background-color: red;
+
+}

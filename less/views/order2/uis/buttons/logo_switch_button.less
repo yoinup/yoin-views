@@ -1,0 +1,122 @@
+
+@import 'sizes';
+
+@white00:#fefefe;
+@white01:#f9f9f9;
+@white02:#fbfbfb;
+@white03:#f0f0f0;
+@white04:#efefef;
+
+@grey00:#919191;
+@grey01:#7d7d7d;
+@grey02:#7f7f7f;
+@grey03:#b6b6b6;
+@grey04:#cdcdcd;
+@grey05:#cfcfcf;
+
+
+@blue00:#1b3b6f;
+@blue01:#1654b5;
+@blue02:#2a5bb3;
+@blue03:#3672dc;
+@blue04:#4085ec;
+@blue05:#4d8fef;
+@blue06:#76adfc;
+
+
+
+@button-width:54px;
+@button-height: @header-button-height;
+@border-radius-size:3px;
+
+
+@button-before-width: @button-width/4;
+@button-after-width: @button-width - @button-before-width;
+
+
+.logo-switch-button {
+
+    z-index: 1; // otherwise touchStart is not fired
+    width: @button-width;
+    height: @button-height;
+
+    border-radius: @border-radius-size 0 0 @border-radius-size;
+    -webkit-transition: 1s all linear;
+    -webkit-appearance: none;
+}
+
+.logo-switch-button::after {
+
+    font-family: 'Yoin Icons';
+    -webkit-font-smoothing: antialiased;
+    content: 'b';
+
+
+    position: absolute;
+    top: 0;
+    left: 0;
+
+    width: @button-after-width;
+    height: @button-height - 2px; // -2px because of border
+
+
+    border: 1px solid @grey00;
+    border-radius: @border-radius-size;
+    background: -webkit-linear-gradient(top, @grey04, @white02);
+    box-shadow: inset 0 1px 0 @white03;
+
+    -webkit-transition: 1s all linear;
+
+    // font style
+    font-size: 220%;
+    text-align: center;
+    color: orange;
+    text-shadow: 0 -1px 0 @blue00;
+    line-height: 27px;
+
+}
+
+.logo-switch-button.is-on::after {
+
+    left: @button-before-width - 2px; // -2px because of border
+
+}
+
+
+
+
+.logo-switch-button::before {
+
+    content: '';
+    left: @button-after-width - 2px; // -2px because of border
+
+    position: absolute;
+    top: 0; 
+
+    width: @button-before-width;
+    height: @button-height - 2px; // -2px because of border
+
+    border-radius: @border-radius-size;
+
+    border: 1px solid @grey01;
+
+    background: -webkit-linear-gradient(top, @grey05, @white04 50%, @white01 50%, @white00);
+    box-shadow: inset 0 2px 2px @grey03,
+                inset -3px 0 3px @grey03;
+
+
+}
+
+
+.logo-switch-button.is-on::before {
+
+    content: '';
+
+    left: 0;
+
+    border-color: @blue01;
+    background: -webkit-linear-gradient(top, @blue03, @blue04 50%, @blue05 50%, @blue06);
+    box-shadow: inset 0 2px 2px @blue02,
+                inset 3px 0 3px @blue02;
+
+}

@@ -1,0 +1,44 @@
+@import 'colors';
+@import 'sizes';
+
+@default-padding: 0.7em;
+
+.box {
+
+	background-color: @grey_low;
+	color: @grey04;
+	border: @border-line-size solid @grey03;
+	border-radius: @border-box-radius-size;
+  margin: 0 1.2em;
+
+  > .box-title {
+		background-color: @grey01;
+		border-top: @border-line-size solid @grey_low;
+		border-bottom: @border-line-size solid @grey03;
+		padding: @default-padding;
+	}
+
+	> .box-title-top {
+		border-top-left-radius: @curve-size;
+		border-top-right-radius: @curve-size;
+	}
+
+	> .box-title-bottom {
+		border-bottom-left-radius: @curve-size;
+		border-bottom-right-radius: @curve-size;
+	}
+
+	> .box-content {
+		padding: @default-padding;
+		line-height: 1.2em;
+	}
+
+	> .box-content-with-title-top {
+		border-top: @border-line-size solid @grey03;
+	}
+
+	> .box-content-with-title-bottom {
+		border-bottom: @border-line-size solid @grey03;
+	}
+
+}

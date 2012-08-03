@@ -1,0 +1,77 @@
+@import 'sizes';
+@import 'colors';
+@import 'gradients';
+
+
+.app {
+
+	position:absolute; 
+	top:0px; bottom:0px; left:0;
+	overflow: hidden;
+
+}
+
+
+
+.clean () {
+
+	padding:0px;
+	margin:0px;
+	border:0px;
+
+}
+
+
+p {
+  -webkit-margin-before: 0px;
+  -webkit-margin-after: 0px;
+  -webkit-margin-start: 0px;
+  -webkit-margin-end: 0px;
+}
+
+body, li {
+	.clean;
+}
+
+ul {
+	.clean;
+  list-style: none;
+
+}
+
+.inline {
+  display: inline-block;
+}
+
+body {
+
+	font-family: "Helvetica NeueUI", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+	-webkit-user-select:none;
+	-webkit-text-size-adjust:none;
+
+}
+
+
+.line_v {
+
+	position:absolute; 
+  top: 0%;
+	width: 1px;
+  border-left: 1px solid black;
+  height: 100%;
+  z-index: 10000;
+
+}
+
+#line_v1 {
+  left: 20%;
+}
+
+#line_v2 {
+  left: 50%;
+}
+
+#line_v3 {
+  left: 80%;
+}
+

@@ -1,0 +1,106 @@
+@import 'sizes';
+@import 'colors';
+
+//--------------------------------COLORES-------------------------------------//
+
+
+@orange_header_00:rgba(255,255,255,0.7);
+@orange_header_01: #fd6d35;
+@orange_header_02: #84391c;
+
+@orange_light_header_button:#feb288;
+
+
+//--------------------------------GRADIENTES-------------------------------------//
+
+
+.header_gradient() {
+  
+  background-color: @orange_header_01;
+  background-image: url(assets/images/BG2.png), -moz-linear-gradient(top, rgba(255,255,255,0.45) 0%, rgba(255,255,255,0.2) 50%, rgba(255,255,255,0) 100%); /* FF3.6+ */
+  background-image: url(assets/images/BG2.png), -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(255,255,255,0.45)), color-stop(50%,rgba(255,255,255,0.2)), color-stop(100%,rgba(255,255,255,0))); /* Chrome,Safari4+ */
+  
+}
+
+
+
+
+//--------------------------------SOMBRAS-------------------------------------//
+
+
+.button_shadow (@border_color:white, @shadow_color_00:white, @shadow_color_01:white, @thick_border:1px, @thick_s1:1px, @thick_s2:2px) { 
+
+  //shadows and border
+
+
+  border-top: @thick_border solid @border_color;
+  
+  -webkit-box-shadow: 0 0 0 @thick_s1 (@shadow_color_00), 0 @thick_s2 0 0 (@shadow_color_01);
+  box-shadow: 0 0 0 @thick_s1 (@shadow_color_00), 0 @thick_s2 0 0 (@shadow_color_01);
+
+}
+
+
+
+//--------------------------------MÁRGENES-------------------------------------//
+  
+
+@margin-size: 7px;
+
+
+
+//-----------------------------------------------------------------------------//
+
+
+
+.header {
+
+  position: relative;
+  height: 42px;
+  width: 100%;
+
+
+  .header_gradient;
+
+  border-bottom:  1px solid @orange_header_02;
+  border-top: 1px solid @orange_header_00;
+
+
+	
+	
+	> .header-title {
+		
+    text-align: center;
+		font-size: @font-big;
+		top: 25%;
+    color: white;
+    text-shadow: 1px 1px 1px #444;
+	
+  }
+
+
+  > .l-left {
+
+    position: relative;
+    top: 17%;
+
+    float:left;
+    margin-left:  @margin-size; 
+
+ }
+
+  > .l-right {
+
+    position: relative;
+    .header_gradient;
+
+    float:right;
+    margin-right: @margin-size; 
+
+    .button_shadow (@orange_header_00,@orange_header_02,@orange_light_header_button); 
+
+  }
+	
+}
+
+

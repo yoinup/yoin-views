@@ -1,0 +1,30 @@
+
+.center_align(@height: 0, @width: 0, @position: absolute){
+
+  position: @position;
+  left: 50%;
+  top: 50%;
+  margin-top: (-1/2)*@height;
+  margin-left: (-1/2)*@width;
+  width: @width;
+  height: @height;
+
+}
+
+.center_height(@height: 0, @position: absolute){
+
+  position: @position;
+  top: 50%;
+  margin-top: (-1/2)*@height;
+  height: @height;
+
+}
+
+.center_width(@width: 0, @position: absolute){
+
+  position: @position;
+  left: 50%;
+  margin-left: (-1/2)*@width;
+  width: @width;
+
+}
