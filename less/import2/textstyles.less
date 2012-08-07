@@ -1,0 +1,77 @@
+@import 'colors';
+@import 'sizes';
+
+//--------------------------------STYLES-------------------------------------//
+
+.letter-press () {
+	text-shadow:0 -1px 0px @pure-black;
+}
+
+.lower-glow () {
+	text-shadow: 0 1px 0px rgba(255, 255, 255, 0.75);
+}
+
+//--------------------------------CLASSES-------------------------------------//
+
+.header-text {
+	font-size: @font-big;
+	font-weight: bold;  
+	color:@pure-white;
+	text-shadow:0 1px 2px @orange02;
+}
+
+.input-text {
+	font-size: @font-normal;  
+	color: @grey12;
+}
+
+.user-message-text {
+	font-size: @font-normal-small;
+	font-weight: bold;  
+	color:@pure-white;
+	text-shadow:0 1px 1px @pure-black;
+}
+
+.buttom-text {
+	font-weight: bold;
+}
+
+.buttom-text.is-small {
+	font-size: @font-normal-small;
+}
+
+.buttom-text.is-big {
+	font-size: @font-big-small;
+}
+
+.text {
+	font-size: @font-normal;
+}
+
+.text.is-font-bold {
+	font-weight: bold;
+}
+
+.text.is-small {
+	font-size: @font-small;
+}
+
+.text.is-big {
+	font-size: @font-big-small;
+	font-weight: bold;
+}
+
+.is-font-white {
+	color:@pure-white;
+	.letter-press;
+}
+
+.is-font-black {
+	color:@black00;
+	.lower-glow;
+}
+
+.is-font-grey {
+	color:@grey12;
+	.lower-glow;
+}
