@@ -1,4 +1,5 @@
 @import 'borders';
+@import 'sizes';
 
 .square-skin (@size) {
 
@@ -53,26 +54,26 @@
 
 .square-image.is-big {
 
-	.square-skin (55px);
+	.square-skin (@size-square-image-is-big);
 
 }  
 
 .square-image.is-normal {
 
-	.square-skin (44px);
+	.square-skin (@size-square-image-is-normal);
 }  
 
 
 .square-image.is-small {
 
-	.square-skin (29px);
+	.square-skin (@size-square-image-is-small);
 
 }  
 
 
 .square-image.is-x-small {
 
-	.square-skin (25px);
+	.square-skin (@size-square-image-is-x-small);
 
 }
 
