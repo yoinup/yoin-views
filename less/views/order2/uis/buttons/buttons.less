@@ -1,0 +1,292 @@
+@import 'colors';
+@import 'sizes';
+
+
+//--------------------------------STYLES-------------------------------------//
+
+.rectangle-button-style (@button-color:white) {
+
+  background-color: @button-color;
+  background-image: url(assets/images/BG2.png), -moz-linear-gradient(top, rgba(255,255,255,0.45) 0%, rgba(255,255,255,0.2) 50%, rgba(255,255,255,0) 100%); /* FF3.6+ */
+  background-image: url(assets/images/BG2.png), -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(255,255,255,0.45)), color-stop(50%,rgba(255,255,255,0.2)), color-stop(100%,rgba(255,255,255,0))); /* Chrome,Safari4+ */
+
+  border-top: 1px solid (rgba(255,255,255,0.8));
+  
+  -webkit-box-shadow: 0 0 0 1px (darken(@button-color, 30%)), 0 2px 0 0 (rgba(255,255,255,0.7));
+  box-shadow: 0 0 0 1px (darken(@button-color, 30%)), 0 2px 0 0 (rgba(255,255,255,0.7));
+
+}
+
+.rectangle-button-active-style (@button-color:white) {
+
+  background-color: @button-color;
+  background-image: url(assets/images/BG2.png), -moz-linear-gradient(top, rgba(255,255,255,0) 0%, rgba(255,255,255,0.2) 50%, rgba(255,255,255,0.45) 100%); /* FF3.6+ */
+  background-image: url(assets/images/BG2.png), -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(255,255,255,0)), color-stop(50%,rgba(255,255,255,0.2)), color-stop(100%,rgba(255,255,255,0.45))); /* Chrome,Safari4+ */
+  
+  border-top: 1px solid darken(@button-color, 10%);
+
+  -webkit-box-shadow: 0 0 0 1px (darken(@button-color, 30%)), inset 0 1px 3px 0 (darken(@button-color, 10%));
+  box-shadow: 0 0 0 1px (darken(@button-color, 30%)), inset 0 1px 3px 0 (darken(@button-color, 10%));
+
+}
+
+.external-large-button-style (@ext-large-button:white) {
+
+  background-color: @ext-large-button;
+
+  -webkit-box-shadow: inset 0 1px 3px 0 (darken(@ext-large-button, 25%)),  0 1px 0 0 (rgba(255,255,255,0.7));
+  box-shadow: inset 0 1px 3px 0 (darken(@ext-large-button, 25%)),  0 1px 0 0 (rgba(255,255,255,0.7));
+
+}
+
+
+.inner-double-button-style (@inner-double-button-style:white) {
+
+  background-color: @inner-double-button-style;
+  background-image: url(assets/images/BG2.png), -moz-linear-gradient(top, rgba(255,255,255,0.45) 0%, rgba(255,255,255,0.2) 50%, rgba(255,255,255,0) 100%); /* FF3.6+ */
+  background-image: url(assets/images/BG2.png), -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(255,255,255,0.45)), color-stop(50%,rgba(255,255,255,0.2)), color-stop(100%,rgba(255,255,255,0))); /* Chrome,Safari4+ */
+
+  border-top: 1px solid (rgba(255,255,255,0.8));
+  
+  -webkit-box-shadow: 0 0 0 1px (darken(@inner-double-button-style, 30%)), 0 2px 0 0 (rgba(0,0,0,0.4));
+  box-shadow: 0 0 0 1px (darken(@inner-double-button-style, 30%)), 0 2px 0 0 (rgba(0,0,0,0.4));
+
+
+}
+
+
+.inner-double-button-active-style (@inner-double-button-style:white) {
+
+  background-color: @inner-double-button-style;
+  background-image: url(assets/images/BG2.png), -moz-linear-gradient(top, rgba(255,255,255,0) 0%, rgba(255,255,255,0.2) 50%, rgba(255,255,255,0.45) 100%); /* FF3.6+ */
+  background-image: url(assets/images/BG2.png), -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(255,255,255,0)), color-stop(50%,rgba(255,255,255,0.2)), color-stop(100%,rgba(255,255,255,0.45))); /* Chrome,Safari4+ */
+
+  border-top: 1px solid (darken(@inner-double-button-style, 10%));
+  
+  -webkit-box-shadow: 0 0 0 1px (darken(@inner-double-button-style, 30%)), inset 0 0px 8px 0 (darken(@inner-double-button-style, 20%));
+  box-shadow: 0 0 0 1px (darken(@inner-double-button-style, 30%)), inset 0 0px 8px 0 (darken(@inner-double-button-style, 20%));
+
+
+}
+
+
+
+
+
+//--------------------------------CLASSES-------------------------------------//
+
+
+//--------------------BUTTONS--------------
+
+
+.rectangle-button {
+
+    position: relative;
+    height: 29px;
+    border-radius: @border-button-radius-size;
+
+}
+
+
+
+.rectangle-button.is-small {
+
+    width: 40px;
+
+}
+
+
+
+.rectangle-button.is-medium {
+    
+    width: 59px;
+
+}
+
+
+.rectangle-button.is-large {
+
+    width: 310px;
+    top: 7px;
+    left: 5px;
+
+}
+
+
+.large-button {
+
+    position: relative;
+    height: 44px;
+    width: 265px;
+    border-radius: @border-box-radius-size;
+
+
+}
+
+
+@magin-double-button:6px;
+
+.external-double-button {
+
+      position: relative;
+      height: 44px;
+      width: 300px;
+      border-radius: @magin-double-button+@border-button-radius-size;
+
+}
+
+
+.inner-double-button {
+
+      position: relative;
+      height: 32px;
+      width: 288px;
+      border-radius: @border-button-radius-size;
+      top: @magin-double-button;
+      left: @magin-double-button;
+
+}     
+      
+
+
+.external-double-button.is-grey {
+
+   .external-large-button-style (@grey03);
+
+}
+
+.inner-double-button.is-blue {
+
+  .inner-double-button-style (@blue00);
+
+}
+
+.inner-double-button.is-blue:active {
+
+  .inner-double-button-active-style (@blue00);
+
+}
+
+ 
+
+.large-button.is-orange, .rectangle-button.is-orange {
+
+  .rectangle-button-style (@orange01);
+
+}
+
+
+.large-button.is-orange:active, .rectangle-button.is-orange:active {
+
+  .rectangle-button-active-style (@orange01);
+
+}
+
+
+.large-button.is-blue, .rectangle-button.is-blue {
+
+  .rectangle-button-style (@blue00);
+
+}
+
+.large-button.is-blue:active, .rectangle-button.is-blue:active {
+
+  .rectangle-button-active-style (@blue00);
+
+}
+
+.large-button.is-grey, .rectangle-button.is-grey {
+
+  .rectangle-button-style (@grey07);
+
+}
+
+.large-button.is-grey:active, .rectangle-button.is-grey:active {
+
+  .rectangle-button-active-style (@grey07);
+
+}
+
+.large-button.is-facebook, .rectangle-button.is-facebook {
+
+  .rectangle-button-style (@blue-facebook);
+
+}
+
+.large-button.is-facebook:active, .rectangle-button.is-facebook :active {
+
+  .rectangle-button-active-style (@blue-facebook);
+
+}
+
+
+.large-button.is-twitter, .rectangle-button.is-twitter {
+
+  .rectangle-button-style (@blue-twitter);
+
+}
+
+.large-button.is-twitter:active, .rectangle-button.is-twitter :active {
+
+  .rectangle-button-active-style (@blue-twitter);
+
+}
+
+
+//--------------------WEB ICONS ------------------
+
+
+.large-button.icon:before, .rectangle-button.icon:before {
+  
+  position: absolute;
+  top: 50%;
+  left: 50%;
+
+  //font icon style
+  color:@white00;
+  text-shadow: 0px 0px 1px rgba(0,0,0,0.9);
+
+
+
+
+}
+
+
+@small-icon:21.875px;
+@height-margin:-0.65;
+.large-button.icon.is-icon-small:before, .rectangle-button.icon.is-icon-small:before {
+  
+  margin-left: -0.5*@small-icon;
+  margin-top: @height-margin*@small-icon;
+
+  
+}
+
+@normal-icon:28px;
+.large-button.icon:before, .rectangle-button.icon:before {
+  
+  margin-left: -0.5*@normal-icon;
+  margin-top: @height-margin*@normal-icon;
+
+  
+}
+
+@big-icon:39.375px;
+.large-button.icon.is-icon-big:before, .rectangle-button.icon.is-icon-big:before {
+
+  margin-left: -0.5*@big-icon;
+  margin-top: @height-margin*@big-icon;
+
+}
+
+
+//--------------------ELEMENTS------------------
+
+.single-tab {
+  position: relative;
+  width: 100%;
+  height: 44px;
+  background-color: @grey04;
+}
+
+
