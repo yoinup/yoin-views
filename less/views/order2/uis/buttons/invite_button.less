@@ -3,10 +3,9 @@
 @import 'colors';
 
 
+
 .invite-button {
 
-  height: 70px;
-  width: 100px;
   background-color: yellow;
 
   border-radius: 5em;
@@ -14,14 +13,11 @@
   > .invite-button-inner {
 
     position:relative;
-    height: 50px;
-    width: 70px;
 
     margin-top: 10px;
     margin-left: 15px;
 
     border-radius: 5em;
-
     background-color: orange;
 
 
@@ -32,6 +28,35 @@
     > .invite-button-price {
 
     }
+
+  }
+
+}
+
+
+.invite-button {
+
+  height: 90px;
+  width: 120px;
+
+  > .invite-button-inner {
+
+    height: 70px;
+    width: 90px;
+
+  }
+}
+
+
+.invite-button.is-small {
+
+  height: @invite-button-small-height;
+  width: @invite-button-small-width;
+
+  > .invite-button-inner {
+
+    height: 50px;
+    width: 70px;
 
   }
 
