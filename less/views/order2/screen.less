@@ -18,13 +18,23 @@
 	background: url(assets/images/main_bg.png), -webkit-linear-gradient(top, @grey00 0%,@grey01 87%,@grey00 99%); 
 
 	> .screen-container {
+		position: relative;
+		//position: absolute; before
 		width: 100%;
+
 		/*min-height: dinamically*/
-		background-color: @grey02;
-		position: absolute;
+    //min-height: 460px - @header-height - @footer-height;
+
 		background-color: @grey02;
 		background-image: url(assets/images/BG.png), -webkit-linear-gradient(0, transparent 40%, rgba(255, 255, 255, 0.3) 40%);
 		background-size: 9%;
 	}
+
+  > .screen-container.is-header-action {
+
+		/*min-height: dinamically*/
+    //min-height: 460px - @header-height - @header-action-height - @footer-height;
+
+  }
 	
 }
