@@ -13,8 +13,7 @@
 
   > .box-title {
 		background-color: @grey01;
-		border-top: @border-line-size solid @white00;
-		border-bottom: @border-line-size solid @grey09;
+		color: @grey12;
 		padding: @default-padding;
 	}
 
@@ -26,11 +25,17 @@
 	> .box-title-bottom {
 		border-bottom-left-radius: @curve-size;
 		border-bottom-right-radius: @curve-size;
+		border-top: @border-line-size solid @white00;
 	}
 
 	> .box-content {
-		border-bottom: 1px solid @grey09;
 		padding: @default-padding;
+	}
+	
+	> .box-content.is-text {
+		white-space: nowrap;
+		text-overflow: ellipsis;
+		overflow: hidden;
 	}
 
 	> .box-content-with-title-top {
