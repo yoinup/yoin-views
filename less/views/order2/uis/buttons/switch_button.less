@@ -1,14 +1,15 @@
+@import 'sizes';
 
 
-@slider-height: 42px;
-@slider-width: 80px;
+@switch-button-internal-height: @switch-button-height - 2px;
+@switch-button-internal-width: @switch-button-width - 2px;
 
 
 .button_corner() {
   
   // backgrounds extends into the padding, not the border. 
   -webkit-background-clip: padding-box;
-  -webkit-border-radius: @slider-height/2 ;
+  -webkit-border-radius: @switch-button-internal-height/2 ;
 
 }
 
@@ -19,8 +20,8 @@
   overflow: visible;
 
   position: relative;
-  height: @slider-height;
-  width: @slider-width;
+  height: @switch-button-internal-height;
+  width: @switch-button-internal-width;
 
   .button_corner();
 
@@ -68,7 +69,7 @@
 
   > .sb-inner {
 
-    margin: 0 @slider-height/2;
+    margin: 0 @switch-button-internal-height/2;
     position: relative;
     z-index: 1;
 
@@ -78,11 +79,11 @@
       z-index: 1;
       top: 50%;
 
-      width: @slider-height - 4px;
-      height: @slider-height - 4px;
+      width: @switch-button-internal-height - 4px;
+      height: @switch-button-internal-height - 4px;
 
       margin-top: 1px;
-      margin-left: -1*(@slider-height/2 - 1px);
+      margin-left: -1*(@switch-button-internal-height/2 - 1px);
 
 
       .button_corner();
@@ -99,3 +100,19 @@
   }
 
 } 
+
+
+.switch-button.is-disabled {
+
+  background: red;
+
+  > .sb-label-left {
+    background: red;
+  }
+
+
+  > .sb-label-right {
+    background: red;
+  }
+
+}
