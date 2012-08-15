@@ -3,60 +3,139 @@
 @import 'colors';
 
 
-
-.invite-button {
-
-  background-color: yellow;
-
-  border-radius: 5em;
-
-  > .invite-button-inner {
-
-    position:relative;
-
-    margin-top: 10px;
-    margin-left: 15px;
-
-    border-radius: 5em;
-    background-color: orange;
+// from sizes
+@width: @invite-button-width;
+@height: @invite-button-height;
 
 
-    > .invite-button-label {
-
-    }
-
-    > .invite-button-price {
-
-    }
-
-  }
-
-}
+@vertical-line-margin: 10%;
+@invite-border-color: red;
 
 
 .invite-button {
 
-  height: 90px;
-  width: 120px;
+  background:-webkit-linear-gradient(top, rgba(120,162,200,1) 0%,rgba(57,119,177,1) 100%);
+
+
+  height: @height;
+  width: @width;
+
+
+  -webkit-mask-image: url(assets/buttons/invite-button-mask.png);
+  -webkit-mask-position: left top;
+  -webkit-mask-repeat: no-repeat;
+  -webkit-mask-size: 100% 100%;
+
 
   > .invite-button-inner {
 
-    height: 70px;
-    width: 90px;
+
+      border-radius: 8px;
+      border: 1px solid @invite-border-color;
+      .center_align(@height*0.8, @width*0.6);
+
+      > .invite-button-vertical-line {
+
+        position:absolute; 
+        top: 0%;
+        width: 1px;
+        height: 100%;
+
+      }
+
+      > .invite-button-vertical-line.is-left {
+
+        border-left: 1px solid @invite-border-color;
+        float:left;
+        left: @vertical-line-margin;
+
+      }
+
+      > .invite-button-vertical-line.is-right {
+
+        border-right: 1px solid @invite-border-color;
+        float:right;
+        right: @vertical-line-margin;
+
+      }
+
+
+      > .invite-button-horizontal-line {
+
+        position:absolute; 
+        top: 50%;
+        height: 1px;
+
+
+        width: 25%;
+
+        border-top: 1px solid @invite-border-color;
+
+      }
+
+      > .invite-button-horizontal-line.is-left {
+
+        float:left;
+        left: @vertical-line-margin + 5%;
+
+      }
+
+      > .invite-button-horizontal-line.is-right {
+
+        float:right;
+        right: @vertical-line-margin + 5%;
+
+      }
+
+
+      > .invite-button-circle {
+
+        border-radius: 3px;
+        .center_align(3px, 3px);
+        background-color: @invite-border-color;
+
+      }
+
+      > .invite-text {
+          position: absolute;
+          width: 100%;
+          height: 50%;
+          color: white;
+          text-align: center;
+
+      }
+
+      > .invite-text.l-up {
+          top: 10%;
+      
+
+      }
+
+      > .invite-text.l-down {
+          top: 10%+50%;
+
+      }
+
+
 
   }
+
+
+  
 }
 
+
+@height-small: @invite-button-small-height;
+@width-small: @invite-button-small-width;
 
 .invite-button.is-small {
 
-  height: @invite-button-small-height;
-  width: @invite-button-small-width;
+  height: @height-small;
+  width: @width-small;
 
   > .invite-button-inner {
 
-    height: 50px;
-    width: 70px;
+      .center_align(@height-small*0.8, @width-small*0.6);
 
   }
 
