@@ -2,14 +2,15 @@
 @import 'sizes';
 @import 'buttons';
 
-.external-double-button {
+.main-button {
 
 	position: relative;
 	height: 44px;
 	width: 300px;
+	.external-large-button-style (@grey03);
 	border-radius: @magin-double-button+@border-button-radius-size;
 	
-	> .inner-double-button {
+	> .inner-main-button {
 
 		position: relative;
 		height: 32px;
@@ -17,26 +18,27 @@
 		border-radius: @border-button-radius-size;
 		top: @magin-double-button;
 		left: @magin-double-button;
+		text-align: center;
+		line-height: 33px;
+
+	}
+
+}
+    
+.main-button.is-blue {
+	
+	> .inner-main-button {
+	
+		.inner-double-button-style (@blue00);
 
 	}
 	
-	> .inner-double-button.is-blue {
-
-	  .inner-double-button-style (@blue00);
-
-	}
-
-	> .inner-double-button.is-blue:active {
-
-	  .inner-double-button-active-style (@blue00);
+	> .inner-main-button:active {
+	
+		.inner-double-button-active-style (@blue00);
 
 	}
-
-}     
-
-.external-double-button.is-grey {
-
-   .external-large-button-style (@grey03);
-
+	
 }
+
 

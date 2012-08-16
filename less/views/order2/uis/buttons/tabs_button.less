@@ -1,0 +1,57 @@
+@import 'colors';
+@import 'sizes';
+@import 'buttons';
+
+@height-tab: 29px; //Must be 30px (@button-height) - 1px
+
+.tabs {
+
+	position: relative;
+	width: 100%;
+	height: 44px;
+	background-color: @grey04;
+	display: table;
+	
+	> .tab {
+
+		height: @height-tab;
+		width: 155px;
+		line-height: (@height-tab) + 1;
+		.rectangle-button-style (@grey07);
+		float: left;
+		top: 7px;
+		left: 5px;
+		text-align: center;
+
+	}
+
+	> .tab.left {
+
+		border-top-left-radius: @border-button-radius-size;
+		border-bottom-left-radius: @border-button-radius-size;  
+		
+	}
+
+
+	> .tab.right {
+
+		border-top-right-radius: @border-button-radius-size;
+		border-bottom-right-radius: @border-button-radius-size;      
+
+	}
+
+}
+
+.tab:active, .tab.left:active, .tab.rigth:active {
+
+	.rectangle-button-active-style (@blue00);
+
+}
+
+.tab.is-selected, .tab.left.is-selected, .tab.rigth.is-selceted {
+
+	.rectangle-button-active-style (@blue00);
+
+}
+
+
