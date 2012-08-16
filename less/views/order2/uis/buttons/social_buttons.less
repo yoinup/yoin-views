@@ -1,0 +1,145 @@
+@import 'colors';
+@import 'sizes';
+@import 'buttons';
+
+.large-button {
+
+	//Thee properties are defined in .large-button
+
+	> .left {
+
+		position: relative;
+		height: 44px;
+		width: 50px;
+		float: left;
+		border-top-left-radius: @border-box-radius-size;
+		border-bottom-left-radius: @border-box-radius-size;  
+		background-position: 50% 50%;
+		background-repeat: no-repeat;
+		background-size: 55%;
+
+	}
+
+	> .right {
+		
+		width: 214px;
+		height: auto;
+		float: right;
+		text-align: center;
+		margin-top: 5%; 
+
+	}
+
+}
+
+
+.rectangle-button.is-social {
+
+	width: 90px;
+	
+	> .left {
+
+		position: relative;
+		height: 29px;
+		width: 23px;
+		float: left;
+		border-top-left-radius: @border-button-radius-size;
+		border-bottom-left-radius: @border-button-radius-size;
+		background-position: 50% 50%;
+		background-repeat: no-repeat;
+		background-size: 60%;
+
+	}
+
+	> .right {
+
+		width: 66px;
+		height: auto;
+		float: right;
+		text-align: center;
+		margin-top: 9%;  
+
+	}
+    
+}
+
+.rectangle-button.is-social.facebook {
+
+	.rectangle-button-style (@blue-facebook);
+
+	> .left {
+
+		background-size: 75%;
+		background-image: url(./assets/images/facebook.png);
+		.left-large-button-style (@blue-facebook);
+
+	}
+
+}
+
+.rectangle-button.is-social.facebook:active {
+
+	.rectangle-button-active-style (@blue-facebook);
+
+}
+
+.rectangle-button.is-social.twitter {
+
+	.rectangle-button-style (@blue-twitter);
+
+	> .left {
+
+		background-image: url(./assets/images/twitter.png);
+		.left-large-button-style (@blue-twitter);
+
+	}
+
+}
+
+.rectangle-button.is-social.twitter:active  {
+
+	.rectangle-button-active-style (@blue-twitter);
+
+}
+
+
+
+.large-button.facebook {
+
+	.rectangle-button-style (@blue-facebook);
+	
+	> .left {
+
+		background-size: 65%;
+		background-image: url(./assets/images/facebook.png);
+		.left-large-button-style (@blue-facebook);
+
+	}
+	
+}
+
+.large-button.facebook:active {
+
+	.rectangle-button-active-style (@blue-facebook);
+
+}
+
+
+.large-button.twitter {
+
+	.rectangle-button-style (@blue-twitter);
+	
+	> .left {
+
+		background-image: url(./assets/images/twitter.png);
+		.left-large-button-style (@blue-twitter);
+
+	}
+
+}
+
+.large-button.twitter:active  {
+
+	.rectangle-button-active-style (@blue-twitter);
+
+}

@@ -1,0 +1,42 @@
+@import 'colors';
+@import 'sizes';
+@import 'buttons';
+
+.external-double-button {
+
+	position: relative;
+	height: 44px;
+	width: 300px;
+	border-radius: @magin-double-button+@border-button-radius-size;
+	
+	> .inner-double-button {
+
+		position: relative;
+		height: 32px;
+		width: 288px;
+		border-radius: @border-button-radius-size;
+		top: @magin-double-button;
+		left: @magin-double-button;
+
+	}
+	
+	> .inner-double-button.is-blue {
+
+	  .inner-double-button-style (@blue00);
+
+	}
+
+	> .inner-double-button.is-blue:active {
+
+	  .inner-double-button-active-style (@blue00);
+
+	}
+
+}     
+
+.external-double-button.is-grey {
+
+   .external-large-button-style (@grey03);
+
+}
+

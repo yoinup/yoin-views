@@ -1,88 +1,6 @@
 @import 'colors';
 @import 'sizes';
-
-
-//--------------------------------STYLES-------------------------------------//
-
-.rectangle-button-style (@button-color:white) {
-
-  background-color: @button-color;
-  background-image: url(assets/images/BG2.png), -moz-linear-gradient(top, rgba(255,255,255,0.45) 0%, rgba(255,255,255,0.2) 50%, rgba(255,255,255,0) 100%); /* FF3.6+ */
-  background-image: url(assets/images/BG2.png), -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(255,255,255,0.45)), color-stop(50%,rgba(255,255,255,0.2)), color-stop(100%,rgba(255,255,255,0))); /* Chrome,Safari4+ */
-
-  border-top: 1px solid (rgba(255,255,255,0.8));
-  
-  -webkit-box-shadow: 0 0 0 1px (darken(@button-color, 30%)), 0 2px 0 0 (rgba(255,255,255,0.7));
-  box-shadow: 0 0 0 1px (darken(@button-color, 30%)), 0 2px 0 0 (rgba(255,255,255,0.7));
-
-}
-
-.rectangle-button-active-style (@button-color:white) {
-
-  background-color: @button-color;
-  background-image: url(assets/images/BG2.png), -moz-linear-gradient(top, rgba(255,255,255,0) 0%, rgba(255,255,255,0.2) 50%, rgba(255,255,255,0.45) 100%); /* FF3.6+ */
-  background-image: url(assets/images/BG2.png), -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(255,255,255,0)), color-stop(50%,rgba(255,255,255,0.2)), color-stop(100%,rgba(255,255,255,0.45))); /* Chrome,Safari4+ */
-  
-  border-top: 1px solid darken(@button-color, 10%);
-
-  -webkit-box-shadow: 0 0 0 1px (darken(@button-color, 30%)), inset 0 1px 3px 0 (darken(@button-color, 10%));
-  box-shadow: 0 0 0 1px (darken(@button-color, 30%)), inset 0 1px 3px 0 (darken(@button-color, 10%));
-
-}
-
-.external-large-button-style (@ext-large-button:white) {
-
-  background-color: @ext-large-button;
-
-  -webkit-box-shadow: inset 0 1px 3px 0 (darken(@ext-large-button, 25%)),  0 1px 0 0 (rgba(255,255,255,0.7));
-  box-shadow: inset 0 1px 3px 0 (darken(@ext-large-button, 25%)),  0 1px 0 0 (rgba(255,255,255,0.7));
-
-}
-
-
-.inner-double-button-style (@inner-double-button-style:white) {
-
-  background-color: @inner-double-button-style;
-  background-image: url(assets/images/BG2.png), -moz-linear-gradient(top, rgba(255,255,255,0.45) 0%, rgba(255,255,255,0.2) 50%, rgba(255,255,255,0) 100%); /* FF3.6+ */
-  background-image: url(assets/images/BG2.png), -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(255,255,255,0.45)), color-stop(50%,rgba(255,255,255,0.2)), color-stop(100%,rgba(255,255,255,0))); /* Chrome,Safari4+ */
-
-  border-top: 1px solid (rgba(255,255,255,0.8));
-  
-  -webkit-box-shadow: 0 0 0 1px (darken(@inner-double-button-style, 30%)), 0 2px 0 0 (rgba(0,0,0,0.4));
-  box-shadow: 0 0 0 1px (darken(@inner-double-button-style, 30%)), 0 2px 0 0 (rgba(0,0,0,0.4));
-
-
-}
-
-
-.inner-double-button-active-style (@inner-double-button-style:white) {
-
-  background-color: @inner-double-button-style;
-  background-image: url(assets/images/BG2.png), -moz-linear-gradient(top, rgba(255,255,255,0) 0%, rgba(255,255,255,0.2) 50%, rgba(255,255,255,0.45) 100%); /* FF3.6+ */
-  background-image: url(assets/images/BG2.png), -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(255,255,255,0)), color-stop(50%,rgba(255,255,255,0.2)), color-stop(100%,rgba(255,255,255,0.45))); /* Chrome,Safari4+ */
-
-  border-top: 1px solid (darken(@inner-double-button-style, 10%));
-  
-  -webkit-box-shadow: 0 0 0 1px (darken(@inner-double-button-style, 30%)), inset 0 0px 8px 0 (darken(@inner-double-button-style, 20%));
-  box-shadow: 0 0 0 1px (darken(@inner-double-button-style, 30%)), inset 0 0px 8px 0 (darken(@inner-double-button-style, 20%));
-
-}
-
-.left-large-button-style (@button-color:white) {    
-
-	border-right: 1px solid darken(@button-color, 20%); 
-	-webkit-box-shadow: 1px 0px 2px 0px rgba(255, 255, 255, 0.5),inset -1px 0 2px 0 rgba(255, 255, 255, 0.5);
-
-}
-
-
-
-
-
-//--------------------------------CLASSES-------------------------------------//
-
-
-//--------------------BUTTONS--------------
+@import 'buttons';
 
 
 .rectangle-button {
@@ -115,49 +33,19 @@
 
 }
 
-
-@magin-double-button:6px;
-
-.external-double-button {
+.large-button {
 
 	position: relative;
 	height: 44px;
-	width: 300px;
-	border-radius: @magin-double-button+@border-button-radius-size;
+	width: 265px;
+	border-radius: @border-box-radius-size;
 
 }
 
 
-.inner-double-button {
-
-	position: relative;
-	height: 32px;
-	width: 288px;
-	border-radius: @border-button-radius-size;
-	top: @magin-double-button;
-	left: @magin-double-button;
-
-}     
-      
 
 
-.external-double-button.is-grey {
 
-   .external-large-button-style (@grey03);
-
-}
-
-.inner-double-button.is-blue {
-
-  .inner-double-button-style (@blue00);
-
-}
-
-.inner-double-button.is-blue:active {
-
-  .inner-double-button-active-style (@blue00);
-
-}
 
 
 .large-button.is-black, .large-button.is-single.is-black, .rectangle-button.is-black, .rectangle-button-adaptative.is-black {
@@ -226,152 +114,9 @@
 }
 
 
-//--------------------SOCIAL BUTTONS -------------
-
-.large-button {
-
-	position: relative;
-	height: 44px;
-	width: 265px;
-	border-radius: @border-box-radius-size;
-
-	> .left {
-
-		position: relative;
-		height: 44px;
-		width: 50px;
-		float: left;
-		border-top-left-radius: @border-box-radius-size;
-		border-bottom-left-radius: @border-box-radius-size;  
-		background-position: 50% 50%;
-		background-repeat: no-repeat;
-		background-size: 55%;
-
-	}
-
-	> .right {
-		
-		width: 214px;
-		height: auto;
-		float: right;
-		text-align: center;
-		margin-top: 5%; 
-
-	}
-
-}
-
-
-.rectangle-button.is-social {
-
-	width: 90px;
-	
-	> .left {
-
-		position: relative;
-		height: 29px;
-		width: 23px;
-		float: left;
-		border-top-left-radius: @border-button-radius-size;
-		border-bottom-left-radius: @border-button-radius-size;
-		background-position: 50% 50%;
-		background-repeat: no-repeat;
-		background-size: 60%;
-
-	}
-
-	> .right {
-
-		width: 66px;
-		height: auto;
-		float: right;
-		text-align: center;
-		margin-top: 9%;  
-
-	}
-    
-}
-
-.rectangle-button.is-social.facebook {
-
-	.rectangle-button-style (@blue-facebook);
-
-	> .left {
-
-		background-size: 75%;
-		background-image: url(./assets/images/facebook.png);
-		.left-large-button-style (@blue-facebook);
-
-	}
-
-}
-
-.rectangle-button.is-social.facebook:active {
-
-	.rectangle-button-active-style (@blue-facebook);
-
-}
-
-.rectangle-button.is-social.twitter {
-
-	.rectangle-button-style (@blue-twitter);
-
-	> .left {
-
-		background-image: url(./assets/images/twitter.png);
-		.left-large-button-style (@blue-twitter);
-
-	}
-
-}
-
-.rectangle-button.is-social.twitter:active  {
-
-	.rectangle-button-active-style (@blue-twitter);
-
-}
 
 
 
-.large-button.facebook {
-
-	.rectangle-button-style (@blue-facebook);
-	
-	> .left {
-
-		background-size: 65%;
-		background-image: url(./assets/images/facebook.png);
-		.left-large-button-style (@blue-facebook);
-
-	}
-	
-}
-
-.large-button.facebook:active {
-
-	.rectangle-button-active-style (@blue-facebook);
-
-}
-
-
-.large-button.twitter {
-
-	.rectangle-button-style (@blue-twitter);
-	
-	> .left {
-
-		background-image: url(./assets/images/twitter.png);
-		.left-large-button-style (@blue-twitter);
-
-	}
-
-}
-
-.large-button.twitter:active  {
-
-	.rectangle-button-active-style (@blue-twitter);
-
-}
 
 
 
