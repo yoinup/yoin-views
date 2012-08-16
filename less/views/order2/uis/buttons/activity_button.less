@@ -45,7 +45,7 @@
 }
 
 
-.activity-button:after{
+.activity-button:after {
 
     position:absolute;
     content : ' ';
@@ -78,17 +78,22 @@
 
 }
 
-// TODO: use global icon size var
-// and check relation with buttongs
-@normal-icon:24px;
+// check relation with buttongs
+/*
+ TODO: use global icon size var
+  @normal-icon:24px;
+  top: 50%;
+  left: 50%;
+  margin-left: -0.5*@normal-icon;
+  margin-top: -0.5*@normal-icon;
+*/
 .activity-button:before {
 
   position: absolute;
-  top: 50%;
-  left: 50%;
 
-  margin-left: -0.5*@normal-icon;
-  margin-top: -0.5*@normal-icon;
+  text-align: center;
+  width: 100%;
+  line-height: @height;
 
   content: 'h'
 

@@ -1,4 +1,3 @@
-
 @import 'sizes';
 
 @white00:#fefefe;
@@ -25,39 +24,44 @@
 
 
 
-@button-width:54px;
-@button-height: @header-button-height;
-@border-radius-size:3px;
 
 
-@button-before-width: @button-width/4;
-@button-after-width: @button-width - @button-before-width;
+@width:54px;
+@height: 30px; // this var should be global
+
+@border-radius-size: 2px;
+
+
+
+@real-height: @height - 2px;
+@button-before-width: @width/4;
+@button-after-width: @width - @button-before-width;
 
 
 .logo-switch-button {
 
     z-index: 1; // otherwise touchStart is not fired
-    width: @button-width;
-    height: @button-height;
+    width: @width;
+    height: @height;
 
     border-radius: @border-radius-size 0 0 @border-radius-size;
     -webkit-transition: 1s all linear;
     -webkit-appearance: none;
 }
 
-.logo-switch-button::after {
+.logo-switch-button.icon-after::after {
 
-    font-family: 'Yoin Icons';
-    -webkit-font-smoothing: antialiased;
-    content: 'b';
-
+    content: 'a';
 
     position: absolute;
     top: 0;
     left: 0;
 
     width: @button-after-width;
-    height: @button-height - 2px; // -2px because of border
+    height: @real-height;
+    // align
+    line-height: @height;
+    text-align: center;
 
 
     border: 1px solid @grey00;
@@ -67,16 +71,12 @@
 
     -webkit-transition: 1s all linear;
 
-    // font style
-    font-size: 220%;
-    text-align: center;
     color: orange;
     text-shadow: 0 -1px 0 @blue00;
-    line-height: 27px;
 
 }
 
-.logo-switch-button.is-on::after {
+.logo-switch-button.icon-after.is-on::after {
 
     left: @button-before-width - 2px; // -2px because of border
 
@@ -94,7 +94,7 @@
     top: 0; 
 
     width: @button-before-width;
-    height: @button-height - 2px; // -2px because of border
+    height: @real-height;
 
     border-radius: @border-radius-size;
 

@@ -8,7 +8,7 @@
 @normal-size: 24px;
 @normal: 32; 
 
-.icon:before {
+.icon:before, .icon-after:after {
 
 	font-size: (32/@normal)*@normal-size;
 	font-family: 'Yoin Icons';
@@ -23,36 +23,28 @@
 
 }
 
-.icon-after:after {
 
-	font-family: 'Yoin Icons';
-	content: attr(icon);
-	-webkit-font-smoothing: antialiased;
-
-}
-
-
-.icon.is-icon-x-big:before {
+.icon.is-icon-x-big:before, .icon-after.is-icon-x-big:after {
 
 	font-size: (74/@normal)*@normal-size;
 	
 }
 
-.icon.is-icon-big:before {
+.icon.is-icon-big:before, .icon-after.is-icon-big:after {
 
 	font-size: (45/@normal)*@normal-size;
 
 }
 
 
-.icon.is-icon-small:before {
+.icon.is-icon-small:before, .icon-after.is-icon-small:after {
 
 	font-size: (25/@normal)*@normal-size;
 	font-size: 13px;
 
 }
 
-.icon.is-icon-x-small:before {
+.icon.is-icon-x-small:before, .icon-after.is-icon-x-small:after {
 
 	font-size: (21/@normal)*@normal-size;
 	font-size: 11px;
