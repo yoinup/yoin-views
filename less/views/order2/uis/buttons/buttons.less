@@ -87,13 +87,11 @@
 
 .rectangle-button {
 
-    position: relative;
-    height: 29px;
-    border-radius: @border-button-radius-size;
+	position: relative;
+	height: 29px;
+	border-radius: @border-button-radius-size;
 
 }
-
-
 
 .rectangle-button.is-small {
 
@@ -101,31 +99,19 @@
 
 }
 
-
-
 .rectangle-button.is-medium {
     
     width: 59px;
 
 }
 
-
 .rectangle-button.is-large {
 
-    width: 310px;
-    top: 7px;
-    left: 5px;
-
-}
-
-
-.large-button {
-
-    position: relative;
-    height: 44px;
-    width: 265px;
-    border-radius: @border-box-radius-size;
-
+	width: 310px;
+	top: 7px;
+	left: 5px;
+	text-align: center;
+	line-height: 30px;
 
 }
 
@@ -134,22 +120,22 @@
 
 .external-double-button {
 
-      position: relative;
-      height: 44px;
-      width: 300px;
-      border-radius: @magin-double-button+@border-button-radius-size;
+	position: relative;
+	height: 44px;
+	width: 300px;
+	border-radius: @magin-double-button+@border-button-radius-size;
 
 }
 
 
 .inner-double-button {
 
-      position: relative;
-      height: 32px;
-      width: 288px;
-      border-radius: @border-button-radius-size;
-      top: @magin-double-button;
-      left: @magin-double-button;
+	position: relative;
+	height: 32px;
+	width: 288px;
+	border-radius: @border-button-radius-size;
+	top: @magin-double-button;
+	left: @magin-double-button;
 
 }     
       
@@ -225,63 +211,8 @@
 
   .rectangle-button-active-style (@grey07);
 
-} 
-
-
-.large-button.is-facebook, .rectangle-button.is-facebook, .rectangle-button.is-social.is-facebook {
-
-	.rectangle-button-style (@blue-facebook);
-	
 }
 
-.large-button.is-facebook:active, .rectangle-button.is-facebook:active, .rectangle-button.is-social.is-facebook:active {
-
-	.rectangle-button-active-style (@blue-facebook);
-
-}
-
-
-.large-button.is-twitter, .rectangle-button.is-twitter, .rectangle-button.is-social.is-twitter {
-
-	.rectangle-button-style (@blue-twitter);
-
-}
-
-.large-button.is-twitter:active, .rectangle-button.is-twitter:active, .rectangle-button.is-social.is-twitter:active  {
-
-	.rectangle-button-active-style (@blue-twitter);
-
-}
-
-.left-large-button.is-twitter {  
-	
-	background-image: url(../assets/images/twitter.png);
-	.left-large-button-style (@blue-twitter);
-
-}
-
-.left-large-button.is-facebook {
-    
-	background-size: 65%;
-	background-image: url(../assets/images/facebook.png);
-	.left-large-button-style (@blue-facebook);
-
-}
-
-.left-social-button.is-facebook {
-  
-	background-size: 75%;
-	background-image: url(../assets/images/facebook.png);
-	.left-large-button-style (@blue-facebook);
-
-}
-
-.left-social-button.is-twitter {
-    
-	background-image: url(../assets/images/twitter.png);
-	.left-large-button-style (@blue-twitter);
-
-}
 
 .rectangle-button-adaptative {
 
@@ -293,6 +224,155 @@
 	white-space: nowrap;
 	
 }
+
+
+//--------------------SOCIAL BUTTONS -------------
+
+.large-button {
+
+	position: relative;
+	height: 44px;
+	width: 265px;
+	border-radius: @border-box-radius-size;
+
+	> .left {
+
+		position: relative;
+		height: 44px;
+		width: 50px;
+		float: left;
+		border-top-left-radius: @border-box-radius-size;
+		border-bottom-left-radius: @border-box-radius-size;  
+		background-position: 50% 50%;
+		background-repeat: no-repeat;
+		background-size: 55%;
+
+	}
+
+	> .right {
+		
+		width: 214px;
+		height: auto;
+		float: right;
+		text-align: center;
+		margin-top: 5%; 
+
+	}
+
+}
+
+
+.rectangle-button.is-social {
+
+	width: 90px;
+	
+	> .left {
+
+		position: relative;
+		height: 29px;
+		width: 23px;
+		float: left;
+		border-top-left-radius: @border-button-radius-size;
+		border-bottom-left-radius: @border-button-radius-size;
+		background-position: 50% 50%;
+		background-repeat: no-repeat;
+		background-size: 60%;
+
+	}
+
+	> .right {
+
+		width: 66px;
+		height: auto;
+		float: right;
+		text-align: center;
+		margin-top: 9%;  
+
+	}
+    
+}
+
+.rectangle-button.is-social.facebook {
+
+	.rectangle-button-style (@blue-facebook);
+
+	> .left {
+
+		background-size: 75%;
+		background-image: url(./assets/images/facebook.png);
+		.left-large-button-style (@blue-facebook);
+
+	}
+
+}
+
+.rectangle-button.is-social.facebook:active {
+
+	.rectangle-button-active-style (@blue-facebook);
+
+}
+
+.rectangle-button.is-social.twitter {
+
+	.rectangle-button-style (@blue-twitter);
+
+	> .left {
+
+		background-image: url(./assets/images/twitter.png);
+		.left-large-button-style (@blue-twitter);
+
+	}
+
+}
+
+.rectangle-button.is-social.twitter:active  {
+
+	.rectangle-button-active-style (@blue-twitter);
+
+}
+
+
+
+.large-button.facebook {
+
+	.rectangle-button-style (@blue-facebook);
+	
+	> .left {
+
+		background-size: 65%;
+		background-image: url(./assets/images/facebook.png);
+		.left-large-button-style (@blue-facebook);
+
+	}
+	
+}
+
+.large-button.facebook:active {
+
+	.rectangle-button-active-style (@blue-facebook);
+
+}
+
+
+.large-button.twitter {
+
+	.rectangle-button-style (@blue-twitter);
+	
+	> .left {
+
+		background-image: url(./assets/images/twitter.png);
+		.left-large-button-style (@blue-twitter);
+
+	}
+
+}
+
+.large-button.twitter:active  {
+
+	.rectangle-button-active-style (@blue-twitter);
+
+}
+
 
 
 //--------------------WEB ICONS ------------------
