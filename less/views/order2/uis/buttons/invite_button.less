@@ -21,7 +21,7 @@
   width: @width;
 
 
-  -webkit-mask-image: url(assets/buttons/invite-button-mask.png);
+  -webkit-mask-image: url(assets/buttons/invite_button_mask.png);
   -webkit-mask-position: left top;
   -webkit-mask-repeat: no-repeat;
   -webkit-mask-size: 100% 100%;
@@ -32,7 +32,8 @@
 
       border-radius: 8px;
       border: 1px solid @invite-border-color;
-      .center_align(@height*0.8, @width*0.6);
+
+      .center_align(@height*0.9, @width*0.8);
 
       > .invite-button-vertical-line {
 
@@ -133,9 +134,17 @@
   height: @height-small;
   width: @width-small;
 
-  > .invite-button-inner {
+  -webkit-mask-image: url(assets/buttons/invite_button_small_mask.png);
 
-      .center_align(@height-small*0.8, @width-small*0.6);
+  > .invite-button-inner {
+    // done on this way because of 0.xxxxpixels
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    margin-top: -24px;
+    margin-left: -40px;
+    width: 78px;
+    height: 46px;
 
   }
 

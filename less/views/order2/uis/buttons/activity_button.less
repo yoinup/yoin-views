@@ -1,0 +1,95 @@
+@import 'aligns';
+@import 'sizes';
+
+
+
+@height: 30px;
+@width: 25px;
+@background-color: green;
+
+@real-height: @height - 2px;
+
+.activity-button {
+
+
+  height: @real-height;
+  width: @width;
+
+
+  background-image: -webkit-linear-gradient(
+      bottom,
+      rgba(0,0,0,0) 0%,
+      rgba(0,0,0,0) 50%,
+      rgba(255,255,255,0.1) 50%,
+      rgba(255,255,255,0.3) 100%
+      );
+
+
+
+
+  line-height : @real-height;
+
+  // this properties shoud be shared
+  border-radius: 2px;
+  box-shadow: 0 1px 0 0 rgba(255, 255, 255, 0.8) inset, 0 1px 0 0 rgba(255, 255, 255, 0.6);
+
+}
+
+
+.activity-button, .activity-button:after {
+
+  background-color: @background-color;
+  border: 1px solid black;
+
+
+}
+
+
+.activity-button:after{
+
+    position:absolute;
+    content : ' ';
+
+    left: -4px;
+    top: 8px;
+    height: 10px;
+    width: 10px;
+
+    background-image:  
+        -webkit-gradient(linear, left bottom, right top, 
+            from(rgba(0,0,0,0)), 
+            color-stop(0.5, rgba(0,0,0,0)), 
+            color-stop(0.5, rgba(255,255,255,0.1)), 
+            to(rgba(255,255,255,0.3))); 
+
+    -webkit-transform : rotate(-45deg) skew(-10deg, -10deg);
+
+
+    // hide triangle
+    -webkit-mask-image : 
+      -webkit-gradient(linear, left top, right bottom, 
+        from(#000000), 
+        color-stop(0.35, #000000), 
+        color-stop(0.36, transparent), 
+        to(transparent));
+
+
+    border-radius : 0px;
+
+}
+
+// TODO: use global icon size var
+// and check relation with buttongs
+@normal-icon:24px;
+.activity-button:before {
+
+  position: absolute;
+  top: 50%;
+  left: 50%;
+
+  margin-left: -0.5*@normal-icon;
+  margin-top: -0.5*@normal-icon;
+
+  content: 'h'
+
+}
