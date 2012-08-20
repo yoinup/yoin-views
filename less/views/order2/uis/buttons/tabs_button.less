@@ -4,19 +4,19 @@
 
 @height-tab: 29px; //Must be 30px (@button-height) - 1px
 @vertical-margin: 7px;
-@horizontal-margin: 5px;
+@horizontal-margin: 1.5%;
 @height-tabs: (@height-tab)+(2*@vertical-margin) + 1px;
 
 .tabs {
 
-	width: 320px;
+	width: 100%;
 	height: @height-tabs;
 	background-color: @grey04;
 	
 	> .tab {
 
 		height: @height-tab;
-		width: (320px/2)-5px; //155px
+		width: (100% - (@horizontal-margin * 2)) / 2;
 		line-height: (@height-tab) + 1;
 		.rectangle-button-style (@grey07);
 		text-align: center;
