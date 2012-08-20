@@ -3,24 +3,27 @@
 @import 'buttons';
 
 @height-tab: 29px; //Must be 30px (@button-height) - 1px
+@vertical-margin: 7px;
+@horizontal-margin: 5px;
+@height-tabs: (@height-tab)+(2*@vertical-margin) + 1px;
 
 .tabs {
 
-	width: 100%;
-	height: 44px;
+	width: 320px;
+	height: @height-tabs;
 	background-color: @grey04;
 	
 	> .tab {
 
 		height: @height-tab;
-		width: 155px;
+		width: (320px/2)-5px; //155px
 		line-height: (@height-tab) + 1;
 		.rectangle-button-style (@grey07);
 		text-align: center;
 		float: left;
 		line-height: @height-tab;
-		margin-top: 7px;
-		margin-bottom: 7px;
+		margin-top: @vertical-margin;
+		margin-bottom: @vertical-margin;
 
 	}
 
@@ -28,7 +31,7 @@
 
 		border-top-left-radius: @border-button-radius-size;
 		border-bottom-left-radius: @border-button-radius-size;
-		margin-left: 5px;
+		margin-left: @horizontal-margin;
 		
 	}
 
@@ -37,7 +40,7 @@
 
 		border-top-right-radius: @border-button-radius-size;
 		border-bottom-right-radius: @border-button-radius-size;      
-		margin-right: 5px;
+		margin-right: @horizontal-margin;
 
 	}
 
