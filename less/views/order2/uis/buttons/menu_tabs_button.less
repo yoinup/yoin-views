@@ -16,12 +16,10 @@
 	> .tab {
 
 		height: @height-tab;
-		width: (100% - (@horizontal-margin * 2)) / 2;
+		float: left;
 		line-height: (@height-tab) + 1;
 		.rectangle-button-style (@grey07);
 		text-align: center;
-		float: left;
-		line-height: @height-tab;
 		margin-top: @vertical-margin;
 		margin-bottom: @vertical-margin;
 
@@ -39,7 +37,7 @@
 	> .tab.right {
 
 		border-top-right-radius: @border-button-radius-size;
-		border-bottom-right-radius: @border-button-radius-size;      
+		border-bottom-right-radius: @border-button-radius-size;
 		margin-right: @horizontal-margin;
 
 	}
@@ -55,6 +53,28 @@
 .tab.is-selected, .tab.left.is-selected, .tab.rigth.is-selceted {
 
 	.rectangle-button-active-style (@blue00);
+
+}
+
+
+.tabs.two {
+
+	> .tab {
+	
+		width: (100% - (@horizontal-margin * 2)) / 2;
+	
+	}
+
+}
+
+
+.tabs.three {
+
+	> .tab {
+	
+		width: (100% - (@horizontal-margin * 2)) / 3;
+	
+	}
 
 }
 
