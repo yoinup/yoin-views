@@ -1,0 +1,35 @@
+
+.flip {
+
+  -webkit-perspective: 1000; 
+
+  > .flip-transform {
+
+    width: 100%;
+    height: 100%;
+    -webkit-transform-style: preserve-3d;
+    -webkit-transition: all 1.0s linear;
+
+    > div:first-child {
+      -webkit-backface-visibility: hidden;
+    }
+
+    > div:last-child {
+      -webkit-backface-visibility: hidden;
+      -webkit-transform: rotateY(180deg);
+    }
+
+  }
+
+
+}
+
+
+.flip.is-back {
+
+  > .flip-transform {
+    -webkit-transform: rotateY( 180deg );
+
+  }
+
+}
