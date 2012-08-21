@@ -1,6 +1,7 @@
 @import 'colors';
 @import 'sizes';
 @import 'buttons';
+@import 'textstyles';
 
 @height-tab: 29px; //Must be 30px (@button-height) - 1px
 @vertical-margin: 7px;
@@ -22,6 +23,24 @@
 		text-align: center;
 		margin-top: @vertical-margin;
 		margin-bottom: @vertical-margin;
+		.button-text-style;
+		.button-text-is-font-black-style;
+
+	}
+	
+	> .tab:active {
+
+		.rectangle-button-active-style (@blue00);
+		.button-text-style;
+		.button-text-is-font-white-style;
+
+	}
+
+	> .tab.is-selected {
+
+		.rectangle-button-active-style (@blue00);
+		.button-text-style;
+		.button-text-is-font-white-style;
 
 	}
 
@@ -41,23 +60,35 @@
 		margin-right: @horizontal-margin;
 
 	}
+	
+	> .tab.single {
+	
+		//Left side
+		border-top-left-radius: @border-button-radius-size;
+		border-bottom-left-radius: @border-button-radius-size;
+		margin-left: @horizontal-margin;
+		//Right side
+		border-top-right-radius: @border-button-radius-size;
+		border-bottom-right-radius: @border-button-radius-size;
+		margin-right: @horizontal-margin;
+		
+	}
 
 }
 
-.tab:active, .tab.left:active, .tab.rigth:active {
 
-	.rectangle-button-active-style (@blue00);
+.tabs.is-one-item {
+
+	> .tab {
+	
+		width: (100% - (@horizontal-margin * 2));
+	
+	}
 
 }
 
-.tab.is-selected, .tab.left.is-selected, .tab.rigth.is-selceted {
 
-	.rectangle-button-active-style (@blue00);
-
-}
-
-
-.tabs.two {
+.tabs.is-two-items {
 
 	> .tab {
 	
@@ -68,11 +99,31 @@
 }
 
 
-.tabs.three {
+.tabs.is-three-items {
 
 	> .tab {
 	
 		width: (100% - (@horizontal-margin * 2)) / 3;
+	
+	}
+
+}
+
+.tabs.is-four-items {
+
+	> .tab {
+	
+		width: (100% - (@horizontal-margin * 2)) / 4;
+	
+	}
+
+}
+
+.tabs.is-five-items {
+
+	> .tab {
+	
+		width: (100% - (@horizontal-margin * 2)) / 5;
 	
 	}
 

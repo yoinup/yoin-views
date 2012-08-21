@@ -1,9 +1,35 @@
 {{#with view}}
 
-	{{#each menuItems}}
+	{{#if isSingleButton}}
 	
-		{{view Yn.MenuTabButtonView content=this.name }}
+		{{view Yn.MenuTabButtonView class="single" 
+			contentBinding="firstButton.name" 
+			actionContentBinding="firstButton.action"  
+			selectedBinding="selected" }}
 	
-	{{/each}}
+	{{else}}
+	
+		{{view Yn.MenuTabButtonView class="left" 
+			contentBinding="firstButton.name"
+			actionContentBinding="firstButton.action"  
+			selectedBinding="selected" }}
 
+		{{#each middleButtons}}
+
+			{{view Yn.MenuTabButtonView 
+				contentBinding="name"
+				actionContentBinding="action" 
+				selectedBinding="view.selected" }}
+
+		{{/each}}
+
+		{{view Yn.MenuTabButtonView class="right" 
+			contentBinding="lastButton.name" 
+			actionContentBinding="lastButton.action" 
+			selectedBinding="selected" }}
+	
+	{{/if}}
+	
 {{/with}}
+	
+	
