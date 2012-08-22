@@ -1,104 +1,73 @@
-@import 'colors';
-@import 'sizes';
-
-//--------------------------------STYLES-------------------------------------//
-
-.letter-press () {
-	text-shadow:0 -1px 0px @pure-black;
-}
-
-.lower-glow () {
-	text-shadow: 0 1px 0px rgba(255, 255, 255, 0.75);
-}
-
-//--------------------------------CLASSES-------------------------------------//
+@import 'textstyles';
 
 .header-text {
-	font-size: @font-big;
-	font-weight: bold;  
-	color:@pure-white;
-	text-shadow:0 1px 2px @orange02;
+	.header-text-style;
 }
 
 .input-text {
-	font-size: @font-normal;  
-	color: @grey12;
+	.input-text-style;
 }
 
 .user-message-text {
-	font-size: @font-small;
-	font-weight: bold;  
-	color:@pure-white;
-	text-shadow:0 1px 1px @pure-black;
+	.user-message-text-style;
 }
 
 .state-text {
-	font-size: @font-normal;
-	font-style: italic; 
-	color:@white00;
-	text-shadow:0 1px 1px @pure-black;   
+	.state-text-style;
 }
 
 .button-text {
-	font-weight: bold;
+	.button-text-style;
 }
 
 .button-text.is-small {
-	font-size: @font-small;
+	.button-text-is-small-style;
 }
 
 .button-text.is-big {
-	font-size: @font-big-small;
+	.button-text-is-big-style;
 }
 
 .text {
-	font-size: @font-normal;
+	.text-style;
 }
 
 .text.is-font-bold {
-	font-weight: bold;
+	.text-is-font-bold-style;
 }
 
 .text.is-font-italic {
-	font-style: italic;
+	.text-is-font-italic-style;
 }
 
 .text.is-small {
-	font-size: @font-small;
+	.text-is-small-style;
 }
 
 .text.is-big {
-	font-size: @font-big-small;
-	font-weight: bold;
+	.text-is-big-style;
 }
 
 .text.is-font-white {
-	color:@pure-white;
+	.text-is-font-white-style;
 }
 
-.button-text.is-font-white{
-	color:@pure-white;
-	.letter-press;
+.button-text.is-font-white {
+	.button-text-is-font-white-style;
 }
 
 .text.is-font-black {
-	color:@black00;
+	.text-is-font-black-style;
 }
 
-.button-text.is-font-black{
-	color:@black00;
-	.lower-glow;
+.button-text.is-font-black {
+	.button-text-is-font-black-style;
 }
 
 .text.is-font-grey {
-	color:@grey12;
+	.text-is-font-grey-style;
 }
 
-.buttom-text.is-font-grey{
-	color:@grey12;
-	.lower-glow;
-}
-
-.text.is-font-white {
-	color:@pure-white;
+.buttom-text.is-font-grey {
+	.button-text-is-font-grey-style;
 }

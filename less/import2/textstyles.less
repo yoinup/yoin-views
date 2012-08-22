@@ -1,0 +1,100 @@
+@import 'colors';
+@import 'sizes';
+
+//--------------------------------STYLES-------------------------------------//
+
+.letter-press () {
+	text-shadow:0 -1px 0px @pure-black;
+}
+
+.lower-glow () {
+	text-shadow: 0 1px 0px rgba(255, 255, 255, 0.75);
+}
+
+//--------------------------------CLASSES-------------------------------------//
+
+.header-text-style {
+	font-size: @font-big;
+	font-weight: bold;  
+	color:@pure-white;
+	text-shadow:0 1px 2px @orange02;
+}
+
+.input-text-style {
+	font-size: @font-normal;  
+	color: @grey12;
+}
+
+.user-message-text-style {
+	font-size: @font-small;
+	font-weight: bold;  
+	color:@pure-white;
+	text-shadow:0 1px 1px @pure-black;
+}
+
+.state-text-style {
+	font-size: @font-normal;
+	font-style: italic; 
+	color:@white00;
+	text-shadow:0 1px 1px @pure-black;   
+}
+
+.button-text-style {
+	font-weight: bold;
+}
+
+.button-text-is-small-style {
+	font-size: @font-small;
+}
+
+.button-text-is-big-style {
+	font-size: @font-big-small;
+}
+
+.text-style {
+	font-size: @font-normal;
+}
+
+.text-is-font-bold-style {
+	font-weight: bold;
+}
+
+.text-is-font-italic-style {
+	font-style: italic;
+}
+
+.text-is-small-style {
+	font-size: @font-small;
+}
+
+.text-is-big-style {
+	font-size: @font-big-small;
+	font-weight: bold;
+}
+
+.text-is-font-white-style {
+	color:@pure-white;
+}
+
+.button-text-is-font-white-style {
+	color:@pure-white;
+	.letter-press;
+}
+
+.text-is-font-black-style {
+	color:@black00;
+}
+
+.button-text-is-font-black-style {
+	color:@black00;
+	.lower-glow;
+}
+
+.text-is-font-grey-style {
+	color:@grey12;
+}
+
+.button-text-is-font-grey-style {
+	color:@grey12;
+	.lower-glow;
+}
