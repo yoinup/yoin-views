@@ -1,3 +1,4 @@
+@import 'animations';
 
 .flip {
 
@@ -8,14 +9,16 @@
     width: 100%;
     height: 100%;
     -webkit-transform-style: preserve-3d;
-    -webkit-transition: all 1.0s linear;
 
-    > div:first-child {
+    // this  must be overwrite
+    // -webkit-transition: -webkit-transform 1000ms @ease-animation-style;
+    -webkit-transform: translate3d(0,0,0);
+
+    > div:first-child, > div:last-child {
       -webkit-backface-visibility: hidden;
     }
 
     > div:last-child {
-      -webkit-backface-visibility: hidden;
       -webkit-transform: rotateY(180deg);
     }
 
@@ -29,7 +32,6 @@
 
   > .flip-transform {
     -webkit-transform: rotateY( 180deg );
-
   }
 
 }
