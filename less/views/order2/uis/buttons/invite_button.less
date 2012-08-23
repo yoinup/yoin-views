@@ -9,13 +9,19 @@
 
 
 @vertical-line-margin: 10%;
-@invite-border-color: red;
+
+@button-color:@blue00;
 
 
 .invite-button {
 
-  background:-webkit-linear-gradient(top, rgba(120,162,200,1) 0%,rgba(57,119,177,1) 100%);
+  background-color: @button-color;
+  background-image: url(assets/images/BG2.png),-moz-linear-gradient(top, rgba(255,255,255,0.35) 0%, rgba(255,255,255,0.2) 50%, rgba(255,255,255,0.1) 100%); /* FF3.6+ */
+  background-image: url(assets/images/BG2.png),-webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(255,255,255,0.35)), color-stop(50%,rgba(255,255,255,0.2)), color-stop(100%,rgba(255,255,255,0.1))); /* Chrome,Safari4+ */
 
+  border-width: 1px;
+  -webkit-border-image: url(assets/buttons/invite_button_border.png) 1% 0% 1% 0.5% stretch stretch;
+  
 
   height: @height;
   width: @width;
@@ -31,9 +37,11 @@
 
 
       border-radius: 8px;
-      border: 1px solid @invite-border-color;
+      .center_align(@height*0.8, @width*0.8);
+      
+      -webkit-box-shadow: 0 0 0 1px @button-color, 0 2px 0 0 rgba(255,255,255,0.1), inset 0 1px 0 0 rgba(255,255,255,0.2), inset 1px 0px 0 0 rgba(255,255,255,0.2), inset -1px 0px 0 0 rgba(255,255,255,0.2);  
 
-      .center_align(@height*0.9, @width*0.8);
+     
 
       > .invite-button-vertical-line {
 
@@ -46,17 +54,21 @@
 
       > .invite-button-vertical-line.is-left {
 
-        border-left: 1px solid @invite-border-color;
+        border-left: 1px solid @button-color;
         float:left;
         left: @vertical-line-margin;
+
+        -webkit-box-shadow: -1px 0px 0px 0px rgba(255, 255, 255, 0.2),inset 1px 0px 0px 0 rgba(255, 255, 255, 0.2);
 
       }
 
       > .invite-button-vertical-line.is-right {
 
-        border-right: 1px solid @invite-border-color;
+        border-right: 1px solid @button-color;
         float:right;
         right: @vertical-line-margin;
+
+        -webkit-box-shadow: 1px 0px 0px 0px rgba(255, 255, 255, 0.2), inset -1px 0 0px 0 rgba(255, 255, 255, 0.2);
 
       }
 
@@ -70,7 +82,10 @@
 
         width: 25%;
 
-        border-top: 1px solid @invite-border-color;
+        border-top: 1px solid @button-color;
+
+        -webkit-box-shadow: 0px 0px 0px 1px rgba(255, 255, 255, 0.1);
+
 
       }
 
@@ -93,7 +108,9 @@
 
         border-radius: 3px;
         .center_align(3px, 3px);
-        background-color: @invite-border-color;
+        background-color: @button-color;
+
+        -webkit-box-shadow: 0px 0px 0px 1px rgba(255, 255, 255, 0.2);
 
       }
 
@@ -107,13 +124,13 @@
       }
 
       > .invite-text.l-up {
-          top: 10%;
+          top: 5%;
       
 
       }
 
       > .invite-text.l-down {
-          top: 10%+50%;
+          top: 15%+50%;
 
       }
 
