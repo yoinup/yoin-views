@@ -5,7 +5,6 @@
 
 .rectangle-button {
 
-	position: relative;
 	height: 29px;
 	border-radius: @border-button-radius-size;
 
@@ -35,7 +34,6 @@
 
 .large-button {
 
-	position: relative;
 	height: 44px;
 	width: 265px;
 	border-radius: @border-box-radius-size;
@@ -43,59 +41,53 @@
 }
 
 
-
-
-
-
-
-.large-button.is-black, .large-button.is-single.is-black, .rectangle-button.is-black, .rectangle-button-adaptative.is-black {
+.large-button.is-black, .large-button.single.is-black, .rectangle-button.is-black, .rectangle-button-adaptative.is-black {
 
   .rectangle-button-style (@black00);
 
 }
 
 
-.large-button.is-black:active, .large-button.is-single.is-black:active, .rectangle-button.is-black:active, .rectangle-button-adaptative.is-black:active {
+.large-button.is-black:active, .large-button.single.is-black:active, .rectangle-button.is-black:active, .rectangle-button-adaptative.is-black:active {
 
   .rectangle-button-active-style (@black00);
 
 }
 
 
-
-.large-button.is-orange, .large-button.is-single.is-orange, .rectangle-button.is-orange, .rectangle-button-adaptative.is-orange {
+.large-button.is-orange, .large-button.single.is-orange, .rectangle-button.is-orange, .rectangle-button-adaptative.is-orange {
 
   .rectangle-button-style (@orange01);
 
 }
 
 
-.large-button.is-orange:active, .large-button.is-single.is-orange:active, .rectangle-button.is-orange:active, .rectangle-button-adaptative.is-orange:active {
+.large-button.is-orange:active, .large-button.single.is-orange:active, .rectangle-button.is-orange:active, .rectangle-button-adaptative.is-orange:active {
 
   .rectangle-button-active-style (@orange01);
 
 }
 
 
-.large-button.is-blue, .large-button.is-single.is-blue, .rectangle-button.is-blue, .rectangle-button-adaptative.is-blue {
+.large-button.is-blue, .large-button.single.is-blue, .rectangle-button.is-blue, .rectangle-button-adaptative.is-blue {
 
   .rectangle-button-style (@blue00);
 
 }
 
-.large-button.is-blue:active, .large-button.is-single.is-blue:active, .rectangle-button.is-blue:active, .rectangle-button-adaptative.is-blue:active {
+.large-button.is-blue:active, .large-button.single.is-blue:active, .rectangle-button.is-blue:active, .rectangle-button-adaptative.is-blue:active {
 
   .rectangle-button-active-style (@blue00);
 
 }
 
-.large-button.is-grey, .large-button.is-single.is-grey, .rectangle-button.is-grey, .rectangle-button-adaptative.is-grey {
+.large-button.is-grey, .large-button.single.is-grey, .rectangle-button.is-grey, .rectangle-button-adaptative.is-grey {
 
   .rectangle-button-style (@grey07);
 
 }
 
-.large-button.is-grey:active, .large-button.is-single.is-grey:active, .rectangle-button.is-grey:active, .rectangle-button-adaptative.is-grey:active {
+.large-button.is-grey:active, .large-button.single.is-grey:active, .rectangle-button.is-grey:active, .rectangle-button-adaptative.is-grey:active {
 
   .rectangle-button-active-style (@grey07);
 
@@ -110,6 +102,13 @@
 	line-height: 28px;
 	text-align: center;
 	white-space: nowrap;
+	
+}
+
+.large-button.single {
+
+	text-align: center;
+	line-height: 46px;
 	
 }
 

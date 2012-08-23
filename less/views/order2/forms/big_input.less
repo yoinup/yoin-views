@@ -1,0 +1,56 @@
+@import 'colors';
+@import 'sizes';
+
+@text-indent: 15px;
+
+.big-input-content {
+
+	margin-left: (100% - @big-input-width) / 2;
+	width: @big-input-width;
+	border-radius: @border-box-radius-size + 1;
+	border-top: 1px solid @grey04;
+	-webkit-box-shadow: 0 0 0 1px (@orange02), 0 2px 0 0 (rgba(255,255,255,0.6));
+	
+	> .big-input {
+
+		width: 100%;
+		height: @big-input-height;
+		-webkit-appearance: none;
+		border: none;
+		padding: 0px;
+		background-color: @pure-white;
+		border-top: 1px solid @grey03;
+		border-radius: 0px;
+		outline: none;
+		font-size: @font-normal;
+		color: @grey12;
+		text-indent: @text-indent;
+
+	}
+
+	> .big-input.up {
+
+		border-top-left-radius: @border-box-radius-size;
+		border-top-right-radius: @border-box-radius-size;
+		border-bottom: none;
+		border-top: none;
+
+	}
+
+	> .big-input.down {
+
+		border-bottom-left-radius: @border-box-radius-size;
+		border-bottom-right-radius: @border-box-radius-size;
+		border-bottom: none;
+
+	}
+
+	> .big-input::-webkit-input-placeholder {
+
+		text-indent: @text-indent;
+		color: @grey05;
+		font-size: @font-normal;
+
+	}
+
+}
