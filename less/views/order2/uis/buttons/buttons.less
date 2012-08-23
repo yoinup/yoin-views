@@ -3,25 +3,21 @@
 @import 'buttons';
 
 
+
 .rectangle-button {
 
-	height: 29px;
+	height: @standard-button-height - 2;
 	border-radius: @border-button-radius-size;
 
 }
 
 .rectangle-button.is-small {
 
-    width: 40px;
+    width: @standard-button-width - 2;
 
 }
 
-.rectangle-button.is-medium {
-    
-    width: 59px;
-
-}
-
+/*
 .rectangle-button.is-large {
 
 	width: 310px;
@@ -31,11 +27,12 @@
 	line-height: 30px;
 
 }
+*/
 
 .large-button {
 
-	height: 44px;
-	width: 265px;
+	height: @big-button-height - 2;
+	width: @big-button-width;
 	border-radius: @border-box-radius-size;
 
 }
@@ -99,7 +96,7 @@
 	display: table;
 	border-radius: @border-button-radius-size;
 	padding: 1px 10px 0;
-	line-height: 28px;
+	line-height: @standard-button-height - 2;
 	text-align: center;
 	white-space: nowrap;
 	
@@ -108,7 +105,7 @@
 .large-button.single {
 
 	text-align: center;
-	line-height: 46px;
+	line-height: @big-button-height;
 	
 }
 
@@ -145,8 +142,8 @@
   
 	/*Override is-icon-small font-size*/
 	font-size: @small-icon;
-  margin-left: -0.5*@small-icon;
-  margin-top: @height-margin*@small-icon;
+  	margin-left: -0.5*@small-icon;
+  	margin-top: @height-margin*@small-icon;
 
   
 }
@@ -156,8 +153,8 @@
   
 	/*Override is-icon-normal font-size*/
 	font-size: @normal-icon;
-  margin-left: -0.5*@normal-icon;
-  margin-top: @height-margin*@normal-icon;
+  	margin-left: -0.5*@normal-icon;
+  	margin-top: @height-margin*@normal-icon;
 
   
 }
@@ -167,8 +164,8 @@
 
 	/*Override is-icon-big font-size*/
 	font-size: @big-icon;
-  margin-left: -0.5*@big-icon;
-  margin-top: @height-margin*@big-icon;
+  	margin-left: -0.5*@big-icon;
+  	margin-top: @height-margin*@big-icon;
 
 }
 

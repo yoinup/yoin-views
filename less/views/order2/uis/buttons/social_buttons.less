@@ -8,7 +8,7 @@
 
 	> .left {
 
-		height: 44px;
+		height: @big-button-height - 2;
 		width: 50px;
 		float: left;
 		border-top-left-radius: @border-box-radius-size;
@@ -34,12 +34,12 @@
 
 .rectangle-button.is-social {
 
-	width: 90px;
+	width: @small-social-button-width;
 	
 	> .left {
 
-		height: 29px;
-		width: 23px;
+		height: @standard-button-height - 2;
+		width: @small-social-button-width - 66 - 1; //One px for line
 		float: left;
 		border-top-left-radius: @border-button-radius-size;
 		border-bottom-left-radius: @border-button-radius-size;
@@ -51,8 +51,8 @@
 
 	> .right {
 
-		width: 66px;
-		height: auto;
+		width: @small-social-button-width - 23 - 1; //One px for line
+ 		height: auto;
 		float: right;
 		text-align: center;
 		margin-top: 9%;  
