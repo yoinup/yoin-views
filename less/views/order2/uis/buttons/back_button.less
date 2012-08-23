@@ -1,8 +1,10 @@
 @import 'aligns';
 @import 'sizes';
+@import 'colors';
 
 
-@background-color: rgba(274,108,15,1);
+
+@background-color: @orange01;
 @height: 28px;
 
 .back-button {
@@ -12,9 +14,6 @@
     top: 4px;
     left: 17px; 
 
-
-
-
     height: @height;
     min-width: 30px;
 
@@ -23,14 +22,14 @@
     padding: 1px 10px 0 6px;
 
     // half transparency
-    background-image: -webkit-linear-gradient(
-        bottom,
-        rgba(0,0,0,0) 0%,
-        rgba(0,0,0,0) 50%,
-        rgba(255,255,255,0.1) 50%,
-        rgba(255,255,255,0.3) 100%
-        );
-
+    
+    background-image: url(assets/images/BG2.png), -webkit-gradient(linear, 
+        left top, left bottom, 
+        color-stop(0%,rgba(255,255,255,0.45)), 
+        color-stop(50%,rgba(255,255,255,0.2)), 
+        color-stop(100%,rgba(255,255,255,0))); /* Chrome,Safari4+ */
+    
+   
     border-top-left-radius: 0px;
     border-bottom-left-radius: 0px;
 
@@ -38,10 +37,10 @@
     border-bottom-right-radius: 2px;
 
 
-    border-top: 1px solid black;   
-    border-right: 1px solid black;
-    border-bottom: 1px solid black;
-    box-shadow: 0 1px 0 0 rgba(255, 255, 255, 0.8) inset, 0 1px 0 0 rgba(255, 255, 255, 0.6);
+    border-top: 1px solid darken(@background-color, 30%);   
+    border-right: 1px solid darken(@background-color, 30%);
+    border-bottom: 1px solid darken(@background-color, 30%);
+    box-shadow: 0 1px 0 0 rgba(255, 255, 255, 0.6) inset, 0 1px 0 0 rgba(255, 255, 255, 0.5), -1px 0 0 0 rgba(255, 255, 255, 0.3) inset ;
 
 
     // font 
@@ -65,16 +64,17 @@
     width: 20px;
 
     background-color: @background-color;
-    background-position :-1px -0.5px;
+    background-position : -1px -0.5px;
 
+   
     // half transparency
-    background-image:  
-        -webkit-gradient(linear, left bottom, right top, 
-            from(rgba(0,0,0,0)), 
-            color-stop(0.5, rgba(0,0,0,0)), 
-            color-stop(0.5, rgba(255,255,255,0.1)), 
-            to(rgba(255,255,255,0.3))); 
 
+    background-image: url(assets/images/BG2.png), -webkit-gradient(linear, 
+        right top, left bottom, 
+        color-stop(0%,rgba(255,255,255,0.45)), 
+        color-stop(50%,rgba(255,255,255,0.2)), 
+        color-stop(100%,rgba(255,255,255,0))); /* Chrome,Safari4+ */
+    
 
 
     -webkit-transform : rotate(-45deg) skew(-10deg, -10deg);
@@ -95,7 +95,7 @@
     border-bottom-left-radius : 4px;
 
 
-    border: 1px solid black;
+    border: 1px solid darken(@background-color, 50%);
     box-shadow: 0px 1px 0px 0px rgba(255, 255, 255, 1) inset;
 
 }
