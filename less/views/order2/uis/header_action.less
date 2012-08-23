@@ -6,6 +6,35 @@
   position: relative;
   width: 100%;
   height: @header-action-height;
-  background-color: red;
+  background-color: @grey05;
+	-webkit-box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 1);
+	border-top: 1px solid rgba(255, 255, 255, 0.7);
+	z-index: 1;
+	display: table;
+	padding-left: @margin-header-size;
+	padding-right: @margin-header-size;
+	
+	> .left {
+	
+		display: table-cell;
+		vertical-align: middle;
+		position: relative;
+	
+	}
+	
+	> .middle {
+	
+		width: 12px;
+	
+	}
+	
+	> .right {
+	
+		display: table-cell;
+		vertical-align: middle;
+		position: relative;
+		width: 1%; //Trick to implement dynamic div
+	
+	}
 
 }

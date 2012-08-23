@@ -1,7 +1,6 @@
 @import 'colors';
 @import 'sizes';
 
-@default-padding: 0.7em;
 @box-shadow: @border-line-size*4;
 
 .box {
@@ -10,7 +9,7 @@
 	background-image: url(assets/images/BG_25.png);
 	color: @grey08;
 	border-radius: @border-box-radius-size;
-  	margin: 0 1.2em;
+	margin: 0 3%;
 	border-top: @border-line-size solid rgba(255, 255, 255, 0.7);
 	-webkit-box-shadow: 0 0 0 @border-line-size @grey09, 0 @box-shadow @box-shadow 0 rgba(0, 0, 0, 0.3);
 	box-shadow: 0 0 0 @border-line-size @grey09, 0 @border-line-size @box-shadow 0 rgba(0, 0, 0, 0.3	);
@@ -19,7 +18,11 @@
 		
 		background-color: @grey01;
 		color: @grey12;
-		padding: @default-padding;
+		padding-left: @box-title-padding-horizontal;
+		padding-right: @box-title-padding-horizontal;
+		padding-top: @box-title-padding-vertical;
+		padding-bottom: @box-title-padding-vertical;
+		
 	}
 
 	> .box-title-top {
@@ -43,7 +46,11 @@
 
 	> .box-content {
 		
-		padding: @default-padding;
+		padding-left: @box-content-padding-horizontal;
+		padding-right: @box-content-padding-horizontal;
+		padding-top: @box-content-padding-vertical;
+		padding-bottom: @box-content-padding-vertical;
+		
 	}
 	
 	> .box-content.is-text {
