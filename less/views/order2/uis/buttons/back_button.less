@@ -1,10 +1,10 @@
 @import 'aligns';
 @import 'sizes';
 @import 'colors';
-
+@import 'textstyles';
 //Don´t include variables (TODO)
 
-@background-color: @orange01;
+@background-color: @black00;
 @height: 28px;
 
 .back-button {
@@ -44,12 +44,13 @@
 
 
     // font 
-    font-weight: 400;
-    font-size : 12px;
+    
     line-height : @height;
     text-align:center;
-    color:#fff;
-    text-shadow : 0px -1px 0px rgba(0,0,0,0.8);
+
+    .button-text-style;
+    .button-text-is-small-style;
+    .button-text-is-font-white-style;
 
 }
 
@@ -99,6 +100,42 @@
     box-shadow: 0px 1px 0px 0px rgba(255, 255, 255, 1) inset;
 
 }
+
+
+
+
+.back-button:active {
+    
+    background-color: @background-color;
+    background-image: url(assets/images/BG2.png), -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(255,255,255,0)), color-stop(50%,rgba(255,255,255,0.2)), color-stop(100%,rgba(255,255,255,0.45))); /* Chrome,Safari4+ */
+
+
+    box-shadow: -1px 1px 3px 0 rgba(0, 0, 0, 0.2) inset;
+
+}
+
+
+.back-button:active:before {
+    
+    
+    background-color: @background-color;
+    background-image: url(assets/images/BG2.png), -webkit-gradient(linear, right top, left bottom, color-stop(0%,rgba(255,255,255,0)), color-stop(50%,rgba(255,255,255,0.2)), color-stop(100%,rgba(255,255,255,0.45))); /* Chrome,Safari4+ */
+
+    box-shadow: 0px 1px 3px 0px rgba(0,0,0,0.3) inset;
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
