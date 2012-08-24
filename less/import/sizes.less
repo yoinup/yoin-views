@@ -66,17 +66,19 @@
 
 
 //buttons sizes
-@standard-button-height:30px;
-@standard-button-width:40px;
+@standard-button-height: 30px;
+@standard-button-width: 40px;
 
-@big-button-height:46px;
-@big-button-width:82.5%;
+@big-button-height: 46px;
+@big-button-width: 82.5%;
+@big-button-width-px: 264px;
 
-@main-button-outer-height:44px;
-@main-button-outer-width:93.75%;
+@main-button-outer-height: 44px;
+@main-button-outer-width: 93.75%;
 
-@main-button-inner-height:32px;
-@main-button-inner-widht:90%;
+@main-button-inner-height: 32px;
+//It's 90%, but relative to MainButtonOuter is 96%
+@main-button-inner-width: 96%;
 
 @invite-button-small-width: 160px*0.6;
 @invite-button-small-height: 86px*0.6;
@@ -89,7 +91,7 @@
 @switch-button-height: 40px;
 @switch-button-width: 80px;
 
-@magin-double-button:6px;
+@magin-double-button: 6px;
 
 @map-button-size: @standard-button-width;
 
@@ -101,7 +103,7 @@
 
 
 //Inputs
-@big-input-width: 82.5%;
+@big-input-width: @big-button-width;
 @big-input-height: 44px; //TODO - Must be replaces by big-button-height
 @single-input-height:29px; //TODO - Must be replaces by sinlge-button-height
 
