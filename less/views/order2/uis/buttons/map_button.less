@@ -1,4 +1,5 @@
 @import 'sizes';
+@import 'colors';
 
 @size: @map-button-size;
 
@@ -8,11 +9,14 @@
   width: @size;
 
   border-radius: @size;
-  border: 2px solid black;
+  border: 3px solid @grey02;
+
+  -webkit-box-shadow: inset 0 1px 1px 2px rgba(0,0,0,0.3);
 
 	background-image: url(assets/buttons/map.png);
   background-repeat:no-repeat;
   background-position:center center;
+
 
   -webkit-background-size: 100% 100%, auto;
   background-size: 100% 100%, auto;
