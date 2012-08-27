@@ -1,11 +1,13 @@
 @import 'sizes';
+@import 'colors';
 
 
 @switch-button-internal-height: @switch-button-height - 2px;
 @switch-button-internal-width: @switch-button-width - 2px;
 
 
-.button_corner() {
+
+.button_corner  () {
   
   // backgrounds extends into the padding, not the border. 
   -webkit-background-clip: padding-box;
@@ -15,19 +17,27 @@
 
 
 
+
 .switch-button {
 
   overflow: visible;
 
   position: relative;
+  
   height: @switch-button-internal-height;
   width: @switch-button-internal-width;
 
   .button_corner ();
 
-  border: 1px solid #BBB;
-  background: #D6D6D6;
-  background-image: -webkit-linear-gradient(#D0D0D0, #DFDFDF);
+  //border: 1px solid #BBB;
+  //background: black;
+  //background-image: -webkit-linear-gradient(#D0D0D0, #DFDFDF);
+
+
+  //background: -webkit-linear-gradient(top, @blue00, lighten(@blue00, 1%) 50%, lighten(@blue00, 8%) 50%, lighten(@blue00, 13%));
+
+
+
 
 
   > .sb-label-left {
@@ -37,8 +47,9 @@
 
 
     border: 1px solid #2373A5;
-    background: #5393C5;
-    background-image: -webkit-linear-gradient(#5393C5 , #6FACD5);
+    background: @grey00;
+    //background-image: -webkit-linear-gradient(#5393C5 , #6FACD5);
+
 
   }
 
@@ -49,8 +60,8 @@
     right: 0;
 
     border: 1px solid #BBB;
-    background: #D6D6D6;
-    background-image: -webkit-linear-gradient( #D0D0D0, #DFDFDF);
+    background: red;
+    //background-image: -webkit-linear-gradient( #D0D0D0, #DFDFDF);
 
   }
 
@@ -63,7 +74,7 @@
 
     border-width: 0;
 
-    .button_corner();
+    .button_corner ();
 
   }
 
@@ -86,7 +97,7 @@
       margin-left: -1*(@switch-button-internal-height/2 - 1px);
 
 
-      .button_corner();
+      .button_corner ();
 
       border: 1px solid #CCC;
       background: #EEE;
@@ -99,7 +110,7 @@
 
   }
 
-} 
+}
 
 
 .switch-button.is-disabled {
