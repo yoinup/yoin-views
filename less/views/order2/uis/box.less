@@ -1,5 +1,6 @@
 @import 'colors';
 @import 'sizes';
+@import 'textstyles';
 
 @box-shadow: @border-line-size*4;
 
@@ -14,15 +15,21 @@
 	-webkit-box-shadow: 0 0 0 @border-line-size @grey09, 0 @box-shadow @box-shadow 0 rgba(0, 0, 0, 0.3);
 	box-shadow: 0 0 0 @border-line-size @grey09, 0 @border-line-size @box-shadow 0 rgba(0, 0, 0, 0.3	);
 
-  > .box-title {
+	> .box-title {
 		
 		background-color: @grey01;
-		color: @grey12;
+		.text-is-font-grey-style;
 		padding-left: @box-title-padding-horizontal;
 		padding-right: @box-title-padding-horizontal;
 		padding-top: @box-title-padding-vertical;
 		padding-bottom: @box-title-padding-vertical;
 		
+	}
+
+	> .box-title.bold {
+
+		.text-is-font-bold-style;
+
 	}
 
 	> .box-title-top {
