@@ -1,6 +1,7 @@
 @import 'colors';
 @import 'sizes';
 @import 'buttons';
+@import 'textstyles';
 
 .large-button.is-social {
 
@@ -36,6 +37,7 @@
 .rectangle-button.is-social {
 
 	width: @small-social-button-width;
+	.button-text-is-font-white-style;
 	
 	> .left {
 
@@ -66,6 +68,7 @@
 
 	.rectangle-button-style (@blue-facebook);
 
+
 	> .left {
 
 		background-size: 75%;
@@ -78,7 +81,16 @@
 
 .rectangle-button.is-social.facebook.is-disabled {
 	
-	//TODO Add style
+	.rectangle-button-active-style (@grey12);
+	.button-text-is-font-disabled-style;
+
+	> .left {
+
+		background-size: 75%;
+		background-image: url(./assets/images/facebook_disabled.png);
+		.left-large-button-style (@grey07);
+
+	}
 
 }
 
@@ -90,8 +102,7 @@
 
 .rectangle-button.is-social.facebook.is-disabled:active {
 	
-	//TODO Add style
-
+	.rectangle-button-active-style (@grey12);
 }
 
 .rectangle-button.is-social.twitter {
@@ -109,7 +120,15 @@
 
 .rectangle-button.is-social.twitter.is-disabled {
 	
-	//TODO Add style
+	.rectangle-button-style (@grey12);
+	.button-text-is-font-disabled-style;
+	
+	> .left {
+
+		background-image: url(./assets/images/twitter_disabled.png);
+		.left-large-button-style (@grey07);
+
+	}
 
 }
 
@@ -121,7 +140,7 @@
 
 .rectangle-button.is-social.twitter.is-disabled:active {
 	
-	//TODO Add style
+	.rectangle-button-active-style (@grey12);
 
 }
 
@@ -129,6 +148,7 @@
 .large-button.facebook {
 
 	.rectangle-button-style (@blue-facebook);
+	.button-text-is-font-white-style;
 	
 	> .left {
 
@@ -142,7 +162,16 @@
 
 .large-button.facebook.is-disabled {
 	
-	.rectangle-button-active-style (@grey13);
+	.rectangle-button-active-style (@grey12);
+	.button-text-is-font-disabled-style;
+
+	> .left {
+
+		background-size: 65%;
+		background-image: url(./assets/images/facebook_disabled.png);
+		.left-large-button-style (@grey07);
+
+	}
 
 }
 
@@ -154,8 +183,7 @@
 
 .large-button.facebook.is-disabled:active {
 	
-	//TODO Add style
-
+	.rectangle-button-active-style (@grey12);
 }
 
 .large-button.twitter {
@@ -173,8 +201,15 @@
 
 .large-button.twitter.is-disabled {
 	
-	//TODO Add style
+	.rectangle-button-active-style (@grey12);
+	.button-text-is-font-disabled-style;
 
+	> .left {
+
+		background-image: url(./assets/images/twitter_disabled.png);
+		.left-large-button-style (@grey07);
+
+	}
 }
 
 .large-button.twitter:active  {
@@ -185,6 +220,6 @@
 
 .large-button.twitter.is-disabled:active {
 	
-	//TODO Add style
+	.rectangle-button-active-style (@grey12);
 
 }
