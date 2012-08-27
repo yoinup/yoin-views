@@ -1,0 +1,182 @@
+@import 'colors';
+@import 'sizes';
+
+
+//--------------------------------ESTILOS-------------------------------------//
+
+.notification-icon-style (@button-color:white) {
+
+  background-color: @button-color;
+  background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(255,255,255,0)), color-stop(50%,rgba(255,255,255,0.75)), color-stop(100%,rgba(255,255,255,0.9))); /* Chrome,Safari4+ */
+
+}
+
+.notification-icon-middle-style (@button-color:white) {
+
+  background-color: darken(@button-color, 2%);  
+  background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0%, lighten(@button-color, 25%)), color-stop(100%,rgba(255,255,255,0))); /* Chrome,Safari4+ */
+
+}
+
+.notification-icon-inner-style (@button-color:white) {
+
+  background-color: lighten(@button-color, 5%);
+  background-image:  url(assets/images/BG2.png), -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(255,255,255,0)), color-stop(75%,rgba(255,255,255,0.5)), color-stop(100%,rgba(255,255,255,0.9))); /* Chrome,Safari4+ */
+  
+}
+
+
+
+//--------------------------------CLASES-------------------------------------//
+
+.notification-icon-size (@size) {
+
+    height: @size;
+    width: @size;
+    border-radius: @size;
+
+}
+
+
+//--------------------BOTONES--------------//
+
+
+
+@notification-button-size: 32px;
+@notification-button-medium-size: @notification-button-size - @notification-margin;
+@notification-button-in-size:@notification-button-medium-size - @notification-in-margin;
+
+
+@notification-margin: (@notification-button-size * 12px) / 100px;
+@notification-in-margin: (@notification-button-size * 6px) / 100px;
+
+
+
+
+
+.notification-icon {
+    
+    .notification-icon-size (@notification-button-size);
+    .notification-icon-style (@grey01);
+    
+
+    > .notification-icon-middle {
+
+        position: relative;
+        top: @notification-margin/2;
+        left: @notification-margin/2;
+         
+        .notification-icon-size (@notification-button-medium-size);
+
+
+        > .notification-icon-inner {
+        
+          position: relative;
+          top: @notification-in-margin/2;
+          left: @notification-in-margin/2;
+         
+          .notification-icon-size (@notification-button-in-size);
+
+        }
+
+
+        @small-icon: 21.875px;
+
+        .notification-icon-inner.icon.is-icon-small:before {
+  
+
+          position: absolute;
+          left: 50%;
+
+          // Este deberia ser el valor pero no se ajusta REVISAR!! (-0.5*@small-icon)
+          
+          margin-left: -10.5px ;
+          top: 3px;
+
+          //font icon style
+          color:@white00;
+          text-shadow: 0px 0px 1px rgba(0,0,0,0.3);
+
+        }
+    }
+
+}
+
+.notification-icon.like {
+        
+    > .notification-icon-middle {
+
+       .notification-icon-middle-style (@pink01);
+
+
+        > .notification-icon-inner {
+
+          .notification-icon-inner-style (@pink01);
+
+        }
+        > .notification-icon-inner.icon:before {
+            content: "m";
+
+        }
+    }
+}
+
+.notification-icon.sent {
+        
+    > .notification-icon-middle {
+
+        .notification-icon-middle-style (@green01);
+
+
+        > .notification-icon-inner {
+
+          .notification-icon-inner-style (@green01);
+
+        }
+        > .notification-icon-inner.icon:before {
+            content: "z";
+
+        }
+    }
+}
+
+.notification-icon.received {
+        
+    > .notification-icon-middle {
+
+        .notification-icon-middle-style (@yellow01);
+
+
+        > .notification-icon-inner {
+
+          .notification-icon-inner-style (@yellow01);
+
+        }
+
+        > .notification-icon-inner.icon:before {
+            content: "A";
+
+        }
+    }
+}
+
+
+.notification-icon.commented {
+        
+    > .notification-icon-middle {
+
+        .notification-icon-middle-style (@purple01);
+
+
+        > .notification-icon-inner {
+
+          .notification-icon-inner-style (@purple01);
+
+        }
+
+        > .notification-icon-inner.icon:before {
+            content: "u";
+
+        }
+    }
+}
