@@ -5,7 +5,9 @@
 @switch-button-internal-height: @switch-button-height - 2px;
 @switch-button-internal-width: @switch-button-width - 2px;
 
-@base-color:@grey00;
+@base-color:@grey02;
+@base-color-disabled:@grey00;
+@right-label-color:@blue00;
 
 
 
@@ -31,24 +33,14 @@
 
   .button_corner ();
 
-  //border: 1px solid #BBB;
-  //background: black;
-  //background-image: -webkit-linear-gradient(#D0D0D0, #DFDFDF);
-
-
-  //background: -webkit-linear-gradient(top, @blue00, lighten(@blue00, 1%) 50%, lighten(@blue00, 8%) 50%, lighten(@blue00, 13%));
-
-
-
-
-
   > .sb-label-left {
 
     z-index: 1;
     left: 0;
 
     background: @base-color; 
-    background-image: -webkit-linear-gradient(@base-color , lighten(@base-color, 2%));
+    background-image: -webkit-linear-gradient(darken(@base-color, 3%), lighten(@base-color, 4%));
+    
     -webkit-box-shadow:inset 0px 1px 1px darken(@base-color, 15%), 0px 1px 1px @pure-white;   
 
 
@@ -60,9 +52,8 @@
     z-index: 0;
     right: 0;
 
-    border: 1px solid #BBB;
-    background: red;
-    //background-image: -webkit-linear-gradient( #D0D0D0, #DFDFDF);
+    background: -webkit-linear-gradient(top, @right-label-color, lighten(@right-label-color, 1%) 50%, lighten(@right-label-color, 8%) 50%, lighten(@right-label-color, 13%));
+    -webkit-box-shadow:inset 0px 1px 1px darken(@right-label-color, 20%), 0px 1px 1px @pure-white;  
 
   }
 
@@ -96,7 +87,7 @@
       height: @switch-button-internal-height - 4px;
 
       margin-top: 1px;
-      margin-left: -1*(@switch-button-internal-height/2 - 1px);
+      margin-left: -1*(@switch-button-internal-height/2 + 1px);
 
       
 
@@ -104,9 +95,9 @@
 
       border: 1px solid lighten(@base-color, 3%);
     
-      background-image: -webkit-linear-gradient(darken(@base-color, 3%), lighten(@base-color, 1%));
+      background-image: -webkit-linear-gradient(darken(@base-color, 10%), lighten(@base-color, 10%));
 
-      -webkit-box-shadow: 0px 1px 4px rgba(0, 0, 0, 0.3)  ;
+      -webkit-box-shadow: 0px 1px 4px rgba(0, 0, 0, 0.3);
 
     }
 
@@ -117,15 +108,39 @@
 
 .switch-button.is-disabled {
 
-  background: red;
 
   > .sb-label-left {
-    background: red;
+    
+    background: @base-color-disabled; 
+    background-image: -webkit-linear-gradient(darken(@base-color-disabled, 3%), lighten(@base-color-disabled, 4%));
+    
+    -webkit-box-shadow:inset 0px 1px 1px darken(@base-color-disabled, 8%), 0px 1px 1px @pure-white;   
+  
   }
 
 
   > .sb-label-right {
-    background: red;
+      
+    background: @base-color-disabled; 
+    background-image: -webkit-linear-gradient(darken(@base-color-disabled, 3%), lighten(@base-color-disabled, 4%));
+    
+    -webkit-box-shadow:inset 0px 1px 1px darken(@base-color-disabled, 8%), 0px 1px 1px @pure-white;   
+  
   }
+
+
+  > .sb-inner {
+     
+     > .sb-inner-button {
+
+        border: 1px solid lighten(@base-color-disabled, 3%);
+      
+        background-image: -webkit-linear-gradient(darken(@base-color-disabled, 10%), lighten(@base-color-disabled, 10%));
+
+        -webkit-box-shadow: 0px 1px 4px rgba(0, 0, 0, 0.3);
+
+      }
+  }
+
 
 }
