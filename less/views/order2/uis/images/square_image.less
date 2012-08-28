@@ -14,20 +14,12 @@
 
 .square-image {
 
-	.border-square-style();
+	.border-square-style;
 
   > .square-image-bg {
 
     width: 100%;
     height: 100%;
-
-  }
-
-}
-
-.square-image.is-up-effect {
-
-  > .square-image-bg {
 
     background-image: -webkit-gradient(linear, left top, right bottom, 
       color-stop(0%, rgba(255, 255, 255, 0.3)), 
@@ -38,9 +30,12 @@
 
 }
 
-.square-image.is-down-effect {
 
-  > .square-image-bg {
+.square-image.is-selected {
+
+  .border-square-selected-style;
+
+   > .square-image-bg {
 
     background-image: -webkit-gradient(linear, right bottom, left top,
       color-stop(0%, rgba(255, 255, 255, 0.3)), 
@@ -48,6 +43,8 @@
       color-stop(51%, rgba(255, 255, 255, 0)));
 
   }
+
+
 
 }
 
