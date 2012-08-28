@@ -80,15 +80,16 @@
         }
 
 
-        @small-icon: 21.875px;
+        @icon-size: 21.875px;
 
-        .notification-icon-inner.icon.is-icon-small:before {
+        .notification-icon-inner.icon:before {
   
 
           position: absolute;
           left: 50%;
 
-          // Este deberia ser el valor pero no se ajusta REVISAR!! (-0.5*@small-icon)
+          //Override icon size to adjust it to the image
+          text-style: @icon-size;
           
           margin-left: -10.5px ;
           top: 3px;
@@ -102,7 +103,7 @@
 
 }
 
-.notification-icon.like {
+.notification-icon.liked {
         
     > .notification-icon-middle {
 
