@@ -1,11 +1,19 @@
 
-.border-square-style (@border-top-color: rgba(255,255,255,0.4)) {
+.border-square-style {
 
 
-	border-top: 1px solid @border-top-color;
+	-webkit-box-shadow:0 0 0 1px rgba(0, 0, 0, 0.4),inset 0 1px 0 0 rgba(255, 255, 255, 0.4), 0 2px 3px 0 rgba(0, 0, 0, 0.5);
+	box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.4),inset 0 1px 0 0 rgba(255, 255, 255, 0.4), 0 2px 3px 0 rgba(0, 0, 0, 0.5);
+}
 
-	-webkit-box-shadow: 0 0 0 1px (rgba(0,0,0,0.2)), 0 1px 2px 0 rgba(0,0,0,0.4); 
-	box-shadow: 0 0 0 1px (rgba(0,0,0,0.2)), 0 1px 2px 0 rgba(0,0,0,0.4);
+
+
+
+.border-square-selected-style {
+
+
+	-webkit-box-shadow:  0 0 0 1px rgba(0, 0, 0, 0.4), 0 0 1px 1px rgba(0, 0, 0, 0.4), inset 0 1px 15px 0 rgba(0, 0, 0, 0.5);
+	box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.4), 0 0 1px 1px rgba(0, 0, 0, 0.4), inset 0 1px 15px 0 rgba(0, 0, 0, 0.5);
 
 }
 
