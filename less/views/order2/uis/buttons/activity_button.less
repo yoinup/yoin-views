@@ -6,7 +6,7 @@
 
 @height: @standard-button-height;
 @width: @standard-button-height - 5;
-@base-color: @orange01;
+@base-color: lighten(@orange01,5%);
 @background-color: darken(@base-color, 2%);
 
 
@@ -38,7 +38,7 @@
 .activity-button, .activity-button:after {
 
   
-  border: 1px solid darken(@base-color, 13%);
+  border: 1px solid darken(@base-color, 8%);
 
 
 }
@@ -101,11 +101,61 @@
 
   content: 'h';
 
-  color: lighten(@base-color, 35%);
-  //text-shadow: 0 -1px 0px rgba(0,0,0,0.3);
+  color: darken(@base-color, 18%);
+  //text-shadow: 0 -1px 0px rgba(255, 255, 255, 0.3);
 
 }
 
+
+
+.activity-button:active {
+  
+    background-color: darken(@base-color, 9%); 
+
+}
+
+
+.activity-button:active:after {
+
+      background-color: darken(@base-color, 9%);
+      
+}
+
+.activity-button:active:before {
+      
+      height: 95%;
+
+      border-bottom-left-radius: 2px;
+      border-bottom-right-radius: 2px;
+
+      color: darken(@base-color, 25%);
+      background-color: darken(@base-color, 9%);
+      
+}
+
+
+
+//The user has new notification
+
+.activity-button.has-one {
+
+}
+
+.activity-button.has-one:after {
+    
+}
+
+.activity-button.has-one:before {
+    
+    color:@white00;
+}
+
+
+.activity-button.has-one:active:before {
+    
+    color: darken(@base-color, 25%)
+
+}
 
 
 
