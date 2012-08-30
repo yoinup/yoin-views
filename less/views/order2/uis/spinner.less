@@ -1,73 +1,53 @@
+@import 'sizes';
+@import 'colors';
 
+.spinner {
 
-@delay: -0.0833s;
+	position: absolute;
+	height: 34.5%;
+	width: 33%;
+	left: 33.5%;
+	top:38%;
+	background-color: rgba(0,0,0,0.7);
+	border-radius: @border-box-radius-size;
 
-.spinner{
+	> .spinner_circle {
 
-  > .spinner-item{
+			position: absolute;
+			height: 60%;
+			width: 63%;
+			left: 12.264151%;
+			top: 13.636364%;
+			border-radius: @border-subbox-radius-size * 100;
+			background-color: transparent;
+			border: 7px solid #e7e7e7;
+			/*-webkit-animation-name: rotateThis;
+			-webkit-animation-duration: 1.5s;
+			-webkit-animation-iteration-count: infinite;
+			-webkit-animation-timing-function: linear;*/
 
-    background: red;
-    opacity: 0;
-    -webkit-animation: fade 1s linear infinite;
-    -webkit-border-radius: 50px;
-    -webkit-box-shadow: 0 0 3px rgba(0,0,0,0.2);
+			> .image_content {
 
-  }
+				position: relative;
+				height: 100%;
+				top: 30%;
+				left: 31%;
+				background-size: 40%;
+				background-image: url('./assets/images/yoin-spinner.png'); 
+				background-repeat: no-repeat;
+			
+			}
 
-  > .spinner-item:nth-child(1){
-    -webkit-transform: rotate(30deg*0) translate(0, -142%);
-    -webkit-animation-delay: @delay*12;
-  }
-  > .spinner-item:nth-child(2){
-    -webkit-transform: rotate(30deg*1) translate(0, -142%);
-    -webkit-animation-delay: @delay*11 ;
-  }
-  > .spinner-item:nth-child(3){
-    -webkit-transform: rotate(30deg*2) translate(0, -142%);
-    -webkit-animation-delay: @delay*10 ;
-  }
-  > .spinner-item:nth-child(4){
-    -webkit-transform: rotate(30deg*3) translate(0, -142%);
-    -webkit-animation-delay: @delay*9 ;
-  }
-  > .spinner-item:nth-child(5){
-    -webkit-transform: rotate(30deg*4) translate(0, -142%);
-    -webkit-animation-delay: @delay*8 ;
-  }
-  > .spinner-item:nth-child(6){
-    -webkit-transform: rotate(30deg*5) translate(0, -142%);
-    -webkit-animation-delay: @delay*7 ;
-  }
-  > .spinner-item:nth-child(7){
-    -webkit-transform: rotate(30deg*6) translate(0, -142%);
-    -webkit-animation-delay: @delay*6 ;
-  }
-  > .spinner-item:nth-child(8){
-    -webkit-transform: rotate(30deg*7) translate(0, -142%);
-    -webkit-animation-delay: @delay*5 ;
-  }
-  > .spinner-item:nth-child(9){
-    -webkit-transform: rotate(30deg*8) translate(0, -142%);
-    -webkit-animation-delay: @delay*4 ;
+	}
 
-  }
-  > .spinner-item:nth-child(10){
-    -webkit-transform: rotate(30deg*9) translate(0, -142%);
-    -webkit-animation-delay: @delay*3 ;
-  }
-  > .spinner-item:nth-child(11){
-    -webkit-transform: rotate(30deg*10) translate(0, -142%);
-    -webkit-animation-delay: @delay*2 ;
-  }
-  > .spinner-item:nth-child(12){
-
-    -webkit-transform: rotate(30deg*11) translate(0, -142%);
-    -webkit-animation-delay: @delay*1 ;
-  }
 
 }
 
-@-webkit-keyframes fade {
-  from {opacity: 1;}
-  to {opacity: 0.25;}
-}
+
+/*@-webkit-keyframes rotateThis {
+	from {-webkit-transform:scale(1) rotate(0deg);}
+	to {-webkit-transform:scale(1) rotate(360deg);}
+}*/
+
+
+
