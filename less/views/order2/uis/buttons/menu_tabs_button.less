@@ -3,7 +3,7 @@
 @import 'buttons';
 @import 'textstyles';
 
-@height-tab: @standard-button-height - 1; 
+@height-tab: @standard-button-height - 1;
 @vertical-margin: 7px;
 @horizontal-margin: 1.5%;
 @height-tabs: (@height-tab)+(2*@vertical-margin) + 1px;
@@ -19,7 +19,7 @@
 		height: @height-tab;
 		float: left;
 		line-height: (@height-tab) + 1;
-		.rectangle-button-style (@grey07);
+		.rectangle-button-menu-style (@grey07);
 		text-align: center;
 		margin-top: @vertical-margin;
 		margin-bottom: @vertical-margin;
@@ -30,7 +30,7 @@
 	
 	> .tab:active {
 
-		.rectangle-button-active-style (@blue00);
+		.rectangle-button-menu-active-style (@blue00);
 		.button-text-style;
 		.button-text-is-font-white-style;
 
@@ -38,7 +38,7 @@
 
 	> .tab.is-selected {
 
-		.rectangle-button-active-style (@blue00);
+		.rectangle-button-menu-active-style (@blue00);
 		.button-text-style;
 		.button-text-is-font-white-style;
 
@@ -58,6 +58,7 @@
 		border-top-right-radius: @border-button-radius-size;
 		border-bottom-right-radius: @border-button-radius-size;
 		margin-right: @horizontal-margin;
+		right: 2px;
 
 	}
 	
@@ -92,7 +93,7 @@
 
 	> .tab {
 	
-		width: (100% - (@horizontal-margin * 2)) / 2;
+		width: ((100% - (@horizontal-margin * 2)) / 2);
 	
 	}
 

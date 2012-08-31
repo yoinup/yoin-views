@@ -14,8 +14,9 @@
   
 }
 
-/*
-.rectangle-button-style (@button-color:white) {
+
+//Does not include all borders (just top)
+.rectangle-button-menu-style (@button-color:white) {
 
   background-color: @button-color;
   background-image: url(assets/images/BG2.png), -moz-linear-gradient(top, rgba(255,255,255,0.45) 0%, rgba(255,255,255,0.2) 50%, rgba(255,255,255,0) 100%); 
@@ -24,10 +25,9 @@
   border-top: 1px solid (rgba(255,255,255,0.8));
   
   -webkit-box-shadow: 0 0 0 1px (darken(@button-color, 30%)), 0 2px 0 0 (rgba(255,255,255,0.7));
-  box-shadow: 0 0 0 1px (darken(@button-color, 30%)), 0 2px 0 0 (rgba(255,255,255,0.7));
 
 }
-*/
+
 
 
 .rectangle-button-active-style (@button-color:white) {
@@ -43,8 +43,8 @@
 }
 
 
-/*
-.rectangle-button-active-style (@button-color:white) {
+//Does not include all borders (just top)
+.rectangle-button-menu-active-style (@button-color:white) {
 
   background-color: @button-color;
   background-image: url(assets/images/BG2.png), -moz-linear-gradient(top, rgba(255,255,255,0) 0%, rgba(255,255,255,0.2) 50%, rgba(255,255,255,0.45) 100%); 
@@ -52,11 +52,10 @@
   
   border-top: 1px solid darken(@button-color, 10%);
 
-  -webkit-box-shadow: 0 0 0 1px (darken(@button-color, 30%)), inset 0 1px 3px 0 (darken(@button-color, 10%));
-  box-shadow: 0 0 0 1px (darken(@button-color, 30%)), inset 0 1px 3px 0 (darken(@button-color, 10%));
-
+  -webkit-box-shadow: 0 0 0 1px (darken(@button-color, 30%)), inset 0 1px 3px 0 (darken(@button-color, 10%)), 0 2px 0 0 rgba(255,255,255,0.7);
+  
 }
-*/
+
 
 .external-large-button-style (@ext-large-button:white) {
 
