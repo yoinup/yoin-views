@@ -9,6 +9,8 @@
 
 
 @vertical-line-margin: 10%;
+@vertical-line-small-margin: 8%;
+
 
 @button-color:@blue00;
 
@@ -146,12 +148,14 @@
 @height-small: @invite-button-small-height;
 @width-small: @invite-button-small-width;
 
+
+/*
 .invite-button.is-small {
 
   height: @height-small;
   width: @width-small;
 
-  -webkit-mask-image: url(assets/buttons/invite_button_small_mask.png);
+  -webkit-mask-image: url(assets/buttons/invie_button_small_mask.png);
 
   > .invite-button-inner {
     // done on this way because of 0.xxxxpixels
@@ -166,3 +170,150 @@
   }
 
 }
+
+*/
+
+
+
+
+.invite-button.is-small {
+
+
+  height: @height-small;
+  width: @width-small;
+
+  -webkit-mask-image: url(assets/buttons/invite_button_small_mask.png);
+  
+  -webkit-border-image: url(assets/buttons/invite_button_small_border.png) 1% 1% 1% 1% stretch stretch;
+
+
+  > .invite-button-inner {
+
+    
+      .center_align (@height-small*0.83, @width-small*0.83);
+      height: 36.2px;
+
+     border-radius: 4px;
+
+
+
+
+      > .invite-button-vertical-line {
+
+        position:absolute; 
+        top: 0%;
+        width: 1px;
+        height: 100%;
+
+      }
+
+      > .invite-button-vertical-line.is-left {
+
+        border-left: 1px solid @button-color;
+        float:left;
+        left: @vertical-line-small-margin;
+
+        -webkit-box-shadow: -1px 0px 0px 0px rgba(255, 255, 255, 0.2),inset 1px 0px 0px 0 rgba(255, 255, 255, 0.2);
+
+      }
+
+      > .invite-button-vertical-line.is-right {
+
+        border-right: 1px solid @button-color;
+        float:right;
+        right: @vertical-line-small-margin;
+
+        -webkit-box-shadow: 1px 0px 0px 0px rgba(255, 255, 255, 0.2), inset -1px 0 0px 0 rgba(255, 255, 255, 0.2);
+
+      }
+
+
+      > .invite-button-horizontal-line {
+
+        position:absolute; 
+        top: 53%;
+        height: 1px;
+
+
+        width: 25%;
+
+        border-top: 1px solid @button-color;
+
+        -webkit-box-shadow: 0px 0px 0px 1px rgba(255, 255, 255, 0.1);
+
+
+      }
+
+      > .invite-button-horizontal-line.is-left {
+
+        float:left;
+        left: @vertical-line-small-margin + 5%;
+
+      }
+
+      > .invite-button-horizontal-line.is-right {
+
+        float:right;
+        right: @vertical-line-small-margin + 5%;
+
+      }
+
+
+      > .invite-button-circle {
+
+        border-radius: 3px;
+        .center_align(2px, 2px);
+        
+        top:55%;
+        background-color: @button-color;
+
+        -webkit-box-shadow: 0px 0px 0px 1px rgba(255, 255, 255, 0.2);
+
+      }
+
+      > .invite-text {
+          position: absolute;
+          width: 100%;
+          height: 50%;
+          color: white;
+          text-align: center;
+
+      }
+
+      > .invite-text.l-up {
+          top: 3%;
+      
+
+      }
+
+      > .invite-text.l-down {
+          top: 56%;
+
+      }
+
+ 
+  }
+
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
