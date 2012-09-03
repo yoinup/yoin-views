@@ -1,5 +1,6 @@
 @import 'sizes';
 @import 'colors';
+@import 'textstyles';
 
 //--------------------------------COLORES-------------------------------------//
 
@@ -71,10 +72,9 @@
 	> .header-title {
 		
     text-align: center;
-		font-size: @font-big;
-    color: white;
-		text-shadow:0 1px 1px @pure-black;
     line-height: @header-height;
+
+    .header-text-style;
 	
   }
 
@@ -87,8 +87,8 @@
 	> .header-subtitle {
 		
     text-align: center;
-		font-size: 12px;
-    color: @pure-black;
+    
+    .header-subtext-style;
 	
   }
 
