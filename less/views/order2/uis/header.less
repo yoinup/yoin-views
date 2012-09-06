@@ -27,10 +27,6 @@
 
 	border-top: 1px solid lighten(@header-style-color, 30%);
 	border-bottom: 1px solid darken(@header-style-color, 30%);
-
-	-webkit-box-shadow: 0 1px 5px 0 rgba(0, 0, 0, 0.5);
-	box-shadow: 0 1px 5px 0 rgba(0, 0, 0, 0.5);
-
 	
 	
 	> .header-title {
@@ -73,10 +69,21 @@
 
   }
 	
+} 
+
+
+
+
+.header.with-small-shadow {
+
+	-webkit-box-shadow: 0 1px 5px 0 rgba(0, 0, 0, 0.5);
+	box-shadow: 0 1px 5px 0 rgba(0, 0, 0, 0.5);
+
 }
 
 
-.header.with-shadow {
+
+.header.with-big-shadow {
 
 	-webkit-box-shadow: 0 3px 13px 0 rgba(0, 0, 0, 0.5);
 	box-shadow: 0 3px 13px 0 rgba(0, 0, 0, 0.5);
