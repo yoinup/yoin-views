@@ -8,7 +8,7 @@
 	width: 100%;
 	height: @mini-spinner-size;
 	text-align: center;
-	margin: 0 auto;
+	margin: 0px auto;
 
 
 	#mini-spinner-canvas {
@@ -18,6 +18,9 @@
 		-webkit-animation-duration: 2s;
 		-webkit-animation-iteration-count: infinite;
 		-webkit-animation-timing-function: linear;
+		display: table-cell;
+		position: relative;
+		vertical-align: middle;
 
 		> .bar {
 			width: 3px;
@@ -72,7 +75,9 @@
 	}
 
 	> #mini-spinner-text {
-		line-height: @mini-spinner-size;
+		display: table-cell;
+		position: relative;
+		vertical-align: middle;
 	}
 
 }
