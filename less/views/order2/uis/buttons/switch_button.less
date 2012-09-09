@@ -35,6 +35,8 @@
 
   > .sb-label-left {
 
+    width: 100%;
+
     z-index: 1;
     left: 0;
 
@@ -48,6 +50,9 @@
 
 
   > .sb-label-right {
+
+    width: 0%;
+
 
     z-index: 0;
     right: 0;
@@ -79,6 +84,9 @@
 
     > .sb-inner-button {
 
+
+      left: 0%;
+
       position: absolute;
       z-index: 1;
       top: 50%;
@@ -102,6 +110,34 @@
     }
 
   }
+
+}
+
+
+
+
+.switch-button.is-on {
+
+  > .sb-label-left {
+    width: 0%;
+
+  }
+
+  > .sb-label-right {
+    width: 100%;
+
+  }
+
+  > .sb-inner {
+     
+    > .sb-inner-button {
+
+      left: 100%;
+
+    }
+
+  }
+
 
 }
 
