@@ -1,5 +1,6 @@
 @import 'sizes';
 @import 'colors';
+@import 'gradients';
 
 .screen {
 
@@ -12,10 +13,7 @@
 
 	overflow: hidden;
 
-	
-	background-color: @grey02;
-	background-image: url(assets/images/BG.png), -webkit-linear-gradient(0, transparent 40%, rgba(255, 255, 255, 0.3) 40%);
-	background-size: 9%;
+	.app-background;
 
 	//This line allows to show black app background in corners
 	border-radius: @border-box-radius-size;
