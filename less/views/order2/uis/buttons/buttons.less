@@ -126,14 +126,25 @@
   top: 50%;
   left: 50%;
   line-height: @standard-button-height;
+  
   //font icon style
   color:@white00;
   text-shadow: 0px 0px 1px rgba(0,0,0,0.9);
 
+}
 
 
+
+.large-button.icon.is-font-black:before, .rectangle-button.icon.is-font-black:before {
+  
+  //font icon style
+  color:@black00;
+  text-shadow: 0px 0px 1px @white00;
 
 }
+
+
+
 
 
 @small-icon:21.875px;
@@ -149,7 +160,7 @@
 }
 
 @normal-icon:28px;
-.large-button.icon:before, .rectangle-button.icon:before {
+.large-button.icon:before,.rectangle-button.icon:before {
   
 	/*Override is-icon-normal font-size*/
 	font-size: @normal-icon;
@@ -160,7 +171,7 @@
 }
 
 @big-icon:39.375px;
-.large-button.icon.is-icon-big:before, .rectangle-button.icon.is-icon-big:before {
+.large-button.icon.is-icon-big:before,.rectangle-button.icon.is-icon-big:before {
 
 	/*Override is-icon-big font-size*/
 	font-size: @big-icon;
