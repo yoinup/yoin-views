@@ -12,10 +12,10 @@
 
 	overflow: hidden;
 
-	background-repeat: repeat;
-
-	background: url(assets/images/main_bg.png), -webkit-gradient(linear, left top, left bottom, color-stop(0%,@grey00), color-stop(87%,@grey01), color-stop(99%,@grey00));
-	background: url(assets/images/main_bg.png), -webkit-linear-gradient(top, @grey00 0%,@grey01 87%,@grey00 99%);
+	
+	background-color: @grey02;
+	background-image: url(assets/images/BG.png), -webkit-linear-gradient(0, transparent 40%, rgba(255, 255, 255, 0.3) 40%);
+	background-size: 9%;
 
 	//This line allows to show black app background in corners
 	border-radius: @border-box-radius-size;
@@ -28,9 +28,7 @@
 		/*min-height: dinamically*/
     //min-height: 460px - @header-height - @footer-height;
 
-		background-color: @grey02;
-		background-image: url(assets/images/BG.png), -webkit-linear-gradient(0, transparent 40%, rgba(255, 255, 255, 0.3) 40%);
-		background-size: 9%;
+		
 	}
 
   > .screen-container.is-header-action {
