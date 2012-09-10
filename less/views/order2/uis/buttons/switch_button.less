@@ -33,12 +33,7 @@
 
   .button_corner ();
 
-  > .sb-label-left {
-
-    width: 100%;
-
-    z-index: 1;
-    left: 0;
+  > .sb-label-right {
 
     background: @base-color; 
     background-image: -webkit-linear-gradient(darken(@base-color, 3%), lighten(@base-color, 4%));
@@ -49,13 +44,7 @@
   }
 
 
-  > .sb-label-right {
-
-    width: 0%;
-
-
-    z-index: 0;
-    right: 0;
+  > .sb-label-left {
 
     background: -webkit-linear-gradient(top, @right-label-color, lighten(@right-label-color, 1%) 50%, lighten(@right-label-color, 8%) 50%, lighten(@right-label-color, 13%));
     -webkit-box-shadow:inset 0px 1px 1px darken(@right-label-color, 20%), 0px 1px 1px @pure-white;  
@@ -79,16 +68,11 @@
 
     margin: 0 @switch-button-internal-height/2;
     position: relative;
-    z-index: 1;
 
 
     > .sb-inner-button {
 
-
-      left: 0%;
-
       position: absolute;
-      z-index: 1;
       top: 50%;
 
       width: @switch-button-internal-height - 4px;
@@ -114,16 +98,48 @@
 }
 
 
+.switch-button {
+
+  > .sb-label-right {
+
+    width: 100%;
+    z-index: 0;
+    right: 0;
+
+  }
+
+  > .sb-label-left {
+
+    z-index: 1;
+    width: 0%;
+    left: 0;
+  }
+
+  > .sb-inner {
+     
+    z-index: 1;
+
+    > .sb-inner-button {
+
+      z-index: 1;
+      left: 0%;
+
+    }
+
+  }
+
+
+}
 
 
 .switch-button.is-on {
 
-  > .sb-label-left {
+  > .sb-label-right {
     width: 0%;
 
   }
 
-  > .sb-label-right {
+  > .sb-label-left {
     width: 100%;
 
   }
@@ -145,18 +161,8 @@
 .switch-button.is-disabled {
 
 
-  > .sb-label-left {
-    
-    background: @base-color-disabled; 
-    background-image: -webkit-linear-gradient(darken(@base-color-disabled, 3%), lighten(@base-color-disabled, 4%));
-    
-    -webkit-box-shadow:inset 0px 1px 1px darken(@base-color-disabled, 8%), 0px 1px 1px @pure-white;   
-  
-  }
+  > .sb-label {
 
-
-  > .sb-label-right {
-      
     background: @base-color-disabled; 
     background-image: -webkit-linear-gradient(darken(@base-color-disabled, 3%), lighten(@base-color-disabled, 4%));
     
