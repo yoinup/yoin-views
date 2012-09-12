@@ -5,6 +5,15 @@
 
 }
 
+
+@font-face {
+
+	font-family: 'Yoin Icons Baseline';
+	src: url('assets/fonts/icons2_baseline.ttf');
+
+}
+
+
 @normal-size: 24px;
 @normal: 32; 
 
@@ -14,12 +23,17 @@
 	font-family: 'Yoin Icons';
 	content: attr(icon);
 	-webkit-font-smoothing: antialiased;
-
-  /*line-height: 1;*/
   text-decoration: none;
 
-  //display: inline-block;
+}
 
+.icon.with-text:before, .icon-after.with-text:after {
+
+	font-size: (32/@normal)*@normal-size;
+	font-family: 'Yoin Icons Baseline';
+	content: attr(icon);
+	-webkit-font-smoothing: antialiased;
+  text-decoration: none;
 
 }
 
