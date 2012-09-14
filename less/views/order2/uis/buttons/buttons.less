@@ -164,13 +164,14 @@
   
 }
 
-@normal-icon:28px;
+@normal-icon:24px;
+@height-margin-normal: @height-margin + 0.06; 
 .large-button.icon:before,.rectangle-button.icon:before {
   
 	/*Override is-icon-normal font-size*/
 	font-size: @normal-icon;
   	margin-left: -0.5*@normal-icon;
-  	margin-top: @height-margin*@normal-icon;
+  	margin-top: @height-margin-normal*@normal-icon;
 
   
 }
