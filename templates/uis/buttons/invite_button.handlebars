@@ -1,15 +1,19 @@
-<div class="invite-button-inner">
+{{#with view}}
 
-  <div class="invite-button-vertical-line is-left"></div>
-  <div class="invite-button-horizontal-line is-left"></div>
+  <div class="invite-button-inner">
 
-  <div class="invite-text l-up button-text is-font-white">{{I18n invite toUpperCase=true}}</div>
+    <div class="invite-button-vertical-line is-left"></div>
+    <div class="invite-button-horizontal-line is-left"></div>
 
-  <div class="invite-button-circle"></div>
+    <div class="invite-text l-up button-text is-font-white">{{I18n invite toUpperCase=true}}</div>
 
-  <div class="invite-text l-down button-text is-font-white">2 $</div>
+    <div class="invite-button-circle"></div>
 
-  <div class="invite-button-horizontal-line is-right"></div>
-  <div class="invite-button-vertical-line is-right"></div>
+    <div class="invite-text l-down button-text is-font-white">{{product.price}} {{I18n currency_symbol}}</div>
 
-</div>
+    <div class="invite-button-horizontal-line is-right"></div>
+    <div class="invite-button-vertical-line is-right"></div>
+
+  </div>
+
+{{/with}}
