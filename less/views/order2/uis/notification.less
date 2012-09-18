@@ -1,0 +1,23 @@
+@import 'colors';
+@import 'animations';
+
+
+.notification {
+
+	width: 100%;
+	background-color: yellow;
+
+  -webkit-transition: height @notification-time-animation-style @ease-animation-style;
+  -webkit-transform: translate3d(0,0,0);
+
+  height: 40px;
+
+}
+
+.notification.is-hidden {
+
+	height:0px;
+	-webkit-transition: height @notification-time-animation-style @ease-animation-style;
+	-webkit-transform: translate3d(0,0,0);
+
+}
