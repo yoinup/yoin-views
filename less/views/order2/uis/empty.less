@@ -1,0 +1,49 @@
+@import 'sizes';
+@import 'textstyles';
+
+
+.empty-view {
+
+	> .transparency-empty {
+
+		height: 100%;
+		width: 100%;
+
+		background: -webkit-gradient(radial, center center, 0px, center center, 100%, color-stop(0%,rgba(220,220,220,0)), color-stop(50%,rgba(220,220,220,0.5)), color-stop(100%,rgba(220,220,220,0.75))); /* Chrome,Safari4+ */
+		background: -webkit-radial-gradient(center, ellipse cover, rgba(220,220,220,0) 0%,rgba(220,220,220,0.5) 50%,rgba(220,220,220,0.75) 100%); /* Chrome10+,Safari5.1+ */
+
+		> .image-empty {
+
+			//TODO : Change this to implement relative size
+			height: 198px;
+			width: 192px;
+
+			background-image: url(assets/images/empty_image.png);
+			background-repeat: no-repeat;
+			background-size: 100%;
+
+			margin: (@size-one-space * 2) auto;
+
+		}
+
+		> .empty-text {
+
+			position: relative;
+			text-align: center;
+
+			font-size: 18px;
+			.text-is-font-low-grey-style;
+			.text-is-font-bold-style;
+			.text-is-font-italic-style;
+
+		}
+
+		> .empty-button {
+
+			margin: (@size-one-space * 2) auto;
+
+		}
+
+	}
+
+}

@@ -1,0 +1,60 @@
+@import 'animations';
+@import 'textstyles';
+@import 'notifications';
+
+
+.notification {
+
+	position: absolute;
+
+	display: block;
+	//display: table;
+	overflow: hidden;
+	width: 100%;
+	height: 35px;
+	z-index: 1;
+
+	border-bottom-left-radius: @border-subbox-radius-size;
+	border-bottom-right-radius: @border-subbox-radius-size;
+    
+	-webkit-transition: height @notification-time-animation-style @linear-animation-style;
+	-webkit-transform: translate3d(0,0,0);
+    
+	.notification-text {
+
+		//display: table-cell;
+		text-align: center;
+		//vertical-align: middle;
+		padding: 0 6px 0 6px;
+		.user-message-text-style;
+
+	}
+
+}
+
+.notification.is-hidden {
+
+	height:0px;
+	overflow: hidden;
+	-webkit-transition: height @notification-time-animation-style @linear-animation-style;
+	-webkit-transform: translate3d(0,0,0);
+
+}
+
+.notification.info {
+
+	.notification-info-style;
+   
+}
+
+.notification.error {
+
+	.notification-error-style;
+   
+}
+
+.notification.succeed {
+
+	.notification-succeed-style;
+   
+}
