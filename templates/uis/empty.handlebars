@@ -1,0 +1,21 @@
+{{#with view}}
+
+	<div class="transparency-empty">
+
+		<div class="image-empty"></div>
+
+		<div class="empty-text">
+
+			{{content}}
+
+		</div>
+
+		{{view Yn.MainButtonView class="empty-button is-blue"
+			contentI18n=messageAction
+			action=messageAction }}
+
+		<div class="space by-five"></div>
+
+	</div>
+
+{{/with}}
