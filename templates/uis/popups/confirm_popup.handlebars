@@ -1,0 +1,37 @@
+{{#with view}}
+
+	<div class="transparency">
+        
+		<div class="popup-block">
+        
+			<div class="popup-text">
+
+				{{content}}
+
+      </div>
+
+      <div class="confirm-popup-buttons">
+
+      	<div class="accept">
+
+      		{{view Yn.AdaptativeButtonView class="is-black button-text is-small is-font-white"
+      			contentI18n="accept"
+      			action="accept"}}
+
+      	</div>
+
+				<div class="cancel">
+
+					{{view Yn.AdaptativeButtonView class="is-black button-text is-small is-font-white"
+      			contentI18n="cancel"
+      			action="cancel"}}
+
+				</div>
+
+      </div>
+
+		</div>
+
+	</div>   
+
+{{/with}}
