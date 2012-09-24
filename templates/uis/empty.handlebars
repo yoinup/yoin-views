@@ -10,9 +10,13 @@
 
 		</div>
 
-		{{view Yn.MainButtonView class="empty-button is-blue"
-			contentI18n=messageAction
-			action=messageAction }}
+		{{#if includeAction }}
+
+			{{view Yn.MainButtonView class="empty-button is-blue"
+				contentI18n=messageAction
+				action=messageAction }}
+
+		{{/if}}
 
 		<div class="space by-one"></div>
 
