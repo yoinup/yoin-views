@@ -1,0 +1,67 @@
+@slider-width:100%;
+@slider-height:17px;
+
+
+@slider-progress-width: @slider-width/4;
+
+
+.button_corner() {
+  
+  // backgrounds extends into the padding, not the border. 
+  -webkit-background-clip: padding-box;
+  -webkit-border-radius: 1em ;
+
+}
+
+
+
+
+
+.slider {
+
+  width: @slider-width;
+  height: @slider-height;
+
+  .button_corner();
+
+  border: 1px solid #BBB;
+  background: #D6D6D6;
+  background-image: -webkit-linear-gradient(#D0D0D0, #DFDFDF);
+
+
+  > .slider-progress {
+
+
+    -webkit-transform: translate3d(0,0,0);
+    -webkit-animation: animation-slider 1s ease-in-out 0.2s infinite alternate; 
+
+    width: @slider-progress-width;
+    //padding-right: 2px; OJO
+
+    border: none;
+    height: 100%;
+
+
+    .button_corner();
+
+    background: #5393C5;
+    background-image: -webkit-linear-gradient(#5393C5, #6FACD5);
+
+  }
+
+}
+
+//@moveX:  @slider-width - @slider-progress-width;
+//@moveX:  @slider-width - @slider-progress-width;
+
+@moveX:  240px; // must be on pixels
+
+
+@-webkit-keyframes animation-slider {
+  from {
+    -webkit-transform: translate3d(0,0,0);
+  }
+  to {
+    -webkit-transform: translate3d(@moveX,0,0);
+  }
+}
