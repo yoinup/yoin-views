@@ -18,7 +18,6 @@
 	border-bottom-right-radius: @border-subbox-radius-size;
     
 	-webkit-transition: height @notification-time-animation-style @notification-animation-style;
-	-webkit-transform: translate3d(0,0,0);
     
 	.notification-text {
 
@@ -37,23 +36,22 @@
 	height:0px;
 	overflow: hidden;
 	-webkit-transition: height @notification-time-animation-style @notification-animation-style;
-	-webkit-transform: translate3d(0,0,0);
 
 }
 
-.notification.info {
+.notification.is-info {
 
 	.notification-info-style;
    
 }
 
-.notification.error {
+.notification.is-error {
 
 	.notification-error-style;
    
 }
 
-.notification.succeed {
+.notification.is-succeed {
 
 	.notification-succeed-style;
    
