@@ -5,15 +5,16 @@
 .main-button {
 
 	position: relative;
-	height: @main-button-outer-height;
-	//The WIDTH is in the Media Query Files
+	
+	//The WIDTH and HEIGHT is in the Media Query Files
 	.external-large-button-style (@grey03);
 	border-radius: @magin-double-button+@border-button-radius-size;
 	
 	> .inner-main-button {
 
 		position: relative;
-		//The WIDTH and HEIGHT is in the Media Query Files
+		height: @main-button-inner-height;
+		//The WIDTH is in the Media Query Files
 		border-radius: @border-button-radius-size;
 		//The TOP and LEFT is in the Media Query Files
 		text-align: center;
