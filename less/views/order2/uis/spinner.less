@@ -1,53 +1,63 @@
 @import 'sizes';
 @import 'colors';
 
+
+@-webkit-keyframes spin {  
+from {  
+    -webkit-transform: rotate(0deg);  
+}  
+to {  
+    -webkit-transform: rotate(360deg);  
+    }  
+}  
+
+
+
 .spinner {
 
 	position: absolute;
-	height: 34.5%;
-	width: 33%;
-	left: 33.5%;
+	height: 24%;
+	width: 33.5%;
+	left: 33.25%;
 	top:38%;
-	background-color: rgba(0,0,0,0.7);
+	background-color: rgba(0,0,0,0.6);
 	border-radius: @border-box-radius-size;
 
-	> .spinner_circle {
+	background-image: url('./assets/images/yoin-spinner.png'); 
+	background-repeat: no-repeat;
+	background-size: 100%;
 
-			position: absolute;
-			height: 60%;
-			width: 63%;
-			left: 12.264151%;
-			top: 13.636364%;
+
+	> .spinner_circle_out {
+
+			position: relative;
+			height: 59%;
+			width: 61%;
+			left: 19.5%;
+			top: 20.5%;
 			border-radius: @border-subbox-radius-size * 100;
-			background-color: transparent;
-			border: 7px solid #e7e7e7;
-			/*-webkit-animation-name: rotateThis;
-			-webkit-animation-duration: 1.5s;
-			-webkit-animation-iteration-count: infinite;
-			-webkit-animation-timing-function: linear;*/
-
-			> .image_content {
-
-				position: relative;
-				height: 100%;
-				top: 30%;
-				left: 31%;
-				background-size: 40%;
-				background-image: url('./assets/images/yoin-spinner.png'); 
-				background-repeat: no-repeat;
 			
-			}
+			//background:  -webkit-linear-gradient(-45deg, #ffffff 0%,#ffffff 14%,#d3d3d3 36%,#c4c4c4 50%,#a0a0a0 75%,#8e8e8e 100%); 
+			background:  -webkit-linear-gradient(-45deg, #ffffff 0%,#d3d3d3 24%,#c4c4c4 50%,#a0a0a0 75%,#8e8e8e 100%); 
 
-	}
+		
+			//-----Mask for the border
+			-webkit-mask-image: url(assets/images/spinner_mask.png);
+  			-webkit-mask-position: left top;
+  			-webkit-mask-repeat: no-repeat;
+  			-webkit-mask-size: 100% 100%;
 
+
+			//----Animation
+			-webkit-animation-name: spin;  
+    		-webkit-animation-iteration-count: infinite;  
+    		-webkit-animation-timing-function: linear;  
+    		-webkit-animation-duration: 0.8s;  	
+
+		}
 
 }
 
-
-/*@-webkit-keyframes rotateThis {
-	from {-webkit-transform:scale(1) rotate(0deg);}
-	to {-webkit-transform:scale(1) rotate(360deg);}
-}*/
 
 
 
