@@ -4,14 +4,14 @@
 
 
 
-.rectangle-button {
+.rectangle-button, .geo-button {
 
 	height: @standard-button-height - 2;
 	border-radius: @border-button-radius-size;
 
 }
 
-.rectangle-button.is-small {
+.rectangle-button.is-small, .geo-button.is-small {
 
     width: @standard-button-width;
 
@@ -78,7 +78,7 @@
 
 }
 
-.large-button.is-grey, .large-button.single.is-grey, .rectangle-button.is-grey, .rectangle-button-adaptative.is-grey {
+.large-button.is-grey, .large-button.single.is-grey, .rectangle-button.is-grey, .rectangle-button-adaptative.is-grey, .geo-button.is-grey {
 
   .rectangle-button-style (@grey09);
 
@@ -99,6 +99,14 @@
 .large-button.is-red:active, .large-button.single.is-red:active, .rectangle-button.is-red:active, .rectangle-button-adaptative.is-red:active {
 
   .rectangle-button-active-style (@red00);
+
+}
+
+
+.geo-button.is-grey:active {
+
+	.rectangle-button-active-style (@blue00);
+
 
 }
 
@@ -139,7 +147,7 @@
 
 
 
-.large-button.icon:before, .rectangle-button.icon:before {
+.large-button.icon:before, .rectangle-button.icon:before, .geo-button.icon:before {
   
   position: absolute;
   top: 50%;
@@ -152,9 +160,15 @@
 
 }
 
+.geo-button.icon:active:before {
+
+	 color:@white00;
+	 text-shadow: 0px 0px 1px rgba(0,0,0,0.9);
+}
 
 
-.large-button.icon.is-font-black:before, .rectangle-button.icon.is-font-black:before {
+
+.large-button.icon.is-font-black:before, .rectangle-button.icon.is-font-black:before, .geo-button.icon.is-font-black:before {
   
   //font icon style
   color:@black00;
@@ -162,13 +176,17 @@
 
 }
 
+.geo-button.icon.is-font-black:active:before {
 
+	 color:@white00;
+	 text-shadow: 0px 0px 1px rgba(0,0,0,0.9);
+}
 
 
 
 @small-icon:21.875px;
 @height-margin:-0.65;
-.large-button.icon.is-icon-small:before, .rectangle-button.icon.is-icon-small:before {
+.large-button.icon.is-icon-small:before, .rectangle-button.icon.is-icon-small:before, .geo-button.icon.is-icon-small:before {
   
 	/*Override is-icon-small font-size*/
 	font-size: @small-icon;
@@ -178,9 +196,17 @@
   
 }
 
+
+.geo-button.icon.is-icon-small:active:before {
+
+	 color:@white00;
+	 text-shadow: 0px 0px 1px rgba(0,0,0,0.9);
+}
+
+
 @normal-icon:24px;
 @height-margin-normal: @height-margin + 0.06; 
-.large-button.icon:before,.rectangle-button.icon:before {
+.large-button.icon:before,.rectangle-button.icon:before, .geo-button.icon:before {
   
 	/*Override is-icon-normal font-size*/
 	font-size: @normal-icon;
@@ -190,8 +216,17 @@
   
 }
 
+.geo-button.icon:active:before {
+
+	 color:@white00;
+	 text-shadow: 0px 0px 1px rgba(0,0,0,0.9);
+}
+
+
+
+
 @big-icon:39.375px;
-.large-button.icon.is-icon-big:before,.rectangle-button.icon.is-icon-big:before {
+.large-button.icon.is-icon-big:before,.rectangle-button.icon.is-icon-big:before, .geo-button.is-icon-big:before {
 
 	/*Override is-icon-big font-size*/
 	font-size: @big-icon;
