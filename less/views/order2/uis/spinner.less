@@ -1,5 +1,6 @@
 @import 'sizes';
 @import 'colors';
+@import 'aligns';
 
 
 @-webkit-keyframes spin {  
@@ -15,11 +16,18 @@ to {
 
 .spinner {
 
-	position: absolute;
-	height: 24%;
-	width: 33.5%;
+	/*
+	position: fixed;
+	height: 110px;
+	width: 108px;
+
 	left: 33.25%;
 	top:38%;
+
+	*/
+	
+	.center_align (110px, 108px,fixed);
+
 	background-color: rgba(0,0,0,0.6);
 	border-radius: @border-box-radius-size;
 
