@@ -19,6 +19,24 @@
 
 .square-image {
 
+  background-image: url(assets/images/user_default.png);
+
+  > .square-image-bg {
+
+    > .square-image-effect {
+
+      width: 100%;
+      height: 100%;
+
+      background-image: -webkit-gradient(linear, left top, right bottom, 
+        color-stop(0%, rgba(255, 255, 255, 0.3)), 
+        color-stop(49%, rgba(255, 255, 255, 0.15)), 
+        color-stop(51%, rgba(255, 255, 255, 0)));
+
+    }
+
+  }
+
 }
 
 
@@ -28,11 +46,14 @@
 
   > .square-image-bg {
 
-    background-image: -webkit-gradient(linear, left top, right bottom, 
-      color-stop(0%, rgba(255, 255, 255, 0.3)), 
-      color-stop(49%, rgba(255, 255, 255, 0.15)), 
-      color-stop(51%, rgba(255, 255, 255, 0)));
+    > .square-image-effect {
 
+      background-image: -webkit-gradient(linear, left top, right bottom, 
+        color-stop(0%, rgba(255, 255, 255, 0.3)), 
+        color-stop(49%, rgba(255, 255, 255, 0.15)), 
+        color-stop(51%, rgba(255, 255, 255, 0)));
+
+    }
   }
 
 
@@ -45,10 +66,14 @@
 
    > .square-image-bg {
 
-    background-image: -webkit-gradient(linear, right bottom, left top,
-      color-stop(0%, rgba(255, 255, 255, 0.3)), 
-      color-stop(49%, rgba(255, 255, 255, 0.15)), 
-      color-stop(51%, rgba(255, 255, 255, 0)));
+    > .square-image-effect {
+
+      background-image: -webkit-gradient(linear, right bottom, left top,
+        color-stop(0%, rgba(255, 255, 255, 0.3)), 
+        color-stop(49%, rgba(255, 255, 255, 0.15)), 
+        color-stop(51%, rgba(255, 255, 255, 0)));
+
+    }
 
   }
 }
@@ -123,16 +148,4 @@
   }
 
 }
-
-
-// resource is loading
-
-.square-image.is-loading {
-  
-  > .square-image-bg {
-    background-image: url(assets/images/user_default.png);
-  }
-
-}
-
 
