@@ -3,16 +3,14 @@
 @import 'colors';
 
 // functions 
-.square-skin-radius (@size) {
-
-  border-radius: (0.07*@size); 
-}
 
 .square-skin (@size) {
 
   height: @size;
   width: @size;
   background-size: @size;
+
+  border-radius: (0.07*@size); 
 
 }
 
@@ -107,7 +105,6 @@
 .square-image.is-big {
 
 	.square-skin (@size-square-image-is-big);
-	.square-skin-radius (@size-square-image-is-big);
 
   > .square-image-bg {
     .square-skin (@size-square-image-is-big);
@@ -118,7 +115,6 @@
 .square-image.is-normal {
 
 	.square-skin (@size-square-image-is-normal);
-	.square-skin-radius (@size-square-image-is-normal);
 
   > .square-image-bg {
     .square-skin (@size-square-image-is-normal);
@@ -129,7 +125,6 @@
 .square-image.is-small {
 
 	.square-skin (@size-square-image-is-small);
-	.square-skin-radius (@size-square-image-is-small);
 
   > .square-image-bg {
     .square-skin (@size-square-image-is-small);
@@ -141,7 +136,6 @@
 .square-image.is-x-small {
 
 	.square-skin (@size-square-image-is-x-small);
-	.square-skin-radius (@size-square-image-is-x-small);
 
   > .square-image-bg {
     .square-skin (@size-square-image-is-x-small);
