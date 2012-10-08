@@ -13,19 +13,19 @@
 
 	overflow: hidden;
 
-	.app-background;
 
 	//This line allows to show black app background in corners
 	border-radius: @border-box-radius-size;
 
 	> .screen-container {
 		position: relative;
-		//position: absolute; before
 		width: 100%;
-
-		/*min-height: dinamically*/
-    //min-height: 460px - @header-height - @footer-height;
-
+    
+    // background-image does not apply to the rootView
+    // because the transition flicks/lag if the
+    // transitioned element has background-image
+    // http://stackoverflow.com/questions/3461441/prevent-flicker-on-webkit-transition-of-webkit-transform
+    .app-background;
 		
 	}
 
