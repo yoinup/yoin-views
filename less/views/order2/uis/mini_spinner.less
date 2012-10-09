@@ -1,4 +1,6 @@
 @import 'colors';
+@import 'textstyles';
+
 
 @translations: -10px;
 @mini-spinner-size: 30px;
@@ -9,6 +11,11 @@
 	height: @mini-spinner-size;
 	text-align: center;
 	margin: 0px auto;
+
+	background: rgba(0, 0, 0, 0.05);
+	-webkit-box-shadow: inset 0 1px 1px 0 rgba(0, 0, 0, 0.2),inset 0 -1px 1px 0 rgba(255, 255, 255, 0.6);
+
+	.text-is-font-grey-style ();
 
 
 	#mini-spinner-canvas {
@@ -25,7 +32,7 @@
 		> .bar {
 			width: 3px;
 			height: 8px;
-			background-color: @pure-black;
+			background-color: @grey12;
 			position: absolute;
 			top: 10px;
 			left: 13px;
