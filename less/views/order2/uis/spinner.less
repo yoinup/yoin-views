@@ -16,17 +16,9 @@ to {
 
 .spinner {
 
-	/*
-	position: fixed;
-	height: 110px;
-	width: 108px;
-
-	left: 33.25%;
-	top:38%;
-
-	*/
-	
-	.center_align (110px, 108px,fixed);
+  //http://stackoverflow.com/questions/743123/fixed-positioning-in-mobile-safari
+        //http://developer.apple.com/library/ios/#technotes/tn2010/tn2262/_index.html
+        .center_align (110px, 108px, absolute);
 
 	background-color: rgba(0,0,0,0.6);
 	border-radius: @border-box-radius-size;
