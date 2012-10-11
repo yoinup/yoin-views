@@ -105,7 +105,7 @@
 
 
 
-.back-button:active {
+.back-button:active, .back-button.is-pending {
     
     background-color: @background-color;
     background-image: url(assets/images/BG2.png), -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(255,255,255,0)), color-stop(50%,rgba(255,255,255,0.2)), color-stop(100%,rgba(255,255,255,0.45))); /* Chrome,Safari4+ */
@@ -116,7 +116,7 @@
 }
 
 
-.back-button:active:before {
+.back-button:active:before , .back-button.is-pending:before {
     
     
     background-color: @background-color;
@@ -125,22 +125,3 @@
     box-shadow: 0px 1px 3px 0px rgba(0,0,0,0.3) inset;
 
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
