@@ -109,20 +109,20 @@
 
 
 
-.activity-button:active, .activity-button.is-pending {
+.activity-button:active, .activity-button.is-pending, .activity-button.touch {
   
     background-color: darken(@base-color, 9%); 
 
 }
 
 
-.activity-button:active:after, .activity-button.is-pending:after {
+.activity-button:active:after, .activity-button.is-pending:after, .activity-button.touch:after {
 
       background-color: darken(@base-color, 9%);
       
 }
 
-.activity-button:active:before, .activity-button.is-pending:before {
+.activity-button:active:before, .activity-button.is-pending:before, .activity-button.touch:before {
       
       height: 95%;
 
@@ -147,14 +147,12 @@
 }
 
 .activity-button.has-one:before {
-    
-    color:@white00;
+  color:@white00;
 }
 
 
-.activity-button.has-one:active:before, .activity-button.has-one.is-pending:before {
-    
-    color: lighten(@base-color, 25%)
+.activity-button.has-one:active:before, .activity-button.has-one.is-pending:before, .activity-button.has-one.touch:before {
+
+  color: lighten(@base-color, 25%)
 
 }
-
