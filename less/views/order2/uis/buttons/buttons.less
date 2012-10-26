@@ -53,15 +53,16 @@
 }
 
 
-.large-button.single.webappb {
+.large-button.square.webappb {
 
-  .rectangle-button-style-webapp (@black00);
+  .rectangle-button-style-webapp (rgba(0,0,0,0.7));
 
 }
 
-.large-button.single.webappb:active, .large-button.single.webappb.touch, .large-button.single.webappb.is-pending {
+.large-button.square.webappb:active, .large-button.square.webappb.touch, .large-button.square.webappb.is-pending {
 
-  .rectangle-button-active-style-webapp (@orange01);
+  .rectangle-button-active-style-webapp (rgba(0,0,0,0.8));
+  color: lighten(@orange01, 15%);
 
 }
 
