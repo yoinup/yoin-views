@@ -38,6 +38,14 @@
 }
 
 
+
+.large-button.square {
+
+	border-radius: @border-box-radius-size - 8;
+
+}
+
+
 .large-button.is-black, .large-button.single.is-black, .rectangle-button.is-black, .rectangle-button-adaptative.is-black {
 
   .rectangle-button-style (@black00);
@@ -45,21 +53,39 @@
 }
 
 
-.large-button.is-black:active, .large-button.single.is-black:active, .rectangle-button.is-black:active, .rectangle-button-adaptative.is-black:active {
+.large-button.square.webappb {
+
+  .rectangle-button-style-webapp (rgba(0,0,0,0.7));
+
+}
+
+.large-button.square.webappb:active, .large-button.square.webappb.touch, .large-button.square.webappb.is-pending {
+
+  .rectangle-button-active-style-webapp (rgba(0,0,0,0.8));
+  color: lighten(@orange01, 15%);
+
+}
+
+
+.large-button.is-black:active, .large-button.single.is-black:active, .rectangle-button.is-black:active, .rectangle-button-adaptative.is-black:active,
+.large-button.is-black.touch, .large-button.single.is-black.touch, .rectangle-button.is-black.touch, .rectangle-button-adaptative.is-black.touch,
+.large-button.is-black.is-pending, .large-button.single.is-black.is-pending, .rectangle-button.is-black.is-pending, .rectangle-button-adaptative.is-black.is-pending {
 
   .rectangle-button-active-style (@black00);
 
 }
 
 
-.large-button.is-orange, .large-button.single.is-orange, .rectangle-button.is-orange, .rectangle-button-adaptative.is-orange {
+.large-button.is-orange, .large-button.single.is-orange, .rectangle-button.is-orange, .rectangle-button-adaptative.is-orange, .large-button.square.is-orange {
 
   .rectangle-button-style (@orange01);
 
 }
 
 
-.large-button.is-orange:active, .large-button.single.is-orange:active, .rectangle-button.is-orange:active, .rectangle-button-adaptative.is-orange:active {
+.large-button.is-orange:active, .large-button.single.is-orange:active, .rectangle-button.is-orange:active, .rectangle-button-adaptative.is-orange:active,
+.large-button.is-orange.touch, .large-button.single.is-orange.touch, .rectangle-button.is-orange.touch, .rectangle-button-adaptative.is-orange.touch,
+.large-button.is-orange.is-pending, .large-button.single.is-orange.is-pending, .rectangle-button.is-orange.is-pending, .rectangle-button-adaptative.is-orange.is-pending {
 
   .rectangle-button-active-style (@orange01);
 
@@ -72,7 +98,9 @@
 
 }
 
-.large-button.is-blue:active, .large-button.single.is-blue:active, .rectangle-button.is-blue:active, .rectangle-button-adaptative.is-blue:active, .geo-button.is-on:active {
+.large-button.is-blue:active, .large-button.single.is-blue:active, .rectangle-button.is-blue:active, .rectangle-button-adaptative.is-blue:active, .geo-button.is-on:active,
+.large-button.is-blue.touch, .large-button.single.is-blue.touch, .rectangle-button.is-blue.touch, .rectangle-button-adaptative.is-blue.touch, .geo-button.is-on.touch,
+.large-button.is-blue.is-pending, .large-button.single.is-blue.is-pending, .rectangle-button.is-blue.is-pending, .rectangle-button-adaptative.is-blue.is-pending, .geo-button.is-on.is-pending {
 
   .rectangle-button-active-style (@blue00);
 
@@ -84,7 +112,9 @@
 
 }
 
-.large-button.is-grey:active, .large-button.single.is-grey:active, .rectangle-button.is-grey:active, .rectangle-button-adaptative.is-grey:active, .geo-button.is-grey:active {
+.large-button.is-grey:active, .large-button.single.is-grey:active, .rectangle-button.is-grey:active, .rectangle-button-adaptative.is-grey:active, .geo-button.is-grey:active,
+.large-button.is-grey.touch, .large-button.single.is-grey.touch, .rectangle-button.is-grey.touch, .rectangle-button-adaptative.is-grey.touch, .geo-button.is-grey.touch,
+.large-button.is-grey.is-pending, .large-button.single.is-grey.is-pending, .rectangle-button.is-grey.is-pending, .rectangle-button-adaptative.is-grey.is-pending, .geo-button.is-grey.is-pending {
 
   .rectangle-button-active-style (@grey06);
 
@@ -96,7 +126,9 @@
 
 }
 
-.large-button.is-red:active, .large-button.single.is-red:active, .rectangle-button.is-red:active, .rectangle-button-adaptative.is-red:active {
+.large-button.is-red:active, .large-button.single.is-red:active, .rectangle-button.is-red:active, .rectangle-button-adaptative.is-red:active,
+.large-button.is-red.touch, .large-button.single.is-red.touch, .rectangle-button.is-red.touch, .rectangle-button-adaptative.is-red.touch,
+.large-button.is-red.is-pending, .large-button.single.is-red.is-pending, .rectangle-button.is-red.is-pending, .rectangle-button-adaptative.is-red.is-pending {
 
   .rectangle-button-active-style (@red00);
 
@@ -182,7 +214,7 @@
 
 @normal-icon:24px;
 @height-margin-normal: @height-margin + 0.06; 
-.large-button.icon:before,.rectangle-button.icon:before, .geo-button.icon:before {
+.large-button.icon:before, .rectangle-button.icon:before, .geo-button.icon:before {
   
 	/*Override is-icon-normal font-size*/
 	font-size: @normal-icon;
@@ -195,7 +227,7 @@
 
 
 @big-icon:39.375px;
-.large-button.icon.is-icon-big:before,.rectangle-button.icon.is-icon-big:before, .geo-button.is-icon-big:before {
+.large-button.icon.is-icon-big:before, .rectangle-button.icon.is-icon-big:before, .geo-button.is-icon-big:before {
 
 	/*Override is-icon-big font-size*/
 	font-size: @big-icon;

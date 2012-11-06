@@ -3,7 +3,6 @@
 @import 'colors';
 
 // functions 
-
 .square-skin (@size) {
 
   height: @size;
@@ -37,7 +36,6 @@
 
 }
 
-
 .square-image.with-icon {
 
 	.border-square-style;
@@ -54,9 +52,7 @@
     }
   }
 
-
 }
-
 
 .square-image.with-icon.is-selected {
 
@@ -70,9 +66,43 @@
         color-stop(0%, rgba(255, 255, 255, 0.3)), 
         color-stop(49%, rgba(255, 255, 255, 0.15)), 
         color-stop(51%, rgba(255, 255, 255, 0)));
-
     }
 
+  }
+}
+
+// effect does not works
+.square-image.with-webfont {
+
+	.border-square-style;
+	position: relative;
+
+   > .square-image-bg {
+   
+    position: absolute;
+    top: 3px;
+    left: 3px;
+
+    > .square-image-effect {
+      background: transparent;
+    }
+
+   }
+
+   > .square-image-bg.icon:before {
+
+    content: attr(icon2);
+    color: white;
+
+   }
+
+}
+
+.square-image.with-webfont.is-selected {
+   > .square-image-bg {
+    > .square-image-effect {
+      background: transparent;
+    }
   }
 }
 
