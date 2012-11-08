@@ -39,6 +39,7 @@
 
 	}
 
+	
 	> .big-input.down {
 
 		border-bottom-left-radius: @border-box-radius-size;
@@ -47,11 +48,46 @@
 
 	}
 
+
+	
+
+
+
 	> .big-input::-webkit-input-placeholder {
 
 		text-indent: @text-indent;
 		color: @grey05;
 		font-size: @font-normal;
+
+	}
+
+}
+
+
+
+.big-input-content.webapp {
+
+	
+	-webkit-box-shadow: 0 0 0 1px (@grey05), 0 2px 5px 0 (rgba(0,0,0,0.9));
+	border-radius: 1px;
+
+	> .big-input {
+
+	}
+
+	> .big-input.up.webapp {
+
+		
+		border-top-left-radius: 1px;
+		border-top-right-radius: 1px;
+
+
+	}
+
+	> .big-input.down.webapp {
+
+		border-bottom-left-radius: 1px;
+		border-bottom-right-radius: 1px;
 
 	}
 
