@@ -112,6 +112,8 @@
 
 }
 
+
+
 .large-button.is-grey:active, .large-button.single.is-grey:active, .rectangle-button.is-grey:active, .rectangle-button-adaptative.is-grey:active, .geo-button.is-grey:active,
 .large-button.is-grey.touch, .large-button.single.is-grey.touch, .rectangle-button.is-grey.touch, .rectangle-button-adaptative.is-grey.touch, .geo-button.is-grey.touch,
 .large-button.is-grey.is-pending, .large-button.single.is-grey.is-pending, .rectangle-button.is-grey.is-pending, .rectangle-button-adaptative.is-grey.is-pending, .geo-button.is-grey.is-pending {
@@ -119,6 +121,22 @@
   .rectangle-button-active-style (@grey06);
 
 }
+
+
+.rectangle-button.is-high-grey {
+
+	 .rectangle-button-style (@grey04);
+
+}
+
+.rectangle-button.is-high-grey:active, .rectangle-button.is-high-grey.touch, .rectangle-button.is-high-grey.is-pending  {
+
+	 .rectangle-button-active-style (@grey03);
+
+}
+
+
+
 
 .large-button.is-red, .large-button.single.is-red, .rectangle-button.is-red, .rectangle-button-adaptative.is-red {
 
@@ -195,6 +213,13 @@
 
 }
 
+.rectangle-button.icon.is-font-grey:before {
+
+	 //font icon style
+	 color:@grey11;
+	 text-shadow: 0px 0px 1px @white00;
+
+}
 
 
 
