@@ -1,0 +1,88 @@
+@import 'animations';
+@import 'textstyles';
+@import 'notifications';
+
+
+.rotate-notification {
+
+	width: 100%;
+	overflow: hidden;
+
+	border-bottom-left-radius: @border-subbox-radius-size;
+	border-bottom-right-radius: @border-subbox-radius-size;
+    
+    
+	.notification-text {
+
+		text-align: center;
+		overflow:hidden;
+		.user-message-text-style;
+
+	}
+
+}
+
+.rotate-notification {
+
+	position: fixed;
+  -webkit-perspective: 1000px;
+
+	.notification-text {
+
+    padding: 10px;
+
+	}
+
+}
+
+@duration: 2000ms;
+.rotate-notification {
+
+  -webkit-animation: slideDown @duration;
+}
+
+.rotate-notification.is-hidden {
+  //-webkit-transform: rotateX(0deg);
+  -webkit-animation: slideUp @duration;
+}
+
+@-webkit-keyframes slideDown {
+  0%   {
+    opacity: 0; 
+    -webkit-transform: rotateX(-90deg);
+  }
+  100%   {
+    opacity: 1; 
+    -webkit-transform: rotateX(0deg);
+  }
+}
+@-webkit-keyframes slideUp {
+  0%   {
+    opacity: 1; 
+    -webkit-transform: rotateX(0deg);
+  }
+  100%   {
+    opacity: 0; 
+    -webkit-transform: rotateX(-90deg);
+  }
+}
+
+
+
+.rotate-notification.is-info {
+
+	.notification-info-style;
+   
+}
+
+.rotate-notification.is-error {
+
+	.notification-error-style;
+   
+}
+
+.rotate-notification.is-succeed {
+
+	.notification-succeed-style;
+   
+}
