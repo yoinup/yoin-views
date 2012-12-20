@@ -1,0 +1,7 @@
+{{#with view}}
+  {{#if product.isFree}}
+    {{I18n free}}
+  {{else}}
+    {{product.price}} {{I18n currency_symbol}}
+  {{/if}}
+{{/with}}
