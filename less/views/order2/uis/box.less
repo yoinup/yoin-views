@@ -3,6 +3,7 @@
 @import 'textstyles';
 @import 'borders';
 @import 'paddings';
+@import 'gradients';
 
 @box-shadow: @border-line-size*4;
 
@@ -63,7 +64,31 @@
 	> .box-content {
 
       .box-padding-with-normal-image;
+
       > .box-content-element {
+
+					> .picture {
+						width: 20%;
+					}
+
+          > .name { 
+
+						width: 65%;
+
+						> .high {
+							.text-is-big-style;
+							.text-is-font-black-style;
+						}
+
+						> .low {
+							.text-is-small-style;
+							.text-is-font-grey-style;
+						}
+          }
+
+					> .action-button {
+						width: 15%;
+					}
 
   				> .text {
   					.text-is-big-style;
@@ -71,11 +96,19 @@
   				}
 
 					> .control {
+  					float: right;
 						.text-is-font-low-grey-style;
 					}
 
       }
 	}
+
+  > .box-content.hasnot-item:active, > .box-content.hasnot-item.is-pending, > .box-content.hasnot-item.touch {
+
+      .box-press;
+      .border-bottom-box-radius-style;
+
+  }
 
   > .box-content.without-padding {
     padding: 0px;
@@ -109,16 +142,37 @@
 
   }
 
-  > .control {
-
-    float: right;
-
-  }
-
 }
 
 .block-cities-element:nth-last-child(3) {
 
   .list-element-clear-border;
+
+}
+
+
+.block-invite-product.box {
+
+  > .box-content {
+
+    > .box-content-element {
+
+      > .name {
+
+        width: 60%;
+
+        > .price-label {
+
+          float: left;
+          margin-top: 4px;
+          margin-left: 10px;
+
+        }
+
+      }
+
+    }
+
+  }
 
 }
