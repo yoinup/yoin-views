@@ -40,11 +40,16 @@
 
 	}
 
-	> .box-title.box-title-top.box-text-title {
+
+	> .box-title.box-title-top {
 
     .text-is-font-bold-style;
     .box-padding-style;
 
+  }
+
+  > .box-title.box-title-top.with-image {
+    .box-padding-with-normal-image;
   }
 
 	> .box-title-bottom {
@@ -56,10 +61,25 @@
 	}
 
 	> .box-content {
-		
 
+      .box-padding-with-normal-image;
+      > .box-content-element {
 
+  				> .text {
+  					.text-is-big-style;
+						.text-is-font-black-style;
+  				}
+
+					> .control {
+						.text-is-font-low-grey-style;
+					}
+
+      }
 	}
+
+  > .box-content.without-padding {
+    padding: 0px;
+  }
 
   > .box-content.has-fill-border {
     .list-element-fill-border;
