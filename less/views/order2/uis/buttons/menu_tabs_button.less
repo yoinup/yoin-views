@@ -8,13 +8,13 @@
 @horizontal-margin: 1.5%;
 @height-tabs: (@height-tab)+(2*@vertical-margin) + 1px;
 
-.tabs {
+.menu-tabs {
 
 	width: 100%;
 	height: @height-tabs;
 	background-color: @grey04;
 	
-	> .tab {
+	> .menu-tab {
 
 		height: @height-tab;
 		float: left;
@@ -28,7 +28,7 @@
 
 	}
 	
-	> .tab:active {
+	> .menu-tab:active {
 
 		.rectangle-button-menu-active-style (@blue00);
 		.button-text-style;
@@ -36,7 +36,7 @@
 
 	}
 
-	> .tab.is-selected {
+	> .menu-tab.is-selected {
 
 		.rectangle-button-menu-active-style (@blue00);
 		.button-text-style;
@@ -44,7 +44,7 @@
 
 	}
 
-	> .tab.left {
+	> .menu-tab.left {
 
 		border-top-left-radius: @border-button-radius-size;
 		border-bottom-left-radius: @border-button-radius-size;
@@ -53,7 +53,7 @@
 	}
 
 
-	> .tab.right {
+	> .menu-tab.right {
 
 		border-top-right-radius: @border-button-radius-size;
 		border-bottom-right-radius: @border-button-radius-size;
@@ -62,7 +62,7 @@
 
 	}
 	
-	> .tab.single {
+	> .menu-tab.single {
 	
 		//Left side
 		border-top-left-radius: @border-button-radius-size;
@@ -78,9 +78,9 @@
 }
 
 
-.tabs.is-one-item {
+.menu-tabs.is-one-item {
 
-	> .tab {
+	> .menu-tab {
 	
 		width: (100% - (@horizontal-margin * 2));
 	
@@ -89,9 +89,9 @@
 }
 
 
-.tabs.is-two-items {
+.menu-tabs.is-two-items {
 
-	> .tab {
+	> .menu-tab {
 	
 		width: ((100% - (@horizontal-margin * 2)) / 2);
 	
@@ -100,9 +100,9 @@
 }
 
 
-.tabs.is-three-items {
+.menu-tabs.is-three-items {
 
-	> .tab {
+	> .menu-tab {
 	
 		width: (100% - (@horizontal-margin * 2)) / 3;
 	
@@ -110,9 +110,9 @@
 
 }
 
-.tabs.is-four-items {
+.menu-tabs.is-four-items {
 
-	> .tab {
+	> .menu-tab {
 	
 		width: (100% - (@horizontal-margin * 2)) / 4;
 	
@@ -120,9 +120,9 @@
 
 }
 
-.tabs.is-five-items {
+.menu-tabs.is-five-items {
 
-	> .tab {
+	> .menu-tab {
 	
 		width: (100% - (@horizontal-margin * 2)) / 5;
 	

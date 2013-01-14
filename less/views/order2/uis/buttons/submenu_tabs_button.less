@@ -1,0 +1,59 @@
+
+@import 'colors';
+@import 'aligns';
+@import 'action_bar';
+@import 'textstyles';
+@import 'paddings';
+@import 'borders';
+
+
+
+@submenu-color:@grey05;
+
+
+
+.submenu-tabs {
+
+  position: relative; 
+  height: 50px;
+  width: 100%;
+  .action-bar-with-shadow-style (@submenu-color);
+
+  > .submenu-tab {
+
+    float: left;
+    height: 100%;
+    width: 20%;
+    .action-bar-border-tab-style (@submenu-color);
+
+    > .square-image {
+
+      margin-left: 25%;
+      margin-top: 10px;
+
+    }
+
+  }
+
+  > .submenu-tab:before {
+
+    margin-left: 30%;
+    line-height: 54px;
+    color: @grey10;
+    text-shadow: 0px 1px 0px rgba(255, 255, 255, 0.5);
+
+  }
+
+  > .submenu-tab:active, > .submenu-tab.is-selected {
+      
+    .action-bar-border-tab-selected-style (@submenu-color);
+
+  }
+
+  > .submenu-tab.last {
+
+    -webkit-box-shadow: none; 
+
+  }
+
+}
