@@ -44,6 +44,22 @@
 
   > .box-title.box-title-top.with-image {
     .box-padding-with-normal-image;
+
+    display: table;
+    position: relative;
+    width: 100%;
+
+    > .picture {
+      display: table-cell;
+      vertical-align: middle;
+      width: 12%;
+    }
+
+    > .name { 
+      display: table-cell;
+      vertical-align: middle;
+      width: 78%;
+    }
   }
 
 	> .box-title-bottom {
@@ -66,6 +82,14 @@
 
           > .name { 
 						width: 65%;
+
+            > .price-label {
+
+              float: left;
+              margin-top: 4px;
+              margin-left: 10px;
+
+            }
           }
 
 					> .action-button {
@@ -84,12 +108,12 @@
 
 	}
 
-	> .box-content.has-message , > .box-content.hasnot-item { 
+	> .box-content.has-message { 
     padding-bottom: 8px;
     padding-top: 8px;
   }
 
-  > .box-content.hasnot-item:active, > .box-content.hasnot-item.is-pending, > .box-content.hasnot-item.touch {
+  > .box-content.has-tap:active, > .box-content.has-tap.is-pending, > .box-content.has-tap.touch {
 
     .box-press;
     .border-bottom-box-radius-style;
@@ -149,35 +173,8 @@
 
 }
 
-.box-content-li:last-child, .box-content-li:nth-last-child(3) {
+.box-content-li:last-of-type {
 
   .list-element-clear-border;
 
 }							
-
-
-.block-invite-product.box {
-
-  > .box-content {
-
-    > .box-content-element {
-
-      > .name {
-
-        width: 60%;
-
-        > .price-label {
-
-          float: left;
-          margin-top: 4px;
-          margin-left: 10px;
-
-        }
-
-      }
-
-    }
-
-  }
-
-}
