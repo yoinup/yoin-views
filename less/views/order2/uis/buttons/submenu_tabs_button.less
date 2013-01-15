@@ -1,4 +1,3 @@
-
 @import 'colors';
 @import 'aligns';
 @import 'action_bar';
@@ -7,24 +6,21 @@
 @import 'borders';
 
 
-
-@submenu-color:@grey05;
-
-
+@height: 50px;
 
 .submenu-tabs {
 
   position: relative; 
-  height: 50px;
+  height: @height;
   width: 100%;
-  .action-bar-with-shadow-style (@submenu-color);
+  .action-bar-style;
+  .action-bar-with-shadow-style;
 
   > .submenu-tab {
 
     float: left;
     height: 100%;
-    width: 20%;
-    .action-bar-border-tab-style (@submenu-color);
+    .action-bar-border-tab-style;
 
     > .square-image {
 
@@ -33,27 +29,52 @@
 
     }
 
+    > .submenu-tab-title {
+
+      text-align: center;
+      line-height: @height;
+      .text-style;
+      .button-text-style;
+      .button-text-is-font-grey-style;
+
+    }
+
   }
 
   > .submenu-tab:before {
-
     margin-left: 30%;
     line-height: 54px;
     color: @grey10;
     text-shadow: 0px 1px 0px rgba(255, 255, 255, 0.5);
-
   }
 
   > .submenu-tab:active, > .submenu-tab.is-selected {
-      
-    .action-bar-border-tab-selected-style (@submenu-color);
-
+    .action-bar-border-tab-selected-style;
   }
 
-  > .submenu-tab.last {
-
+  > .submenu-tab:last-child {
     -webkit-box-shadow: none; 
+  }
 
+  > .submenu-tab:last-child:active, > .submenu-tab.is-selected:last-child {
+    .action-bar-border-last-tab-selected-style; 
+  }
+
+}
+
+
+.submenu-tabs.is-five-items {
+
+  > .submenu-tab {
+    width: 20%;
+  }
+
+}
+
+.submenu-tabs.is-two-items {
+
+  > .submenu-tab {
+    width: 50%;
   }
 
 }

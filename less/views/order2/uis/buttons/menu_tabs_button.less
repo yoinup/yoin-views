@@ -2,6 +2,7 @@
 @import 'sizes';
 @import 'buttons';
 @import 'textstyles';
+@import 'action_bar';
 
 @height-tab: @standard-button-height - 1;
 @vertical-margin: 7px;
@@ -15,6 +16,8 @@
 	background-color: @grey04;
 	
 	> .menu-tab {
+    // this can be removed, has not semantic
+    .action-bar-style;	
 
 		height: @height-tab;
 		float: left;
