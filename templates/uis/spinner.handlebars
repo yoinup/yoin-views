@@ -1,3 +1,13 @@
-<div class="spinner_circle_out">
-</div>
+{{#with view}}
 
+<div class="spinner-square">
+  <div class="spinner_circle_out">
+  </div>
+</div>
+{{#if content}}
+<div class="spinner-text text is-font-black is-small center">
+  {{content}}
+</div>
+{{/if}}
+
+{{/with}}

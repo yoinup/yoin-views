@@ -13,57 +13,66 @@ to {
 }  
 
 
-
 .spinner {
 
-  //http://stackoverflow.com/questions/743123/fixed-positioning-in-mobile-safari
-        //http://developer.apple.com/library/ios/#technotes/tn2010/tn2262/_index.html
-        .center_align (110px, 108px, absolute);
+  > .spinner-square {
 
-	background-color: rgba(0,0,0,0.6);
-	border-radius: @border-box-radius-size;
+    //http://stackoverflow.com/questions/743123/fixed-positioning-in-mobile-safari
+    //http://developer.apple.com/library/ios/#technotes/tn2010/tn2262/_index.html
+    .center_align (110px, 108px, absolute);
 
-	background-image: url('./assets/images/yoin-spinner.png'); 
-	background-repeat: no-repeat;
-	background-size: 100%;
+    background-color: rgba(0,0,0,0.6);
+    border-radius: @border-box-radius-size;
 
-
-	> .spinner_circle_out {
-
-			position: relative;
-			height: 59%;
-			width: 61%;
-			left: 19.5%;
-			top: 20.5%;
-			border-radius: @border-subbox-radius-size * 100;
-			
-			//background:  -webkit-linear-gradient(-45deg, #ffffff 0%,#ffffff 14%,#d3d3d3 36%,#c4c4c4 50%,#a0a0a0 75%,#8e8e8e 100%); 
-			background:  -webkit-linear-gradient(-45deg, #ffffff 0%,#d3d3d3 24%,#c4c4c4 50%,#a0a0a0 75%,#8e8e8e 100%); 
-
-		
-			//-----Mask for the border
-			-webkit-mask-image: url(assets/images/spinner_mask.png);
-  			-webkit-mask-position: left top;
-  			-webkit-mask-repeat: no-repeat;
-  			-webkit-mask-size: 100% 100%;
+    background-image: url('./assets/images/yoin-spinner.png'); 
+    background-repeat: no-repeat;
+    background-size: 100%;
 
 
-			//----Animation
-			-webkit-animation-name: spin;  
-    		-webkit-animation-iteration-count: infinite;  
-    		-webkit-animation-timing-function: linear;  
-    		-webkit-animation-duration: 0.8s;  	
+    > .spinner_circle_out {
 
-		}
+        position: relative;
+        height: 59%;
+        width: 61%;
+        left: 19.5%;
+        top: 20.5%;
+        border-radius: @border-subbox-radius-size * 100;
+        
+        //background:  -webkit-linear-gradient(-45deg, #ffffff 0%,#ffffff 14%,#d3d3d3 36%,#c4c4c4 50%,#a0a0a0 75%,#8e8e8e 100%); 
+        background:  -webkit-linear-gradient(-45deg, #ffffff 0%,#d3d3d3 24%,#c4c4c4 50%,#a0a0a0 75%,#8e8e8e 100%); 
+
+      
+        //-----Mask for the border
+        -webkit-mask-image: url(assets/images/spinner_mask.png);
+        -webkit-mask-position: left top;
+        -webkit-mask-repeat: no-repeat;
+        -webkit-mask-size: 100% 100%;
+
+
+        //----Animation
+        -webkit-animation-name: spin;  
+        -webkit-animation-iteration-count: infinite;  
+        -webkit-animation-timing-function: linear;  
+        -webkit-animation-duration: 0.8s;  	
+
+      }
+
+  }
+
+  > .spinner-text {
+    
+    .center_width (110px);
+    top: 50%;
+    margin-top: 60px;
+
+  }
 
 }
 
 .spinner.is-vertical-center {
 
-  margin-top: 0px;
+  > .spinner-square {
+    margin-top: 0px;
+  }
 
 }
-
-
-
-
