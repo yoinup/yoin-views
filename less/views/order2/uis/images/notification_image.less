@@ -11,46 +11,7 @@
 
 }
 
-/*
-.notification-icon-style (@button-color:white) {
-
-  background-color: @button-color;
-  background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(255,255,255,0)), color-stop(50%,rgba(255,255,255,0.75)), color-stop(100%,rgba(255,255,255,0.9))); 
-
-}
-
-
-.notification-icon-middle-style (@button-color:white) {
-
-  background-color: darken(@button-color, 2%);  
-  background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0%, lighten(@button-color, 25%)), color-stop(100%,rgba(255,255,255,0))); 
-
-}
-
-.notification-icon-inner-style (@button-color:white) {
-
-  background-color: lighten(@button-color, 5%);
-  background-image:  url(assets/images/BG2.png), -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(255,255,255,0)), color-stop(75%,rgba(255,255,255,0.5)), color-stop(100%,rgba(255,255,255,0.9))); 
-  
-}
-
-*/
-
-
-
 //--------------------------------CLASES-------------------------------------//
-
-.notification-icon-size (@size) {
-
-    height: @size;
-    width: @size;
-    border-radius: @size;
-
-}
-
-
-//--------------------BOTONES--------------//
-
 
 
 @notification-button-size: 32px;
@@ -65,19 +26,16 @@
 
 .notification-icon {
 
-  .notification-icon-size (@notification-button-medium-size);
-
- 
-
+  height: @notification-button-medium-size;
+  width: @notification-button-medium-size;
+  border-radius: @notification-button-medium-size;
 
 }
 
 
-@icon-size: 21.875px;
-
 .notification-icon:before {
           
-    margin-right: 2px;
+    margin-left: 2px;
     line-height: 30px;
    
 
@@ -145,151 +103,3 @@
 }
 
 
-
-
-
-
-//The old design, more complex.
-
-/*
-.notification-icon {
-    
-    .notification-icon-size (@notification-button-size);
-    .notification-icon-style (@grey01);
-    
-
-    > .notification-icon-middle {
-
-        position: relative;
-        top: @notification-margin/2;
-        left: @notification-margin/2;
-         
-        .notification-icon-size (@notification-button-medium-size);
-
-
-        > .notification-icon-inner {
-        
-          position: relative;
-          top: @notification-in-margin/2;
-          left: @notification-in-margin/2;
-         
-          .notification-icon-size (@notification-button-medium-size);
-
-        }
-
-
-        @icon-size: 21.875px;
-
-        
-        .notification-icon-inner.icon:before {
-  
-
-          position: absolute;
-          left: 50%;
-
-          //Override icon size to adjust it to the image
-          font-size:@icon-size;
-          
-          margin-left: -11px ;
-          top: 3px;
-
-          //font icon style
-          color:@white00;
-          text-shadow: 0px 0px 1px rgba(0,0,0,0.3);
-
-        }
-    }
-}
-
-
-
-
-
- //background-color: @pink01;  
-//-webkit-box-shadow: inset 0 0 0 1px darken( @pink01,15%), 0 0 0 1px @grey04;
-
-
-
-.notification-icon.liked {
-        
-    > .notification-icon-middle {
-
-       //.notification-icon-middle-style (@pink01);
-
-
-        > .notification-icon-inner {
-
-          //.notification-icon-inner-style (@pink01);
-
-        }
-        
-        > .notification-icon-inner.icon:before {
-            content: "m";
-
-        }
-    }
-}
-
-
-
-.notification-icon.sent {
-        
-    > .notification-icon-middle {
-
-        .notification-icon-middle-style (@green01);
-
-
-        > .notification-icon-inner {
-
-        .notification-icon-inner-style (@green01);
-
-        }
-
-        > .notification-icon-inner.icon:before {
-            content: "z";
-
-        }
-    }
-}
-
-.notification-icon.received {
-        
-    > .notification-icon-middle {
-
-        .notification-icon-middle-style (@yellow01);
-
-
-        > .notification-icon-inner {
-
-          .notification-icon-inner-style (@yellow01);
-
-        }
-
-        > .notification-icon-inner.icon:before {
-            content: "A";
-
-        }
-    }
-}
-
-
-.notification-icon.commented {
-        
-    > .notification-icon-middle {
-
-        .notification-icon-middle-style (@purple01);
-
-
-        > .notification-icon-inner {
-
-          .notification-icon-inner-style (@purple01);
-
-        }
-
-        > .notification-icon-inner.icon:before {
-            content: "u";
-
-        }
-    }
-}
-*/
