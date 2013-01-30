@@ -1,4 +1,5 @@
 @import 'textstyles';
+@import 'aligns';
 
 @media only screen and (max-device-width: 320px),
 only screen and (-webkit-min-device-pixel-ratio : 1.5), 
@@ -10,13 +11,13 @@ only screen and (min-device-pixel-ratio : 1.5) {
 
 			> .image-empty {
 
-				height: 200px;
-				width: 200px;
+        .center_align (200px, 200px, absolute);
 
 			}
 
 			> .empty-text {
 
+        margin-top: 110px;
 				.alert-text-style;
 
 			}
@@ -24,5 +25,19 @@ only screen and (min-device-pixel-ratio : 1.5) {
 		}
 
 	}
+
+	.empty-view.is-vertical-center {
+
+		> .transparency-empty {
+
+			> .empty-text {
+
+        margin-top: 210px;
+
+			}
+
+		}
+
+  }
 
 }
