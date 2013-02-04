@@ -1,0 +1,46 @@
+
+{{#with view}}
+
+	<div class="short-block-content">
+		
+		<div class="short-block-image">
+
+			{{view Yn.SquareImageView class=imagetype contentBinding="content" withPhoto=true }}
+
+		</div>
+
+		<div class="short-block-name">
+
+			<span class="main-text">{{content.name}}</span>
+
+			{{#if venue}}
+
+				<div class="detail-text">
+
+					<span class="icon with-text is-icon-x-small" icon="i">
+
+					</span>
+
+					{{venue.city.name}}
+
+
+				</div>
+
+			{{/if}}
+
+		</div>
+
+  {{#if hasPrice }}
+
+		<div class="short-block-ext">
+
+      {{view Yn.PriceLabelView
+        productBinding="content"}}   
+
+    </div>
+
+  {{/if}}	
+
+	</div>
+
+{{/with}}

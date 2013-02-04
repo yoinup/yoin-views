@@ -1,0 +1,33 @@
+{{#with view}}
+
+	<div class="short-block-content">
+		
+		<div class="short-block-image">
+
+			{{view Yn.SquareImageView class=imagetype contentBinding="content.brand" withIcon=true }}
+
+		</div>
+
+		<div class="short-block-name">
+
+			<span class="main-text">{{content.name}}</span>
+
+			{{#if content.city}}
+
+				<div class="detail-text">
+
+					<span class="icon with-text is-icon-x-small" icon="i">
+
+					</span>
+
+					{{content.city.name}}
+
+				</div>
+
+			{{/if}}
+
+		</div>
+
+	</div>
+
+{{/with}}

@@ -1,0 +1,97 @@
+{{#with view}}
+
+
+	<div class="short-block-content">
+
+    {{#if hasImage }}
+      <div class="short-block-image">
+        {{#if isYoinUser }}
+
+          {{view Yn.SquareImageView class=imagetype
+            contentBinding="content"
+            withPhoto=true }}
+
+        {{else}}
+
+          {{#if isFbUser }}
+
+            {{view Yn.SquareImageView class=imagetype
+              contentBinding="fbId"
+              isFBUser=true
+              withPhoto=true }}
+
+          {{/if}}
+
+        {{/if}}
+
+      </div>
+    {{/if}}
+
+		<div class="short-block-name">
+
+			{{#if isYoinUser }}
+			
+			  <span class="main-text">
+			  
+			    {{#if content.suspended }}
+		        {{I18n someone}}
+		      {{else}}
+		        {{content.name}}
+		      {{/if}}
+
+				</span>
+
+				{{#if showCity}}
+
+					{{#if content.city}}
+
+						<div class="detail-text">
+
+							<span class="icon with-text is-icon-x-small" icon="i">
+							</span>
+
+							{{content.city.name}}
+
+
+						</div>
+
+					{{/if}}
+
+				{{else}}
+
+						<div class="detail-text without-icon">
+							{{content.status}}
+						</div>
+
+				{{/if}}
+
+			{{else}}
+
+        <span class="main-text">
+          {{#if isFbUser }}
+            {{fbName}}
+          {{else}}
+            {{phoneName}}
+          {{/if}}	
+        </span>
+
+			{{/if}}
+
+		</div>
+
+    {{#if hasInviteButton }}
+
+      <div class="short-block-ext">
+      
+        {{view Yn.AdaptativeButtonView class="is-blue button-text is-small is-font-white" 
+          contentI18n="invite" 
+          action="invite" 
+          actionContentBinding="content"}}
+
+      </div>
+
+    {{/if}}	
+
+</div>
+
+{{/with}}
