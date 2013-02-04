@@ -1,0 +1,131 @@
+{{#with view }}
+
+<div class="venue-box-content box-content without-padding">
+
+	<div class="venue-box-top">
+
+		<div class="venue-left-l">
+      {{view Yn.SquareImageView class="fix-scrolling-touch is-big" 
+        contentBinding="brand" withIcon=true}}
+		</div>
+
+		<div class="venue-middle-l">
+
+			<div class="main-text">
+				{{selected.name}}
+			</div>
+
+      {{#if hasBrandName }}
+        <div class="detail-text">
+          {{brand.name}}
+        </div>
+      {{/if}}
+
+		</div>
+
+		<div class="venue-right-l">
+
+      {{#if hasSelect }}
+
+        {{#if isGeopositionOn }}
+          {{#if venue.distance}}
+            <span class="icon with-text is-icon-small" icon="o"></span>
+            {{normalize_distance distanceBinding="venue.distance" }}
+          {{/if}}
+        {{/if}}
+			
+				{{#if selected.hasLikes }}
+					<span class="icon with-text is-icon-small" icon="m"></span>
+					{{selected.likeCount}}		
+				{{/if}}
+
+      {{/if}}
+
+      {{#if hasResend }}
+
+        {{view Yn.IconBtapView class="f-right is-blue rectangle-button is-small is-font-white"
+          icon="L"
+          actionContentBinding="invitation"
+          action="resend"}}
+
+      {{/if}}
+			
+
+		</div>
+
+	</div>
+
+
+		<div class="venue-box-products">
+
+      {{#if hasSelect }}
+
+        {{view Yn.VenueBoxProductSwipeView 
+          venueBinding="venue"
+          contentBinding="products"
+          selectedBinding="selected"}}
+
+
+      {{else}}
+
+        {{view Yn.UnTapVenueBoxProductSwipeView 
+          venueBinding="venue"
+          contentBinding="products"
+          selectedBinding="selected"}}
+
+
+      {{/if}}
+
+			{{view Yn.CarouselCirclesView class="fix-scrolling-touch"
+				contentBinding="products"
+				selectedBinding="selected"}}
+
+      {{#if hasSelect }}
+        {{view Yn.InviteButtonView class="fix-scrolling-touch is-small"
+          venueBinding="venue"
+          productBinding="selected"}}
+      {{/if}}
+
+		</div>
+
+		<div class="venue-box-bottom">
+
+        {{#if hasPeople}}
+
+          <div class="box-title-inline not-inherit-padding">
+            {{I18n venue_people_title}}:
+          </div>
+          <div class="box-content-element with-normal-image-padding">
+
+            {{#each person in fivePeople}}
+              {{view Yn.VenueNearUserSquareImageView class="is-special1 touchable inline fix-scrolling-touch"
+                contentBinding="person"
+                venueBinding="view.venue"
+                withPhoto=true }}
+            {{/each}}
+
+            {{#if higherThanFivePeople}}
+
+              {{view Yn.VenueNearPlusButtonView class="is-special1 touchable square-image with-photo is-plus inline fix-scrolling-touch"
+                action="goToFriendsNearby"
+                peopleBinding="people"
+                venueBinding="venue" }}
+
+            {{/if}}
+
+          </div>
+
+
+        {{/if}}
+
+        {{#if hasDescription}}
+          <div class="detail-text">
+            {{selected.description}}
+          </div>
+        {{/if}}
+
+		</div>
+
+</div>
+
+{{/with}}
