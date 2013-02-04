@@ -154,6 +154,7 @@
 
         height: 12px;
 				background-color: @grey01;
+        width: 100%;
 
 				//The same border-radius as box-title-bottom
 				border-bottom-left-radius: @curve-size;
@@ -181,16 +182,70 @@
 
 }
 
-.venue-box.has-description {
 
-	> .venue-box-content {
 
-    > .venue-box-bottom {
+@media only screen 
+and (min-device-width : 768px) 
+and (max-device-width : 1024px) {
 
-      padding: 8px;
+  .venue-box {
+    > .venue-box-content {
+
+      > .venue-box-top {
+
+        height: 40px;
+
+        > .venue-left-l {
+          width: 10%;
+        }
+
+        > .venue-middle-l {
+
+        }
+
+        > .venue-left-l {
+
+        }
+
+      }
+
+			> .venue-box-products {
+
+					height: 220px;
+
+      }
+
+      > .venue-box-bottom {
+
+      }
+
+    }
+  }
+
+
+  .venue-box.has-description {
+
+    > .venue-box-content {
+
+
+      > .venue-box-bottom {
+
+        display: table;
+        height: 30px;
+        padding: 8px;
+
+        > .detail-text {
+
+          display: table-cell;
+          vertical-align: middle;
+
+        }
+
+      }
 
     }
 
   }
+
 
 }
