@@ -59,15 +59,23 @@
 	width:100%;
 	
 	> .left-column {
-		display: table-cell;
+
 		vertical-align: middle;
 		text-align: left;
+		display: table-cell;
+
+		padding-right: 8px;
 	}
 	
 	> .right-column {
 		display: table-cell;
 		vertical-align: middle;
 		text-align: right;
+
+		padding-left: 8px;
+		> .toogle-circle-button, > .button-text, > .icon , >.switch-button {
+			float: right;
+		}
 	}
 	
 }
@@ -83,6 +91,7 @@
 		display: table-cell;
 		vertical-align: middle;
 		text-align: left;
+		padding-right: 8px;
 	}
 
 	> .middle-column {
@@ -99,6 +108,11 @@
 		display: table-cell;
 		vertical-align: middle;
 		text-align: right;
+
+		padding-left: 8px;
+		> .toogle-circle-button, > .button-text, > .icon , >.switch-button {
+			float: right;
+		}
 	}
 	
 }
