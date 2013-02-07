@@ -15,32 +15,24 @@
 
   box-shadow:inset 0px 1px 1px darken(@button-color, 16%), 0px 1px 1px @white00;
 
-
 }
-
-
-
-
 
 .price-label {
     
+
+    -webkit-border-radius: @price_radius;
+            border-radius: @price_radius;
     
-    padding: 3px 9px;
 
-    /*border-radius*/
-
-    -webkit-border-radius:@price_radius;
-            border-radius:@price_radius;
-    
-    float:right;
-
-
-
-     .price-label-style (@blue00);
+   .price-label-style (@blue00);
 
 
 
     //Font-----------------------
+    padding: 3px 9px;
+    white-space: nowrap;
+    height: 20px;
+    text-align: center;
 
     .button-text-is-big-style;
     .button-text-style;
@@ -53,6 +45,6 @@
 
 .price-label.is-small {
 
-    .button-text-is-small-style;
+  .button-text-is-small-style;
 
 }

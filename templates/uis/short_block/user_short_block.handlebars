@@ -1,10 +1,10 @@
 {{#with view}}
 
 
-	<div class="short-block-content">
+	<div class="three-column-table">
 
     {{#if hasImage }}
-      <div class="short-block-image">
+      <div class="picture left-column">
         {{#if isYoinUser }}
 
           {{view Yn.SquareImageView class=imagetype
@@ -27,7 +27,7 @@
       </div>
     {{/if}}
 
-		<div class="short-block-name">
+		<div class="name middle-column">
 
 			{{#if isYoinUser }}
 			
@@ -81,7 +81,7 @@
 
     {{#if hasInviteButton }}
 
-      <div class="short-block-ext">
+      <div class="action-button right-column">
       
         {{view Yn.AdaptativeButtonView class="is-blue button-text is-small is-font-white" 
           contentI18n="invite" 

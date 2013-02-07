@@ -17,12 +17,11 @@
 	border: 1px solid @grey07;
 
 	> .box-content {
-    .box-padding-with-normal-image;
+    .box-padding-vertical;
 	}
 
 	> .box-content.has-message { 
-    padding-bottom: 8px;
-    padding-top: 8px;
+    .box-padding-horizontal;
   }
 
   > .box-content.has-tap:active, > .box-content.has-tap.is-pending, > .box-content.has-tap.touch {
@@ -60,9 +59,6 @@
 
 .box-content-element {
 
-    > .picture {
-    }
-
     > .name { 
 
       > .price-label {
@@ -74,15 +70,12 @@
       }
     }
 
-    > .control {
-      .text-is-font-low-grey-style;
-    }
-
-
 }
 
 .box-content-element.with-normal-image-padding {
-  .box-padding-with-normal-image;
+
+  .box-padding-style;
+
 }
 
 
@@ -101,14 +94,14 @@
 
 .box-content-li-no-border {
 
-  padding: 8px; 
+  .box-padding-vertical;
 
 }
 
 
 .box-content-li {
 
-  padding: 8px; 
+  .box-padding-vertical;
   .list-element-fill-border;
 
 }
@@ -144,7 +137,7 @@
 
 .box-title-top.with-image {
 
-  .box-padding-with-normal-image;
+  .box-padding-vertical;
 
   display: table;
   position: relative;
@@ -153,10 +146,11 @@
   > .picture {
     display: table-cell;
     vertical-align: middle;
-		padding-right: 8px;
+		padding-right: @box-padding-horizontal;
   }
 
   > .name { 
+    .box-padding-horizontal;
     display: table-cell;
     vertical-align: middle;
   }

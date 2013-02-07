@@ -1,9 +1,26 @@
 @import 'borders';
-@import 'sizes';
 @import 'colors';
-@import 'images';
 
 
+
+//------------
+
+@size-square-image-is-big: 53px;
+@size-square-image-is-normal: 42px;
+@size-square-image-is-small: 28px;
+@size-square-image-is-x-small: 23px;
+@size-square-image-is-special1: 41px;
+
+.square-skin (@size) {
+
+  height: @size;
+  width: @size;
+  background-size: @size @size;
+
+  border-radius: (0.09*@size); 
+
+}
+//---------
 
 .square-image {
 
@@ -15,12 +32,6 @@
 
       width: 100%;
       height: 100%;
-/*
-      background-image: -webkit-gradient(linear, left top, right bottom, 
-        color-stop(0%, rgba(255, 255, 255, 0.3)), 
-        color-stop(49%, rgba(255, 255, 255, 0.15)), 
-        color-stop(51%, rgba(255, 255, 255, 0)));
-        */
 
     }
 
@@ -32,37 +43,12 @@
 
 	.border-square-style;
 
-  > .square-image-bg {
-
-    > .square-image-effect {
-      /*
-      background-image: -webkit-gradient(linear, left top, right bottom, 
-        color-stop(0%, rgba(255, 255, 255, 0.3)), 
-        color-stop(49%, rgba(255, 255, 255, 0.15)), 
-        color-stop(51%, rgba(255, 255, 255, 0)));
-        */
-
-    }
-  }
-
 }
 
 .square-image.with-icon.is-selected {
 
   .border-square-selected-style;
 
-   > .square-image-bg {
-
-    > .square-image-effect {
-/*
-      background-image: -webkit-gradient(linear, right bottom, left top,
-        color-stop(0%, rgba(255, 255, 255, 0.3)), 
-        color-stop(49%, rgba(255, 255, 255, 0.15)), 
-        color-stop(51%, rgba(255, 255, 255, 0)));
-        */
-    }
-
-  }
 }
 
 

@@ -1,4 +1,6 @@
 @import 'sizes';
+@import 'textstyles';
+@import 'paddings';
 
 .text.is-not-box.l-right {
   text-align: right;
@@ -51,70 +53,65 @@
 }
 
 
-/*** TWO COLUMN TABLE DEFINITION ***/
+.two-column-table, .three-column-table {
 
-.two-column-table {
-	display: table;
 	position: relative;
 	width:100%;
-	
+
+	> .left-column, > .middle-column, > .right-column {
+		display: table-cell;
+		vertical-align: middle;
+  }
+
+	> .left-column, > .right-column {
+    .box-padding-horizontal;
+  }
+
+	> .left-column.main {
+    width: 100%;
+  }
+
 	> .left-column {
 
-		vertical-align: middle;
 		text-align: left;
-		display: table-cell;
 
-		padding-right: 8px;
-	}
-	
-	> .right-column {
-		display: table-cell;
-		vertical-align: middle;
-		text-align: right;
+		> .square-image {
+      float: left;
+    }
 
-		padding-left: 8px;
-		> .toogle-circle-button, > .button-text, > .icon , >.switch-button {
-			float: right;
-		}
-	}
-	
-}
+  }
 
-/*** THREE COLUMN TABLE DEFINITION ***/
 
-.three-column-table {
-	display: table;
-	position: relative;
-	width:100%;
-	
-	> .left-column {
-		display: table-cell;
-		vertical-align: middle;
-		text-align: left;
-		padding-right: 8px;
-	}
+
+  > .left-column.has-many-images {
+
+		> .square-image {
+      margin: 2px 0 0 2px;
+    }
+
+  }
 
 	> .middle-column {
-		display: table-cell;
-		vertical-align: middle;
+    width: 100%;
 		text-align: left;
 	}
 
 	> .middle-column.is-right {
+    width: 0%;
 		text-align: right;
   }
-	
+
 	> .right-column {
-		display: table-cell;
-		vertical-align: middle;
 		text-align: right;
 
-		padding-left: 8px;
-		> .toogle-circle-button, > .button-text, > .icon , >.switch-button {
+		> .toogle-circle-button, > .button-text, > .arrow, > .icon , >.switch-button {
 			float: right;
 		}
+
 	}
-	
+
+  > .right-column.control {
+    .text-is-font-low-grey-style;
+  }
+
 }
-
-
