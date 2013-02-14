@@ -7,7 +7,7 @@
       <div class="picture left-column">
         {{#if isYoinUser }}
 
-          {{view Yn.SquareImageView class=imagetype
+          {{view Yn.SquareImageView classBinding="imagetype"
             contentBinding="content"
             withPhoto=true }}
 
@@ -15,7 +15,7 @@
 
           {{#if isFbUser }}
 
-            {{view Yn.SquareImageView class=imagetype
+            {{view Yn.SquareImageView classBinding="imagetype"
               contentBinding="fbId"
               isFBUser=true
               withPhoto=true }}
