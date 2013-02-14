@@ -59,9 +59,11 @@
 
 				{{else}}
 
-						<div class="detail-text without-icon">
-							{{content.status}}
-						</div>
+            {{#if showStatus}}
+              <div class="detail-text without-icon">
+                {{content.status}}
+              </div>
+            {{/if}}
 
 				{{/if}}
 
