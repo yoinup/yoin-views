@@ -2,7 +2,8 @@
 @import 'sizes';
 @import 'textstyles';
 @import 'buttons';
-//---------------
+
+//---------- functions
 
 .left-large-button-style(@button-color:white) {    
 
@@ -19,16 +20,19 @@
 
 }
 
+//-----------------------
+
 .large-button.is-social {
 
-	width: 265px; 
-	//The rest of the properties are defined in .large-button
+  display: table;
+  position: relative;
 
 	> .left {
 
-		height: @big-button-height - 2px;
-		width: 50px;
-		float: left;
+		width: 20%;
+    display: table-cell;
+    vertical-align: middle;
+
 		border-top-left-radius: @border-box-radius-size;
 		border-bottom-left-radius: @border-box-radius-size;  
 		background-position: 50% 50%;
@@ -38,128 +42,16 @@
 	}
 
 	> .right {
-		
-		width: 214px;
-		height: auto;
-		float: right;
+
+    display: table-cell;
+    vertical-align: middle;
+
 		text-align: center;
-		margin-top: 5%; 
+		width: 80%;
 
 	}
 
 }
-
-
-.rectangle-button.is-social {
-
-	width: 90px;
-	.button-text-is-font-white-style;
-	
-	> .left {
-
-		height: @standard-button-height - 2px;
-		width: 23px; //One px for line
-		float: left;
-		border-top-left-radius: @border-button-radius-size;
-		border-bottom-left-radius: @border-button-radius-size;
-		background-position: 50% 50%;
-		background-repeat: no-repeat;
-		background-size: 60%;
-
-	}
-
-	> .right {
-
-		width: 66px; //One px for line
- 		height: auto;
-		float: right;
-		text-align: center;
-		margin-top: 9%;  
-
-	}
-    
-}
-
-.rectangle-button.is-social.facebook {
-
-	.rectangle-button-style(@blue-facebook);
-
-
-	> .left {
-
-		background-size: 75%;
-		background-image: url(./assets/images/facebook.png);
-		.left-large-button-style(@blue-facebook);
-
-	}
-
-}
-
-.rectangle-button.is-social.facebook.is-disabled {
-	
-	.rectangle-button-active-style(@grey12);
-	.button-text-is-font-disabled-style;
-
-	> .left {
-
-		background-size: 75%;
-		background-image: url(./assets/images/facebook_disabled.png);
-		.left-large-button-social-disable-style(@grey07);
-
-	}
-
-}
-
-.rectangle-button.is-social.facebook:active, .rectangle-button.is-social.facebook.is-pending , .rectangle-button.is-social.facebook.touch {
-
-	.rectangle-button-active-style(@blue-facebook);
-
-}
-
-.rectangle-button.is-social.facebook.is-disabled:active {
-	
-	.rectangle-button-active-style(@grey12);
-}
-
-.rectangle-button.is-social.twitter {
-
-	.rectangle-button-style(@blue-twitter);
-
-	> .left {
-
-		background-image: url(./assets/images/twitter.png);
-		.left-large-button-style(@blue-twitter);
-
-	}
-
-}
-
-.rectangle-button.is-social.twitter.is-disabled {
-	
-	.rectangle-button-active-style(@grey12);
-	.button-text-is-font-disabled-style;
-	
-	> .left {
-
-		background-image: url(./assets/images/twitter_disabled.png);
-		.left-large-button-social-disable-style(@grey07);
-
-	}
-
-}
-
-.rectangle-button.is-social.twitter:active, .rectangle-button.is-social.twitter.is-pending, .rectangle-button.is-social.twitter.touch {
-
-	.rectangle-button-active-style(@blue-twitter);
-
-}
-
-.rectangle-button.is-social.twitter.is-disabled:active {
-	
-	.rectangle-button-active-style(@grey12);
-
-}
-
 
 .large-button.facebook {
 
@@ -240,3 +132,4 @@
 	.rectangle-button-active-style(@grey12);
 
 }
+
