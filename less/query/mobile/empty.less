@@ -1,43 +1,38 @@
 @import 'textstyles';
 @import 'aligns';
 
-@media only screen and (max-device-width: 320px),
-only screen and (-webkit-min-device-pixel-ratio : 1.5), 
-only screen and (min-device-pixel-ratio : 1.5) {
+.empty-view {
 
-	.empty-view {
+	> .transparency-empty {
 
-		> .transparency-empty {
+		> .image-empty {
 
-			> .image-empty {
+			.center_align (200px, 200px, absolute);
 
-        .center_align (200px, 200px, absolute);
+		}
 
-			}
+		> .empty-text {
 
-			> .empty-text {
-
-        margin-top: 110px;
-				.alert-text-style;
-
-			}
+			margin-top: 110px;
+			.alert-text-style;
 
 		}
 
 	}
 
-	.empty-view.is-vertical-center {
+}
 
-		> .transparency-empty {
+.empty-view.is-vertical-center {
 
-			> .empty-text {
+	> .transparency-empty {
 
-        margin-top: 210px;
+		> .empty-text {
 
-			}
+			margin-top: 210px;
 
 		}
 
-  }
+	}
 
 }
+

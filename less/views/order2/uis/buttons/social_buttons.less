@@ -1,16 +1,32 @@
 @import 'colors';
 @import 'sizes';
-@import 'buttons';
 @import 'textstyles';
+@import 'buttons';
+//---------------
+
+.left-large-button-style(@button-color:white) {    
+
+	border-right: 1px solid darken(@button-color, 15%); 
+	-webkit-box-shadow: 1px 0px 2px 0px rgba(255, 255, 255, 0.5),inset -1px 0 2px 0 rgba(255, 255, 255, 0.5);
+
+}
+
+
+.left-large-button-social-disable-style(@button-color:white) {    
+
+  border-right: 1px solid darken(@button-color, 15%);  
+  -webkit-box-shadow: 0px 0px 0px 0px rgba(255, 255, 255, 0.5),inset 0px 0 0px 0 rgba(255, 255, 255, 0.5);
+
+}
 
 .large-button.is-social {
 
-	width: @big-button-width-px + 1; //+1 for a line
+	width: 265px; 
 	//The rest of the properties are defined in .large-button
 
 	> .left {
 
-		height: @big-button-height - 2;
+		height: @big-button-height - 2px;
 		width: 50px;
 		float: left;
 		border-top-left-radius: @border-box-radius-size;
@@ -36,13 +52,13 @@
 
 .rectangle-button.is-social {
 
-	width: @small-social-button-width;
+	width: 90px;
 	.button-text-is-font-white-style;
 	
 	> .left {
 
-		height: @standard-button-height - 2;
-		width: @small-social-button-width - 66 - 1; //One px for line
+		height: @standard-button-height - 2px;
+		width: 23px; //One px for line
 		float: left;
 		border-top-left-radius: @border-button-radius-size;
 		border-bottom-left-radius: @border-button-radius-size;
@@ -54,7 +70,7 @@
 
 	> .right {
 
-		width: @small-social-button-width - 23 - 1; //One px for line
+		width: 66px; //One px for line
  		height: auto;
 		float: right;
 		text-align: center;
@@ -66,14 +82,14 @@
 
 .rectangle-button.is-social.facebook {
 
-	.rectangle-button-style (@blue-facebook);
+	.rectangle-button-style(@blue-facebook);
 
 
 	> .left {
 
 		background-size: 75%;
 		background-image: url(./assets/images/facebook.png);
-		.left-large-button-style (@blue-facebook);
+		.left-large-button-style(@blue-facebook);
 
 	}
 
@@ -81,14 +97,14 @@
 
 .rectangle-button.is-social.facebook.is-disabled {
 	
-	.rectangle-button-active-style (@grey12);
+	.rectangle-button-active-style(@grey12);
 	.button-text-is-font-disabled-style;
 
 	> .left {
 
 		background-size: 75%;
 		background-image: url(./assets/images/facebook_disabled.png);
-		.left-large-button-social-disable-style (@grey07);
+		.left-large-button-social-disable-style(@grey07);
 
 	}
 
@@ -96,23 +112,23 @@
 
 .rectangle-button.is-social.facebook:active, .rectangle-button.is-social.facebook.is-pending , .rectangle-button.is-social.facebook.touch {
 
-	.rectangle-button-active-style (@blue-facebook);
+	.rectangle-button-active-style(@blue-facebook);
 
 }
 
 .rectangle-button.is-social.facebook.is-disabled:active {
 	
-	.rectangle-button-active-style (@grey12);
+	.rectangle-button-active-style(@grey12);
 }
 
 .rectangle-button.is-social.twitter {
 
-	.rectangle-button-style (@blue-twitter);
+	.rectangle-button-style(@blue-twitter);
 
 	> .left {
 
 		background-image: url(./assets/images/twitter.png);
-		.left-large-button-style (@blue-twitter);
+		.left-large-button-style(@blue-twitter);
 
 	}
 
@@ -120,13 +136,13 @@
 
 .rectangle-button.is-social.twitter.is-disabled {
 	
-	.rectangle-button-active-style (@grey12);
+	.rectangle-button-active-style(@grey12);
 	.button-text-is-font-disabled-style;
 	
 	> .left {
 
 		background-image: url(./assets/images/twitter_disabled.png);
-		.left-large-button-social-disable-style (@grey07);
+		.left-large-button-social-disable-style(@grey07);
 
 	}
 
@@ -134,27 +150,27 @@
 
 .rectangle-button.is-social.twitter:active, .rectangle-button.is-social.twitter.is-pending, .rectangle-button.is-social.twitter.touch {
 
-	.rectangle-button-active-style (@blue-twitter);
+	.rectangle-button-active-style(@blue-twitter);
 
 }
 
 .rectangle-button.is-social.twitter.is-disabled:active {
 	
-	.rectangle-button-active-style (@grey12);
+	.rectangle-button-active-style(@grey12);
 
 }
 
 
 .large-button.facebook {
 
-	.rectangle-button-style (@blue-facebook);
+	.rectangle-button-style(@blue-facebook);
 	.button-text-is-font-white-style;
 	
 	> .left {
 
 		background-size: 65%;
 		background-image: url(./assets/images/facebook.png);
-		.left-large-button-style (@blue-facebook);
+		.left-large-button-style(@blue-facebook);
 
 	}
 	
@@ -162,14 +178,14 @@
 
 .large-button.facebook.is-disabled {
 	
-	.rectangle-button-active-style (@grey12);
+	.rectangle-button-active-style(@grey12);
 	.button-text-is-font-disabled-style;
 
 	> .left {
 
 		background-size: 65%;
 		background-image: url(./assets/images/facebook_disabled.png);
-		.left-large-button-social-disable-style (@grey08);
+		.left-large-button-social-disable-style(@grey08);
 
 	}
 
@@ -177,24 +193,24 @@
 
 .large-button.facebook:active, .large-button.facebook.is-pending, .large-button.facebook.touch {
 
-	.rectangle-button-active-style (@blue-facebook);
+	.rectangle-button-active-style(@blue-facebook);
 
 }
 
 .large-button.facebook.is-disabled:active {
 	
-	.rectangle-button-active-style (@grey12);
+	.rectangle-button-active-style(@grey12);
 }
 
 .large-button.twitter {
 
-	.rectangle-button-style (@blue-twitter);
+	.rectangle-button-style(@blue-twitter);
 	.button-text-is-font-white-style;
 	
 	> .left {
 
 		background-image: url(./assets/images/twitter.png);
-		.left-large-button-style (@blue-twitter);
+		.left-large-button-style(@blue-twitter);
 
 	}
 
@@ -202,25 +218,25 @@
 
 .large-button.twitter.is-disabled {
 	
-	.rectangle-button-active-style (@grey12);
+	.rectangle-button-active-style(@grey12);
 	.button-text-is-font-disabled-style;
 
 	> .left {
 
 		background-image: url(./assets/images/twitter_disabled.png);
-		.left-large-button-social-disable-style (@grey07);
+		.left-large-button-social-disable-style(@grey07);
 
 	}
 }
 
 .large-button.twitter:active, .large-button.twitter.is-pending, .large-button.twitter.touch {
 
-	.rectangle-button-active-style (@blue-twitter);
+	.rectangle-button-active-style(@blue-twitter);
 
 }
 
 .large-button.twitter.is-disabled:active {
 
-	.rectangle-button-active-style (@grey12);
+	.rectangle-button-active-style(@grey12);
 
 }
