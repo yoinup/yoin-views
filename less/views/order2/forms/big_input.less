@@ -3,6 +3,12 @@
 
 @text-indent: 15px;
 
+.big-input-font-type() {
+  font-size: @font-normal;
+  color: @grey12;
+
+}
+
 .big-input-content {
 
 	margin: 0px auto;
@@ -12,7 +18,7 @@
 	-webkit-box-shadow: 0 0 0 1px (@orange02), 0 2px 0 0 (rgba(255,255,255,0.6));
 	
 	
-	> .big-input {
+	> .big-input, > .big-input:focus {
 
 		width: 100%;
 		height: @big-button-height - 2px;
@@ -23,9 +29,18 @@
 		border-top: 1px solid @grey03;
 		border-radius: 0px;
 		outline: none;
-		font-size: @font-normal;
-		color: @grey12;
-		text-indent: @text-indent;
+    .big-input-font-type;
+
+    text-indent: @text-indent;
+
+    &::-webkit-input-placeholder {
+
+      .big-input-font-type;
+
+      // TODO; android bug
+      text-indent: @text-indent;
+
+    }
 
 	}
 
@@ -49,51 +64,7 @@
 
 
 
-	> .big-input::-webkit-input-placeholder {
-
-		text-indent: @text-indent;
-		color: @grey05;
-		font-size: @font-normal;
-
-	}
 
 }
 
 
-
-
-
-
-
-
-
-
-
-
-.big-input-content.webapp {
-
-	
-	-webkit-box-shadow: 0 0 0 1px (@grey05), 0 2px 5px 0 (rgba(0,0,0,0.9));
-	border-radius: 1px;
-
-	> .big-input {
-
-	}
-
-	> .big-input.up.webapp {
-
-		
-		border-top-left-radius: 1px;
-		border-top-right-radius: 1px;
-
-
-	}
-
-	> .big-input.down.webapp {
-
-		border-bottom-left-radius: 1px;
-		border-bottom-right-radius: 1px;
-
-	}
-
-}
