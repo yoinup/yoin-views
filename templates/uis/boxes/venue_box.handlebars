@@ -28,16 +28,16 @@
       {{#if hasSelect }}
 
         {{#if isGeopositionOn }}
+
           {{#if venue.distance}}
-            <span class="icon with-text is-icon-small" icon="o"></span>
-            {{normalize_distance distanceBinding="venue.distance" }}
+
+            <span class="icon-after with-text is-icon-small" icon="o">
+              {{normalize_distance distanceBinding="venue.distance" }}
+            </span>
+            
           {{/if}}
         {{/if}}
 			
-				{{#if selected.hasLikes }}
-					<span class="icon with-text is-icon-small" icon="m"></span>
-					{{selected.likeCount}}		
-				{{/if}}
 
       {{/if}}
 
