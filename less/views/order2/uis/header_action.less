@@ -6,7 +6,7 @@
 
 	position: relative;
 	width: 100%;
-	height: @header-action-height;
+	height: 40px;
 
   .action-bar-style;
 	.action-bar-with-shadow-style;
@@ -14,32 +14,31 @@
 
 	//z-index: 1;
 	display: table;
-	padding-left: @margin-header-size;
-	padding-right: @margin-header-size;
 
 
 
 	
-	> .left {
+	> .ha-left {
 	
 		display: table-cell;
 		vertical-align: middle;
-		position: relative;
+    width: 100%;
+
+		padding-left: @margin-header-size;
 	
 	}
 	
-	> .middle {
 	
-		width: 12px;
-	
-	}
-	
-	> .right {
+	> .ha-right {
+
+		padding: 0 @margin-header-size;
 	
 		display: table-cell;
 		vertical-align: middle;
-		position: relative;
-		width: 1%; //Trick to implement dynamic div
+
+		> .button-text {
+			float: right;
+		}
 	
 	}
 
