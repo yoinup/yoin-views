@@ -1,4 +1,3 @@
-@import 'borders';
 @import 'colors';
 
 
@@ -20,7 +19,7 @@
   border-radius: (0.09*@size); 
 
 }
-//---------
+//--------- local functions
 
 .square-image {
 
@@ -39,30 +38,20 @@
 
 }
 
-.square-image.with-icon {
+.square-image.with-icon, .square-image.with-webfont, .square-image.with-photo, .square-image.with-channel {
 
-	.border-square-style;
-
-}
-
-.square-image.with-icon.is-selected {
-
-  .border-square-selected-style;
+	border: 1px solid @grey10;
+	/*
+	-webkit-box-shadow:0 0 0 1px rgba(0, 0, 0, 0.4),inset 0 1px 0 0 rgba(255, 255, 255, 0.4), 0 2px 3px 0 rgba(0, 0, 0, 0.5);
+	box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.4),inset 0 1px 0 0 rgba(255, 255, 255, 0.4), 0 2px 3px 0 rgba(0, 0, 0, 0.5);
+	*/
 
 }
-
-
-
-
-
-
-
 
 
 // effect does not works
 .square-image.with-webfont {
 
-	.border-square-style;
 	position: relative;
 
    > .square-image-bg {
@@ -101,29 +90,16 @@
 }
 
 
-.square-image.with-photo {
-
-   .border-square-photo-style;
-
-}
-
-
 .square-image.with-photo.is-selected {
-
-    .border-square-photo-selected-style;
+  // why there is a different effect
+	-webkit-box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.4), inset 0px 0px 20px 0 rgba(0, 0, 0, 0.6);
+	box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.4), inset 0px 0px 20px 0 rgba(0, 0, 0, 0.6);
 }
 
+.square-image.with-icon.is-selected, .square-image.touchable:active, .square-image.touchable.is-pending, .square-image.touchable.touch {
 
-.square-image.with-channel {
-
-   .border-square-channel-style;
-
-}
-
-
-.square-image.touchable:active, .square-image.touchable.is-pending, .square-image.touchable.touch {
-
-  .border-square-selected-style;
+	-webkit-box-shadow:  0 0 0 1px rgba(0, 0, 0, 0.4), 0 0 1px 1px rgba(0, 0, 0, 0.4), inset 0 1px 15px 0 rgba(0, 0, 0, 0.5);
+	box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.4), 0 0 1px 1px rgba(0, 0, 0, 0.4), inset 0 1px 15px 0 rgba(0, 0, 0, 0.5);
 
 }
 

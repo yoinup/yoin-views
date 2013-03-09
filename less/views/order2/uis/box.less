@@ -1,13 +1,22 @@
 @import 'colors';
 @import 'sizes';
 @import 'textstyles';
-@import 'borders';
 @import 'paddings';
 @import 'gradients';
+@import 'lists';
+
+//-------- local functions
+
+.border-bottom-box-radius-style () {
+	border-bottom-left-radius: @border-box-radius-size;
+	border-bottom-right-radius: @border-box-radius-size;
+}
+
+//------------------------- 
 
 .box {
 	
-	.border-box-radius-style;
+	border-radius: @border-box-radius-size;
 	//The MARGIN is in the Media Query Files
 
 	background-color: @white00;
@@ -101,7 +110,8 @@
 }
 
 .box-content-li:last-of-type {
-  .list-element-clear-border;
+	border-bottom: 0px;
+	-webkit-box-shadow: 0 0 0 0;
 }							
 
  .box-content-li.has-tap:active,  .box-content-li.has-tap.is-pending, .box-content-li.has-tap.touch {
@@ -119,9 +129,11 @@
 
   background-color: @grey01;
 
-  .border-top-box-radius-style;
+	border-top-left-radius: @border-box-radius-size;
+	border-top-right-radius: @border-box-radius-size;
+
   border-bottom: 1px solid rgba(255, 255, 255, 0.7);
-  -webkit-box-shadow: inset 0 -(@border-line-size) 0 0 @grey09;
+  -webkit-box-shadow: inset 0 -1px 0 0 @grey09;
 
   .button-text-is-font-grey-style;
   .text-is-font-bold-style;
@@ -156,8 +168,8 @@
   .button-text-is-font-grey-style;
   .box-padding-style;
   
-  border-top: @border-line-size solid @grey09;
-  -webkit-box-shadow: inset 0 @border-line-size 0 0 rgba(255, 255, 255, 0.7);
+  border-top: 1px solid @grey09;
+  -webkit-box-shadow: inset 0 1px 0 0 rgba(255, 255, 255, 0.7);
   .border-bottom-box-radius-style;
 
   display: table;
