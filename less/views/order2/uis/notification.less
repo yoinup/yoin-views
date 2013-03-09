@@ -1,7 +1,19 @@
 @import 'animations';
 @import 'textstyles';
-@import 'notifications';
+@import 'colors';
 
+
+.notification-style (@color:white) {
+
+	background-color: @color;
+	background-image: -moz-linear-gradient(top, rgba(255,255,255,0.45) 0%, rgba(255,255,255,0.2) 50%, rgba(255,255,255,0) 100%); 
+	background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(255,255,255,0.45)), color-stop(50%,rgba(255,255,255,0.2)), color-stop(100%,rgba(255,255,255,0))); 
+	border-top: 1px solid rgba(255,255,255,0.7);  
+	-webkit-box-shadow: inset 0 -1px 0 0 darken(@color, 30%), 0 4px 10px 0 rgba(0, 0, 0, 0.4);	
+
+}
+
+// -------------------------- function calls
 
 .notification {
 
@@ -48,18 +60,18 @@
 
 .notification.is-info {
 
-	.notification-info-style;
+  .notification-style(@blue00);
    
 }
 
 .notification.is-error {
 
-	.notification-error-style;
+  .notification-style(@grey16);
    
 }
 
 .notification.is-succeed {
 
-	.notification-succeed-style;
+  .notification-style(@green02);
    
 }
