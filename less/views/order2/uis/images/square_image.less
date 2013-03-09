@@ -1,9 +1,9 @@
 @import 'colors';
+@import 'radius';
 
 
 
-//------------
-
+//------------------------
 @size-square-image-is-big: 53px;
 @size-square-image-is-normal: 42px;
 @size-square-image-is-small: 28px;
@@ -15,8 +15,7 @@
   height: @size;
   width: @size;
   background-size: @size @size;
-
-  border-radius: (0.09*@size); 
+  .square-skin-border-radius(@size);
 
 }
 //--------- local functions

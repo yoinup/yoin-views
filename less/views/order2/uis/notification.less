@@ -1,6 +1,7 @@
 @import 'animations';
 @import 'textstyles';
 @import 'colors';
+@import 'radius';
 
 
 .notification-style (@color:white) {
@@ -27,8 +28,8 @@
 	z-index: 1;
 	overflow: hidden;
 
-	border-bottom-left-radius: @border-box-radius-size/2;
-	border-bottom-right-radius: @border-box-radius-size/2;
+	border-bottom-left-radius: @border-single-radius-size;
+	border-bottom-right-radius: @border-single-radius-size;
     
 	-webkit-transition: height @notification-time-animation-style @notification-animation-style;
 	-webkit-transform:translate3d(0,0,0);

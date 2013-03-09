@@ -12,115 +12,13 @@
   
 }
 
-
-//Does not include all borders (just top)
-.rectangle-button-menu-style(@button-color:white) {
-
-  background-color: @button-color;
-  background-image: url(assets/images/BG2.png), -moz-linear-gradient(top, rgba(255,255,255,0.45) 0%, rgba(255,255,255,0.2) 50%, rgba(255,255,255,0) 100%); 
-  background-image: url(assets/images/BG2.png), -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(255,255,255,0.45)), color-stop(50%,rgba(255,255,255,0.2)), color-stop(100%,rgba(255,255,255,0))); 
-
-  border-top: 1px solid (rgba(255,255,255,0.8));
-  
-  -webkit-box-shadow: 0 0 0 1px (darken(@button-color, 30%)), 0 2px 0 0 (rgba(255,255,255,0.7));
-
-}
-
-
-
 .rectangle-button-active-style(@button-color:white) {
 
-  background-color: @button-color;
   background-image: url(assets/images/BG2.png), -moz-linear-gradient(top, rgba(255,255,255,0) 0%, rgba(255,255,255,0.2) 50%, rgba(255,255,255,0.45) 100%);
   background-image: url(assets/images/BG2.png), -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(255,255,255,0)), color-stop(50%,rgba(255,255,255,0.2)), color-stop(100%,rgba(255,255,255,0.45)));
-  
-  border: 1px solid darken(@button-color, 30%);
   
   -webkit-box-shadow: 0 1px 0 0 rgba(255,255,255,0.5), inset 0 1px 3px 0px rgba(0,0,0,0.3);
 
 }
 
 
-//Does not include all borders (just top)
-.rectangle-button-menu-active-style(@button-color:white) {
-
-  background-color: @button-color;
-  background-image: url(assets/images/BG2.png), -moz-linear-gradient(top, rgba(255,255,255,0) 0%, rgba(255,255,255,0.2) 50%, rgba(255,255,255,0.45) 100%); 
-  background-image: url(assets/images/BG2.png), -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(255,255,255,0)), color-stop(50%,rgba(255,255,255,0.2)), color-stop(100%,rgba(255,255,255,0.45))); 
-  
-  border-top: 1px solid darken(@button-color, 10%);
-
-  -webkit-box-shadow: 0 0 0 1px (darken(@button-color, 30%)), inset 0 1px 3px 0 (darken(@button-color, 10%)), 0 2px 0 0 rgba(255,255,255,0.7);
-  
-}
-
-
-.external-large-button-style(@ext-large-button:white) {
-
-  background-color: @ext-large-button;
-
-  -webkit-box-shadow: inset 0 1px 3px 0 (darken(@ext-large-button, 25%)),  0 1px 0 0 (rgba(255,255,255,0.7));
-  box-shadow: inset 0 1px 3px 0 (darken(@ext-large-button, 25%)),  0 1px 0 0 (rgba(255,255,255,0.7));
-
-}
-
-
-.inner-double-button-style(@inner-double-button-style:white) {
-
-  background-color: @inner-double-button-style;
-  background-image: url(assets/images/BG2.png), -moz-linear-gradient(top, rgba(255,255,255,0.45) 0%, rgba(255,255,255,0.2) 50%, rgba(255,255,255,0) 100%);
-  background-image: url(assets/images/BG2.png), -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(255,255,255,0.45)), color-stop(50%,rgba(255,255,255,0.2)), color-stop(100%,rgba(255,255,255,0)));
-
-  border-top: 1px solid (rgba(255,255,255,0.8));
-  
-  -webkit-box-shadow: 0 0 0 1px (darken(@inner-double-button-style, 30%)), 0 2px 0 0 (rgba(0,0,0,0.4));
-  box-shadow: 0 0 0 1px (darken(@inner-double-button-style, 30%)), 0 2px 0 0 (rgba(0,0,0,0.4));
-
-
-}
-
-
-.inner-double-button-active-style(@inner-double-button-style:white) {
-
-  background-color: @inner-double-button-style;
-  background-image: url(assets/images/BG2.png), -moz-linear-gradient(top, rgba(255,255,255,0) 0%, rgba(255,255,255,0.2) 50%, rgba(255,255,255,0.45) 100%);
-  background-image: url(assets/images/BG2.png), -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(255,255,255,0)), color-stop(50%,rgba(255,255,255,0.2)), color-stop(100%,rgba(255,255,255,0.45)));
-
-  border-top: 1px solid (darken(@inner-double-button-style, 10%));
-  
-  -webkit-box-shadow: 0 0 0 1px (darken(@inner-double-button-style, 30%)), inset 0 0px 8px 0 (darken(@inner-double-button-style, 20%));
-  box-shadow: 0 0 0 1px (darken(@inner-double-button-style, 30%)), inset 0 0px 8px 0 (darken(@inner-double-button-style, 20%));
-
-}
-
-
-
-.rectangle-button-style-webapp(@button-color:white) {
-
-
-  background-color: @button-color;
-  background-image: url(assets/images/BG2.png), -moz-linear-gradient(top, rgba(255,255,255,0.45) 0%, rgba(255,255,255,0.2) 50%, rgba(255,255,255,0) 100%); 
-  background-image: url(assets/images/BG2.png), -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(255,255,255,0.45)), color-stop(50%,rgba(255,255,255,0.2)), color-stop(100%,rgba(255,255,255,0))); 
-
-  border: 1px solid darken(@button-color, 30%);
-  
-  -webkit-box-shadow: 0 1px 5px 0 rgba(0,0,0,0.9), inset 0 1px 0 0 rgba(255,255,255,0.6), -1px 0 0 0 rgba(255,255,255,0.2) inset, 1px 0 0 0 rgba(255,255,255,0.2) inset;
-
-
-
-}
-
-
-
-
-.rectangle-button-active-style-webapp(@button-color:white) {
-
-  background-color: @button-color;
-  background-image: url(assets/images/BG2.png), -moz-linear-gradient(top, rgba(255,255,255,0) 0%, rgba(255,255,255,0.2) 50%, rgba(255,255,255,0.45) 100%); 
-  background-image: url(assets/images/BG2.png), -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(255,255,255,0)), color-stop(50%,rgba(255,255,255,0.2)), color-stop(100%,rgba(255,255,255,0.45)));
-  
-  border: 1px solid darken(@button-color, 30%);
-  
-  -webkit-box-shadow: 0 1px 5px 0 rgba(0,0,0,0.9), inset 0 1px 3px 0px rgba(0,0,0,0.3);
-
-}

@@ -1,13 +1,42 @@
 @import 'colors';
 @import 'sizes';
-@import 'buttons';
 @import 'textstyles';
 @import 'action_bar';
+@import 'radius';
 
 @height-tab: @standard-button-height - 1;
 @vertical-margin: 7px;
 @horizontal-margin: 1.5%;
 @height-tabs: (@height-tab)+(2*@vertical-margin) + 1px;
+
+
+//Does not include all borders (just top)
+.rectangle-button-menu-style(@button-color:white) {
+
+  background-color: @button-color;
+  background-image: url(assets/images/BG2.png), -moz-linear-gradient(top, rgba(255,255,255,0.45) 0%, rgba(255,255,255,0.2) 50%, rgba(255,255,255,0) 100%); 
+  background-image: url(assets/images/BG2.png), -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(255,255,255,0.45)), color-stop(50%,rgba(255,255,255,0.2)), color-stop(100%,rgba(255,255,255,0))); 
+
+  border-top: 1px solid (rgba(255,255,255,0.8));
+  
+  -webkit-box-shadow: 0 0 0 1px (darken(@button-color, 30%)), 0 2px 0 0 (rgba(255,255,255,0.7));
+
+}
+
+//Does not include all borders (just top)
+.rectangle-button-menu-active-style(@button-color:white) {
+
+  background-image: url(assets/images/BG2.png), -moz-linear-gradient(top, rgba(255,255,255,0) 0%, rgba(255,255,255,0.2) 50%, rgba(255,255,255,0.45) 100%); 
+  background-image: url(assets/images/BG2.png), -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(255,255,255,0)), color-stop(50%,rgba(255,255,255,0.2)), color-stop(100%,rgba(255,255,255,0.45))); 
+  
+  border-top: 1px solid darken(@button-color, 10%);
+
+  -webkit-box-shadow: 0 0 0 1px (darken(@button-color, 30%)), inset 0 1px 3px 0 (darken(@button-color, 10%)), 0 2px 0 0 rgba(255,255,255,0.7);
+}
+
+
+// local style functions
+
 
 .menu-tabs {
 
@@ -22,24 +51,17 @@
 		height: @height-tab;
 		float: left;
 		line-height: (@height-tab) + 1;
-		.rectangle-button-menu-style (@grey06);
 		text-align: center;
 		margin-top: @vertical-margin - 1;
 		margin-bottom: @vertical-margin;
+
+		.rectangle-button-menu-style (@grey06);
 		.button-text-style;
 		.button-text-is-font-black-style;
 
 	}
 	
-	> .menu-tab:active {
-
-		.rectangle-button-menu-active-style (@blue00);
-		.button-text-style;
-		.button-text-is-font-white-style;
-
-	}
-
-	> .menu-tab.is-selected {
+	> .menu-tab.is-selected, > .menu-tab:active {
 
 		.rectangle-button-menu-active-style (@blue00);
 		.button-text-style;
@@ -49,8 +71,8 @@
 
 	> .menu-tab.left {
 
-		border-top-left-radius: @border-button-radius-size;
-		border-bottom-left-radius: @border-button-radius-size;
+		border-top-left-radius: @border-single-radius-size;
+		border-bottom-left-radius: @border-single-radius-size;
 		margin-left: @horizontal-margin;
 		
 	}
@@ -58,8 +80,8 @@
 
 	> .menu-tab.right {
 
-		border-top-right-radius: @border-button-radius-size;
-		border-bottom-right-radius: @border-button-radius-size;
+		border-top-right-radius: @border-single-radius-size;
+		border-bottom-right-radius: @border-single-radius-size;
 		margin-right: @horizontal-margin;
 		right: 2px;
 
@@ -67,13 +89,8 @@
 	
 	> .menu-tab.single {
 	
-		//Left side
-		border-top-left-radius: @border-button-radius-size;
-		border-bottom-left-radius: @border-button-radius-size;
+		border-radius: @border-single-radius-size;
 		margin-left: @horizontal-margin;
-		//Right side
-		border-top-right-radius: @border-button-radius-size;
-		border-bottom-right-radius: @border-button-radius-size;
 		margin-right: @horizontal-margin;
 		
 	}
