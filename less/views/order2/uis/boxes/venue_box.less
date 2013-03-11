@@ -6,179 +6,124 @@
 @import 'radius';
 
 
-@z-index1: 1000;
-
 @product-height: 109px;
-@square_image_size: 58px;
 
 .venue-box {
 
 	position:relative;
 
+  > .venue-box-top {
 
-	> .venue-box-content {
+    position: relative;
+    z-index: 1;
 
+    border-bottom: 1px solid rgba(255, 255, 255, 0.7);	
 
-		> .venue-box-top {
+    line-height: 16px;
 
-			display: table;
+    > .left-column {
 
-			// OJO: check in tablet
-			//width: 100%;
-			//height: 100%;
+      > .square-image {
 
-			position: relative;
-			z-index: 1;
+        position: absolute;
+        z-index: 1000;
+        margin-top: -16px;
 
-			border-bottom: 1px solid rgba(255, 255, 255, 0.7);	
+      }
+    }
 
-			
-			padding-bottom: 2px;
-			padding-left: 4px;
-			padding-top: 4px;
-      padding-right: 8px;
+    > .middle-column {
+      padding-left: 54px;
+    }
 
-			line-height: 16px;
-      
-
-		
-			> .venue-left-l {
-
-				height: 100%;
-				display: table-cell;
-
-				.square-image {
-
-					position: absolute;
-					z-index: @z-index1;
-
-					margin: 2px 0 0 2px;
-
-				}
-
-			}
-
-			> .venue-middle-l {
-
-				height: 100%;
-        width: 100%;
-
-				display: table-cell;
-				vertical-align: middle;
-
-			}
-
-			> .venue-right-l {
-
-				height: 100%;
-				display: table-cell;
-				vertical-align: middle;
-
-				.text-is-font-grey-style;
-
-				text-align: right;
-        white-space: nowrap;
-
-			}
-
-		}
+  }
 
 
-			> .venue-box-products {
+    > .venue-box-products {
 
-				height: @product-height;
-				width: 100%;
-				//background-color: red;
-				overflow: hidden;
+      height: @product-height;
+      width: 100%;
+      //background-color: red;
+      overflow: hidden;
 
-				border-top: 1px solid @grey09;
-				border-bottom: 1px solid @grey09;
+      border-top: 1px solid @grey09;
+      border-bottom: 1px solid @grey09;
 
 
 
-				> .venue-box-products-swipe {
+      > .venue-box-products-swipe {
 
-					position:relative;
-					height: 100%;
-					overflow: visible;
+        position:relative;
+        height: 100%;
+        overflow: visible;
 
-					-webkit-transition: -webkit-transform 200ms ease-in-out;
-
-
-					> .venue-product {
-
-						position: absolute;
-						width: 100%;
-						height: 100%;
-
-						-webkit-transform: translateZ(0);
-
-						background-color: @grey05;
-
-					}
-
-					> .venue-product.is-loading {
-
-						background-image: url('./assets/images/product_default.png');
-						background-size: 100%;
-						background-repeat: no-repeat;
-
-					}
+        -webkit-transition: -webkit-transform 200ms ease-in-out;
 
 
-				}
+        > .venue-product {
 
-				> .invite-button {
+          position: absolute;
+          width: 100%;
+          height: 100%;
 
-					position: absolute;
-					float: right;
-					top: 100px;
-					right: -8px;
+          -webkit-transform: translateZ(0);
 
-				}
+          background-color: @grey05;
 
+        }
 
-				> .carousel-circles {
+        > .venue-product.is-loading {
 
-					position: relative;
-					top: -13px;
-					left: 16px;
+          background-image: url('./assets/images/product_default.png');
+          background-size: 100%;
+          background-repeat: no-repeat;
 
-					> .carousel-circle {
-
-					}
-
-				}
+        }
 
 
-			}
+      }
 
-			> .venue-box-bottom {
+      > .invite-button {
 
-        height: 12px;
-				background-color: @grey01;
-        width: 100%;
+        position: absolute;
+        float: right;
+        top: 100px;
+        right: -8px;
 
-				//The same border-radius as box-title-bottom
-				border-bottom-left-radius: @border-box-radius-size;
-				border-bottom-right-radius: @border-box-radius-size;
+      }
 
-				border-top: 1px solid rgba(255,255,255,0.7);
+      > .carousel-circles {
 
-			}
+        position: relative;
+        top: -13px;
+        left: 16px;
 
-	}
+        > .carousel-circle {
+
+        }
+
+      }
+
+    }
+
+    > .venue-box-bottom {
+
+      min-height: 12px;
+      border-top: 1px solid rgba(255,255,255,0.7);
+      width: 100%;
+
+    }
 
 }
 
 .venue-box.has-people {
 
-	> .venue-box-content {
+  > .venue-box-bottom {
 
-    > .venue-box-bottom {
+    > .images {
 
-      height: 79px;
-
+      .box-padding-horizontal;
+      padding-bottom: 4px;
     }
 
   }

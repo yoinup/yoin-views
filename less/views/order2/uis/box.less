@@ -24,42 +24,43 @@
 	background-image: url(assets/images/BG_25.png);
 	border: 1px solid @grey07;
 
-	> .box-content {
-    .box-padding-vertical;
-	}
-
-	> .box-content.has-padding { 
-    .box-padding-horizontal;
-  }
-
-  > .box-content.has-tap:active, > .box-content.has-tap.is-pending, > .box-content.has-tap.touch {
-
-    .box-press;
-    .border-bottom-box-radius-style;
-
-  }
-
-	> .box-content.has-li {
-    padding: 0px;
-  }
-
-  > .box-content.without-padding {
-    padding: 0px;
-  }
-
-  > .box-content.has-fill-border {
-    .list-element-fill-border;
-  }
-
-	> .box-content.is-text {
-		
-		//white-space: nowrap;
-		text-overflow: ellipsis;
-		overflow: hidden;
-
-	}
 
 }
+
+.box-content {
+  .box-padding-vertical;
+}
+
+.box-content.low-bottom {
+  padding-bottom: 4px;
+}
+
+.box-content.has-padding { 
+  .box-padding-horizontal;
+}
+
+.box-content.has-tap:active, .box-content.has-tap.is-pending, .box-content.has-tap.touch {
+
+  .box-press;
+  .border-bottom-box-radius-style;
+
+}
+
+.box-content.has-li, .box-content.without-padding {
+  padding: 0px;
+}
+
+.box-content.has-fill-border {
+  .list-element-fill-border;
+}
+
+.box-content.is-text {
+  
+  text-overflow: ellipsis;
+  overflow: hidden;
+
+}
+
 
 .box-content-element {
 
@@ -73,26 +74,6 @@
 
       }
     }
-
-}
-
-.box-content-element.with-normal-image-padding {
-
-  .box-padding-style;
-
-}
-
-
-.box-title-inline {
-
-  padding-bottom: 6px;
-  .button-text-is-font-black-style;
-
-}
-
-.box-title-inline.not-inherit-padding {
-
-  padding: 6px 0px 0px 8px;
 
 }
 
