@@ -5,7 +5,6 @@
 @import 'paddings';
 @import 'radius';
 
-
 @product-height: 109px;
 
 .venue-box {
@@ -33,7 +32,7 @@
     }
 
     > .middle-column {
-      padding-left: 54px;
+      padding-left: @size-square-image-is-big + 1px;
     }
 
   }
@@ -116,16 +115,22 @@
 
 }
 
+
 .venue-box.has-people {
 
   > .venue-box-bottom {
 
-    > .images {
+    > .images.h-scroller {
 
-      .box-padding-horizontal;
-      padding-bottom: 4px;
+      margin-left: @box-padding-horizontal;
+      margin-right: @box-padding-horizontal;
+      padding-bottom: @box-padding-vertical/2;
+
+      height: @size-square-image-is-normal + 2px;
+
     }
 
   }
 
 }
+

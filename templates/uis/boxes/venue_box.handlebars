@@ -98,14 +98,16 @@
         {{view Yn.SeeMoreButtonView contentBinding="venue" }}
       </div>
 
-      <div class="images">
+      <div class="images h-scroller">
 
-          {{#each person in fivePeople}}
+        <div class="h-scroller-container">
+          {{#each person in people}}
             {{view Yn.VenueNearUserSquareImageView class="is-normal touchable inline fix-scrolling-touch"
               contentBinding="person"
               venueBinding="view.venue"
               withPhoto=true }}
           {{/each}}
+        </div>
 
       </div>
 

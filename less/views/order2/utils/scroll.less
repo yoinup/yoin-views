@@ -2,19 +2,31 @@
   height: 0.5em;
 }
 
-
-.scroller {
-  overflow-y: auto;
+.scroller, .h-scroller {
   -webkit-overflow-scrolling: touch;
 }
 
-.scroller::-webkit-scrollbar  {
+.scroller::-webkit-scrollbar, .h-scroller::-webkit-scrollbar  {
   display: none; 
+}
+
+.scroller {
+  overflow-y: auto;
+}
+
+.h-scroller {
+  overflow-x: auto;
+  overflow-y: hidden;
 }
 
 .scroller-container {
   // because of SpinnerView: absolute
   min-height: 100%;
+}
+
+.h-scroller-container {
+  min-width: 100%;
+  white-space: nowrap;
 }
 
 .fix-scrolling-touch {
