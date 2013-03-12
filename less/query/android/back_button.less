@@ -1,4 +1,28 @@
 
+@import 'sizes';
+@import 'textstyles';
+
 .back-button {
   display: none;
+}
+
+.android-back-button {
+
+  position: absolute;
+  left: @margin-header-size;
+
+	.text-is-font-grey-style;
+}
+
+.android-back-button:before {
+
+  content: 'd';
+  line-height: @header-height + 5px;
+}
+
+
+.android-back-button:active, .android-back-button.is-pending, .android-back-button.touch {
+
+  .text-is-font-selected-style
+
 }
