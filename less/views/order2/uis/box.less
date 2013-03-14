@@ -102,25 +102,28 @@
 
 
 // box-title top and bottoms
-.box-title-top {
+
+.box-title-top, .box-title-bottom {
 
   background-color: @grey01;
+  .button-text-is-font-grey-style;
 
-	border-top-left-radius: @border-box-radius-size;
-	border-top-right-radius: @border-box-radius-size;
+}
+
+.box-title-top {
+
+  .box-padding-style;
+  .text-is-font-bold-style;
 
   border-bottom: 1px solid rgba(255, 255, 255, 0.7);
   -webkit-box-shadow: inset 0 -1px 0 0 @grey09;
+	border-top-left-radius: @border-box-radius-size;
+	border-top-right-radius: @border-box-radius-size;
 
-  .button-text-is-font-grey-style;
-  .text-is-font-bold-style;
-  .box-padding-style;
 
 }
 
 .box-title-top.with-image {
-
-  .box-padding-vertical;
 
   display: table;
   position: relative;
@@ -141,9 +144,7 @@
 
 .box-title-bottom {
 
-  background-color: @grey01;
-  .button-text-is-font-grey-style;
-  .box-padding-style;
+  .box-padding-vertical;
   
   border-top: 1px solid @grey09;
   -webkit-box-shadow: inset 0 1px 0 0 rgba(255, 255, 255, 0.7);
@@ -167,9 +168,13 @@
 
   > .bottom-detail.is-left {
 
+		padding-left: @box-padding-horizontal;
+
   }
 
   > .bottom-detail.is-right {
+
+		padding-right: @box-padding-horizontal;
     text-align: right;
 
   }
