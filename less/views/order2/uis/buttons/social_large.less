@@ -1,7 +1,8 @@
 @import 'colors';
 @import 'sizes';
 @import 'textstyles';
-@import 'buttons';
+@import 'borders';
+@import 'gradients';
 @import 'radius';
 
 //---------- functions
@@ -55,7 +56,8 @@
 
 .large-button.facebook {
 
-	.rectangle-button-style(@blue-facebook);
+
+  .ui-fill-border(@blue-facebook);
 	.button-text-is-font-white-style;
 	
 	> .left {
@@ -70,7 +72,7 @@
 
 .large-button.facebook.is-disabled {
 	
-	.rectangle-button-active-style(@grey12);
+  .ui-fill-border(@grey12);
 	.button-text-is-font-disabled-style;
 
 	> .left {
@@ -85,18 +87,19 @@
 
 .large-button.facebook:active, .large-button.facebook.is-pending, .large-button.facebook.touch {
 
-	.rectangle-button-active-style(@blue-facebook);
+  .ui-fill-border-active(@blue-facebook);
 
 }
 
 .large-button.facebook.is-disabled:active {
-	
-	.rectangle-button-active-style(@grey12);
+
+  .ui-fill-border-active(@grey12);
+
 }
 
 .large-button.twitter {
 
-	.rectangle-button-style(@blue-twitter);
+  .ui-fill-border(@blue-twitter);
 	.button-text-is-font-white-style;
 	
 	> .left {
@@ -110,7 +113,7 @@
 
 .large-button.twitter.is-disabled {
 	
-	.rectangle-button-active-style(@grey12);
+  .ui-fill-border-active(@grey12);
 	.button-text-is-font-disabled-style;
 
 	> .left {
@@ -123,13 +126,13 @@
 
 .large-button.twitter:active, .large-button.twitter.is-pending, .large-button.twitter.touch {
 
-	.rectangle-button-active-style(@blue-twitter);
+  .ui-fill-border-active(@blue-twitter);
 
 }
 
 .large-button.twitter.is-disabled:active {
 
-	.rectangle-button-active-style(@grey12);
+  .ui-fill-border-active(@grey12);
 
 }
 

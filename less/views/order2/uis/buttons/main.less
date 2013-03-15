@@ -1,34 +1,10 @@
 @import 'colors';
 @import 'sizes';
-@import 'buttons';
 @import 'radius';
+@import 'borders';
+@import 'gradients';
 
 
-.inner-double-button-style(@color:white) {
-
-  background-color: @color;
-  background-image: url(assets/images/BG2.png), -moz-linear-gradient(top, rgba(255,255,255,0.45) 0%, rgba(255,255,255,0.2) 50%, rgba(255,255,255,0) 100%);
-  background-image: url(assets/images/BG2.png), -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(255,255,255,0.45)), color-stop(50%,rgba(255,255,255,0.2)), color-stop(100%,rgba(255,255,255,0)));
-
-  border-top: 1px solid (rgba(255,255,255,0.8));
-  
-  -webkit-box-shadow: 0 0 0 1px (darken(@color, 30%)), 0 2px 0 0 (rgba(0,0,0,0.4));
-  box-shadow: 0 0 0 1px (darken(@color, 30%)), 0 2px 0 0 (rgba(0,0,0,0.4));
-
-
-}
-
-.inner-double-button-active-style(@color:white) {
-
-  background-image: url(assets/images/BG2.png), -moz-linear-gradient(top, rgba(255,255,255,0) 0%, rgba(255,255,255,0.2) 50%, rgba(255,255,255,0.45) 100%);
-  background-image: url(assets/images/BG2.png), -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(255,255,255,0)), color-stop(50%,rgba(255,255,255,0.2)), color-stop(100%,rgba(255,255,255,0.45)));
-
-  border-top: 1px solid (darken(@color, 10%));
-  
-  -webkit-box-shadow: 0 0 0 1px (darken(@color, 30%)), inset 0 0px 8px 0 (darken(@color, 20%));
-  box-shadow: 0 0 0 1px (darken(@color, 30%)), inset 0 0px 8px 0 (darken(@color, 20%));
-
-}
 
 // ------------------------------- local functions
 
@@ -68,50 +44,50 @@
     
 .main-button.is-blue {
 	> .inner-main-button {
-		.inner-double-button-style (@blue00);
+    .ui-fill-border(@blue00);
 	}
 }
 
 .main-button.is-black {
 	> .inner-main-button {
-		.inner-double-button-style (@black00);
+    .ui-fill-border(@black00);
 	}
 }
 
 .main-button.is-green {
 	> .inner-main-button {
-		.inner-double-button-style (@green01);
+    .ui-fill-border(@green01);
 	}
 }
 
 .main-button.is-red {
 	> .inner-main-button {
-		.inner-double-button-style (@red00);
+    .ui-fill-border(@red00);
 	}
 }
 
 .main-button.is-blue:active, .main-button.is-blue.is-pending, .main-button.is-blue.touch {
 	> .inner-main-button {
-		.inner-double-button-active-style (@blue00);
+    .ui-fill-border-active(@blue00);
 	}
 }
 
 
 .main-button.is-black:active, .main-button.is-black.is-pending, .main-button.is-black.touch {
 	> .inner-main-button {
-		.inner-double-button-active-style (@black00);
+    .ui-fill-border-active(@black00);
 	}
 }
 
 
 .main-button.is-green:active, .main-button.is-green.is-pending, .main-button.is-green.touch {
 	> .inner-main-button {
-		.inner-double-button-active-style (@green01);
+    .ui-fill-border-active(@green01);
 	}
 }
 
 .main-button.is-red:active, .main-button.is-red.is-pending, .main-button.is-red.touch {
 	> .inner-main-button {
-		.inner-double-button-active-style (@red00);
+    .ui-fill-border-active(@red00);
 	}
 }
