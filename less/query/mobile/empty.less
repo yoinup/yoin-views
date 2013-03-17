@@ -1,30 +1,27 @@
 @import 'textstyles';
 @import 'aligns';
 
-.empty-view {
+.empty-text {
+  .alert-text-style;
+}
+
+.empty-view.is-relative {
   height: 100px;
   width: 100px;
   margin: 0 auto;
 }
 
-.empty-text {
-  .alert-text-style;
+.empty-text.is-relative {
 	margin: 0 3.125%;
 }
 
 
 .empty-view.is-absolute {
-  position: absolute;
-  top: 50%;
-  margin-top: (-1/2)*100px;
+  .center_align(100px, 100px, absolute);
 }
 
 .empty-text.is-absolute {
-  position: absolute;
+  .center_width(300px, absolute);
   top: 50%;
   margin-top: 60px;
-}
-
-.empty-view.is-absolute.is-vertical-center {
-  margin-top: 110px;
 }
