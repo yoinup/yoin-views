@@ -2,37 +2,29 @@
 @import 'aligns';
 
 .empty-view {
-
-	> .transparency-empty {
-
-		> .image-empty {
-
-			.center_align (200px, 200px, absolute);
-
-		}
-
-		> .empty-text {
-
-			margin-top: 110px;
-			.alert-text-style;
-
-		}
-
-	}
-
+  height: 100px;
+  width: 100px;
+  margin: 0 auto;
 }
 
-.empty-view.is-vertical-center {
-
-	> .transparency-empty {
-
-		> .empty-text {
-
-			margin-top: 210px;
-
-		}
-
-	}
-
+.empty-text {
+  .alert-text-style;
+	margin: 0 3.125%;
 }
 
+
+.empty-view.is-absolute {
+  position: absolute;
+  top: 50%;
+  margin-top: (-1/2)*100px;
+}
+
+.empty-text.is-absolute {
+  position: absolute;
+  top: 50%;
+  margin-top: 60px;
+}
+
+.empty-view.is-absolute.is-vertical-center {
+  margin-top: 110px;
+}

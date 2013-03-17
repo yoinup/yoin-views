@@ -5,81 +5,14 @@
 
 .empty-view {
 
-	> .transparency-empty {
-		
-		> .image-empty {
-
-			background-image: url(assets/images/empty_image.png);
-			background-repeat: no-repeat;
-			background-size: 100%;
-
-		}
-
-		> .empty-text {
-
-			position: absolute;
-      top: 50%;
-      .center_width (320px);
-			text-align: center;
-
-			//The Text Style is in the Media Query Files
-
-		}
-
-	}
+  background-image: url(assets/images/empty_image.png);
+  background-repeat: no-repeat;
+  background-size: 100%;
 
 }
 
-
-.empty-view.is-small {
-
-	> .transparency-empty {
-
-		> .image-empty {
-
-			//TODO : Change this to implement relative size
-			//height: 100px;
-			//width: 100px;
-      .center_align (100px, 100px, absolute);
-
-		}
-
-    > .empty-text {
-
-      margin-top: 60px;
-
-    }
-
-	}
-
+.empty-text {
+  text-align: center;
 }
 
-.empty-view.is-vertical-center.is-small {
-
-	> .transparency-empty {
-
-    > .empty-text {
-
-      margin-top: 110px;
-
-    }
-
-	}
-
-}
-
-
-.empty-view.is-vertical-center {
-
-	> .transparency-empty {
-
-		> .image-empty {
-
-      margin-top: 0px;
-
-		}
-
-	}
-
-}
 
