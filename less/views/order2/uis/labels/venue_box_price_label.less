@@ -10,17 +10,18 @@
 .venue-box-price-label-style (@button-color:white) {
 
   background-color: @button-color;
-  background-image: -moz-linear-gradient(top, rgba(255,255,255,0) 0%, rgba(255,255,255,0.1) 70%, rgba(255,255,255,0.2) 100%); 
-  background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(255,255,255,0)), color-stop(70%,rgba(255,255,255,0.1)), color-stop(100%,rgba(255,255,255,0.2))); 
+  background-image: -moz-linear-gradient(top, rgba(0,0,0,0.1) 0%, rgba(13,13,13,0.1) 1%, rgba(127,127,127,0.1) 10%, rgba(252,252,252,0.1) 50%, rgba(127,127,127,0.1) 85%, rgba(0,0,0,0.1) 100%); /* FF3.6+ */
+  background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(0,0,0,0.1)), color-stop(1%,rgba(13,13,13,0.1)), color-stop(10%,rgba(127,127,127,0.1)), color-stop(50%,rgba(252,252,252,0.1)), color-stop(85%,rgba(127,127,127,0.1)), color-stop(100%,rgba(0,0,0,0.1))); /* Chrome,Safari4+ */
 
-  box-shadow:inset 0px 1px 1px darken(@button-color, 16%), 0px 1px 1px @white00;
+  box-shadow: 0 1px 0 0 rgba(0, 0, 0, 0.2);
+  border: 1px solid rgba(0,0,0,0.2);
 
 }
 
 .venue-box-price-label {
 
-	border-bottom-left-radius: @border-single-radius-size;
-	border-bottom-right-radius: @border-single-radius-size;
+	border-bottom-left-radius: 3px;
+	border-bottom-right-radius: 3px;
   
 
  .venue-box-price-label-style (@orange01);
