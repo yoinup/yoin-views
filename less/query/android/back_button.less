@@ -11,7 +11,8 @@
   position: absolute;
   left: @margin-header-size;
 
-	.text-is-font-grey-style;
+	.button-text-is-font-white-style;
+	-webkit-transform: rotate(360deg) scale(-1, 1);
 }
 
 .android-back-button:before {
@@ -23,6 +24,7 @@
 
 .android-back-button:active, .android-back-button.is-pending, .android-back-button.touch {
 
-  .text-is-font-selected-style
+  //.text-is-font-selected-style
+  opacity: 0.5;
 
 }
