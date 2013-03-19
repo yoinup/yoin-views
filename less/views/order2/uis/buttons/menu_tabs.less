@@ -12,17 +12,21 @@
 
 
 //Does not include all borders (just top)
-.menu-tabs-border(@button-color:white) {
+
+
+.menu-tabs-border (@button-color:white) {
 
   border-top: 1px solid (rgba(255,255,255,0.8));
   -webkit-box-shadow: 0 0 0 1px (darken(@button-color, 30%)), 0 2px 0 0 (rgba(255,255,255,0.7));
 
 }
 
-.menu-tabs-border-active(@button-color:white) {
-  //border-top: 1px solid darken(@button-color, 10%);
-  //-webkit-box-shadow: 0 0 0 1px (darken(@button-color, 30%)), inset 0 1px 3px 0 (darken(@button-color, 10%)), 0 2px 0 0 rgba(255,255,255,0.7);
+/*
+.menu-tabs-border-active (@button-color:white) {
+  border-top: 1px solid darken(@button-color, 10%);
+  -webkit-box-shadow: 0 0 0 1px (darken(@button-color, 30%)), inset 0 1px 3px 0 (darken(@button-color, 10%)), 0 2px 0 0 rgba(255,255,255,0.7);
 }
+*/
 
 
 // local style functions
@@ -34,8 +38,8 @@
 	height: @height-tabs;
 	background-color: @grey04;
 
-  .ui-border-middle (@grey06);
-  .ui-border-middle-add-bottom-shadow (@grey06);
+  .ui-border-wrapper (@grey06);
+  .ui-border-wrapper-small-shadow (@grey06);
 	
 	> .menu-tab {
 
@@ -46,8 +50,8 @@
 		margin-top: @vertical-margin - 1;
 		margin-bottom: @vertical-margin;
     
-    .ui-fill(@grey06);
-		.menu-tabs-border(@grey06);
+    .ui-fill (@grey06);
+	.menu-tabs-border (@grey06);
 
 		.button-text-style;
 		.button-text-is-font-black-style;
@@ -56,7 +60,7 @@
 	
 	> .menu-tab.is-selected, > .menu-tab:active {
 
-    .ui-fill(@blue00);
+    .ui-fill (@blue00);
 
 		.button-text-style;
 		.button-text-is-font-white-style;
