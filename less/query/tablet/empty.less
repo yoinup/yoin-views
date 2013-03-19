@@ -2,34 +2,31 @@
 @import 'aligns';
 
 
-.empty-view {
-
-
-		> .image-empty {
-
-			.center_align (400px, 400px, absolute);
-
-		}
-
-		> .empty-text {
-
-			margin-top: 210px;
-			.big-alert-text-style;
-
-		}
-
-
+// TODO: 
+// - change text-style to do platform-agnostic
+// - css for common margin with box
+// - define local sizes
+.empty-text {
+  .big-alert-text-style;
 }
 
-.empty-view.is-vertical-center {
-
-
-		> .empty-text {
-
-			margin-top: 410px;
-
-		}
-
-
+.empty-view.is-relative {
+  height: 400px;
+  width: 400px;
+  margin: 0 auto;
 }
 
+.empty-text.is-relative {
+	margin: 0 62px;
+}
+
+
+.empty-view.is-absolute {
+  .center_align(400px, 400px, absolute);
+}
+
+.empty-text.is-absolute {
+  .center_width(600px, absolute);
+  top: 50%;
+  margin-top: 220px;
+}
