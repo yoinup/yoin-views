@@ -7,16 +7,11 @@
 
 
 .submenu-border-tab-style (@button-color: @grey05) {
-  -webkit-box-shadow: 1px 0 0 0 rgba(255, 255, 255, 0.5), inset -1px 0 0 0 darken(@button-color, 30%), inset -2px 0 0 0 rgba(255, 255, 255, 0.5);
+
+  -webkit-box-shadow: 1px 0 0 0 rgba(255, 255, 255, 0.5), inset -1px 0 0 0 darken(@button-color, 30%);
+
 }
 
-
-.submenu-border-tab-selected-style (@button-color: @grey05) {
-  -webkit-box-shadow: inset 0 -1px 0 0 darken(@button-color, 30%), 1px 0 0 0 rgba(255, 255, 255, 0.5), inset -1px 0 0 0 darken(@button-color, 50%), 0 -1px 0 0 rgba(0, 0, 0, 0.2);
-}
-.submenu-border-last-tab-selected-style (@button-color: @grey05) {
-  -webkit-box-shadow: inset 0 -1px 0 0 darken(@button-color, 30%), 0 -1px 0 0 rgba(0, 0, 0, 0.2);
-}
 
 @height: 50px;
 
@@ -26,15 +21,15 @@
   height: @height;
   width: 100%;
 
- .ui-border-wrapper  (@grey06);
- .ui-border-wrapper-small-shadow (@grey06);
+  .ui-fill (@grey06);
+  .ui-border-wrapper  (@grey06);
+  .ui-border-wrapper-small-shadow (@grey06);
 
   > .submenu-tab {
 
     float: left;
-    height: 100%;
+    height: @height - 1;
 
-    .ui-fill (@grey06);
     .submenu-border-tab-style;
 
     > .square-image {
@@ -65,8 +60,8 @@
 
   > .submenu-tab:active, > .submenu-tab.is-selected {
 
-    .ui-fill-active (@grey08);
-    //.submenu-border-tab-selected-style;
+    .ui-fill-active (@grey06);
+  
   }
 
   > .submenu-tab:last-of-type {
@@ -74,7 +69,8 @@
   }
 
   > .submenu-tab:last-of-type:active, > .submenu-tab.is-selected:last-of-type {
-    .submenu-border-last-tab-selected-style; 
+    -webkit-box-shadow: none;
+
   }
 
 }
