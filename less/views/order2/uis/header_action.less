@@ -10,33 +10,35 @@
 	height: 40px;
 
   .ui-fill(@grey06);
- .ui-border-wrapper (@grey06);
- .ui-border-wrapper-small-shadow (@grey06);
+  .ui-border-wrapper (@grey06);
+  .ui-border-wrapper-small-shadow (@grey06);
 
 	display: table;
-	
-	> .ha-left {
-	
+
+	> .ha-right, > .ha-left, > .ha-single-box {
 		display: table-cell;
 		vertical-align: middle;
-    width: 100%;
-
-		padding-left: @margin-header-size;
+	}
 	
+	> .ha-left {
+    width: 100%;
+		padding-left: @margin-header-size;
 	}
 	
 	
 	> .ha-right {
 
 		padding: 0 @margin-header-size;
-	
-		display: table-cell;
-		vertical-align: middle;
 
 		> .button-text {
 			float: right;
 		}
 	
+	}
+
+	> .ha-single-box {
+		width: 100%;
+		padding: 0 @margin-header-size;
 	}
 
 }
