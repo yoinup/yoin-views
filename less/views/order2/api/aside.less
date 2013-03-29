@@ -3,7 +3,7 @@
 
 
 @aside-size: 50%;
-@aside-size-big: 80%;
+@aside-size-big: 83%;
 
 .aside-container {
 
@@ -13,8 +13,8 @@
 
   > .aside-front {
     z-index: 2;
-
     width:100%;
+    height:100%;
     left: 0%;
   }
 
@@ -36,7 +36,7 @@
     width: @aside-size;
   }
 
-  > .aside-left {
+  > .aside-right {
     left: @aside-size;
   }
 
@@ -48,8 +48,8 @@
     width: @aside-size-big;
   }
 
-  > .aside-left {
-    left: 100% - @aside-size-big;
+  > .aside-right {
+    left: @aside-size-big;
   }
 
 }
@@ -82,9 +82,9 @@
 }
 
 .aside-container.is-aside-big.is-aside-right > .aside-front {
-  left: @aside-size-big;
+  left: @aside-size-big*1;
 }
 
 .aside-container.is-aside-big.is-aside-left > .aside-front {
-  left: @aside-size-big*-1;
+  left: @aside-size-big;
 }
