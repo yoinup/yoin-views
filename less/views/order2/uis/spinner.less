@@ -1,4 +1,4 @@
-    @import 'sizes';
+@import 'sizes';
 @import 'colors';
 @import 'aligns';
 @import 'radius';
@@ -13,6 +13,8 @@ to {
     }  
 }  
 
+@spinner-height: 110px;
+@spinner-width: 108px;
 
 .spinner {
 
@@ -20,9 +22,7 @@ to {
 
     //http://stackoverflow.com/questions/743123/fixed-positioning-in-mobile-safari
     //http://developer.apple.com/library/ios/#technotes/tn2010/tn2262/_index.html
-    .center_align (110px, 108px, absolute);
 
-    z-index: 1000;
     background-color: rgba(0,0,0,0.6);
     border-radius: @border-box-radius-size;
 
@@ -50,57 +50,43 @@ to {
         -webkit-animation-iteration-count: infinite;  
         -webkit-animation-timing-function: linear;  
         -webkit-animation-duration: 0.8s;   
-        
 
       }
-
-
-
-   /*
-    > .spinner_circle_out {
-
-        position: relative;
-        height: 59%;
-        width: 61%;
-        left: 19.5%;
-        top: 20.5%;
-        border-radius: 500px;
-        
-        //background:  -webkit-linear-gradient(-45deg, #ffffff 0%,#ffffff 14%,#d3d3d3 36%,#c4c4c4 50%,#a0a0a0 75%,#8e8e8e 100%); 
-        background:  -webkit-linear-gradient(-45deg, #ffffff 0%,#d3d3d3 24%,#c4c4c4 50%,#a0a0a0 75%,#8e8e8e 100%); 
-
-      
-        //-----Mask for the border
-        -webkit-mask-image: url(assets/images/spinner_mask.png);
-        -webkit-mask-position: left top;
-        -webkit-mask-repeat: no-repeat;
-        -webkit-mask-size: 100% 100%;
-
-
-        //----Animation
-        -webkit-animation-name: spin;  
-        -webkit-animation-iteration-count: infinite;  
-        -webkit-animation-timing-function: linear;  
-        -webkit-animation-duration: 0.8s;  	
-
-      }
-
-      */
 
   }
 
+}
 
+.spinner:not(.is-relative) {
 
+  > .spinner-square {
 
+    .center_align (@spinner-height, @spinner-width, absolute);
+    z-index: 1000;
 
-
+  }
 
   > .spinner-text {
     
-    .center_width (110px);
+    .center_width (@spinner-width);
     top: 50%;
     margin-top: 60px;
 
+  }
+
+}
+
+
+.spinner.is-relative {
+
+  > .spinner-square {
+    height: @spinner-height;
+    width: @spinner-width;
+    margin: 0 auto;
+  }
+
+  > .spinner-text {
+    margin-top: 4px;
   }
 
 }
