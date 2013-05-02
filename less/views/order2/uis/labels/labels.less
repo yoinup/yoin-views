@@ -17,7 +17,7 @@
 
 }
 
-.price-label {
+.menu-counter-label, .price-label {
     
 
     -webkit-border-radius: @price_radius;
@@ -42,6 +42,12 @@
 
 }
 
+.menu-counter-label {
+
+   .price-label-style (@orange01);
+
+}
+
 
 .price-label.is-small {
 
@@ -52,8 +58,8 @@
 
 .notification-counter-label {
   position: absolute;
-  top: 21px;
-  left: 38px;
+  top: -5px;
+  left: -7px;
 
   -webkit-border-radius: @price_radius;
           border-radius: @price_radius;
