@@ -3,81 +3,18 @@
 
 	<div class="three-column-table">
 
-    {{#if hasImage }}
-      <div class="picture left-column">
-        {{#if isYoinUser }}
-
-          {{view Yn.SquareImageView classBinding="imagetype"
-            contentBinding="content"
-            withPhoto=true }}
-
-        {{else}}
-
-          {{#if isFbUser }}
-
-            {{view Yn.SquareImageView classBinding="imagetype"
-              contentBinding="fbId"
-              isFBUser=true
-              withPhoto=true }}
-
-          {{/if}}
-
-        {{/if}}
-
-      </div>
-    {{/if}}
+    <div class="picture left-column">
+      {{view Yn.SquareImageView classBinding="imagetype"
+        contentBinding="contentPhoto"
+        isFBUserBinding="isFbUser"
+        withPhoto=true }}
+    </div>
 
 		<div class="name middle-column">
 
-			{{#if isYoinUser }}
-			
-			  <span class="main-text">
-			  
-			    {{#if content.suspended }}
-		        {{I18n someone}}
-		      {{else}}
-		        {{content.name}}
-		      {{/if}}
-
-				</span>
-
-				{{#if showCity}}
-
-					{{#if content.city}}
-
-						<div class="detail-text">
-
-							<span class="icon with-text is-icon-x-small" icon="i">
-							</span>
-
-							{{content.city.name}}
-
-
-						</div>
-
-					{{/if}}
-
-				{{else}}
-
-            {{#if showStatus}}
-              <div class="detail-text without-icon">
-                {{content.status}}
-              </div>
-            {{/if}}
-
-				{{/if}}
-
-			{{else}}
-
-        <span class="main-text">
-          {{#if isFbUser }}
-            {{fbName}}
-          {{else}}
-            {{phoneName}}
-          {{/if}}	
-        </span>
-
-			{{/if}}
+      <span class="main-text">
+        {{userName}}
+      </span>
 
 		</div>
 

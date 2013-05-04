@@ -24,19 +24,11 @@
 
   <div class="control right-column">
 
-    {{#if hasSelect }}
+    {{#if showGeoposition }}
 
-      {{#if isGeopositionOn }}
-
-        {{#if venue.distance}}
-
-          <span class="icon-after with-text is-icon-small space-nowrap" icon="o">
-            {{normalize_distance distanceBinding="venue.distance" }}
-          </span>
-          
-        {{/if}}
-      {{/if}}
-    
+      <span class="icon-after with-text is-icon-small space-nowrap" icon="o">
+        {{normalize_distance distanceBinding="venue.distance" }}
+      </span>
 
     {{/if}}
 
@@ -48,7 +40,6 @@
         action="resend"}}
 
     {{/if}}
-    
 
   </div>
 
@@ -64,6 +55,13 @@
       contentBinding="products"
       selectedBinding="selected"}}
 
+    {{view Yn.CarouselCirclesView class="fix-scrolling-touch"
+      contentBinding="products"
+      selectedBinding="selected"}}
+
+    {{view Yn.VenueBoxPriceLabelView class="fix-scrolling-touch"
+      productBinding="selected"}}
+
 
   {{else}}
 
@@ -72,16 +70,11 @@
       contentBinding="products"
       selectedBinding="selected"}}
 
+    {{view Yn.CarouselCirclesView class="fix-scrolling-touch"
+      contentBinding="products"
+      selectedBinding="selected"}}
 
-  {{/if}}
 
-  {{view Yn.CarouselCirclesView class="fix-scrolling-touch"
-    contentBinding="products"
-    selectedBinding="selected"}}
-
-  {{#if hasSelect }}
-    {{view Yn.VenueBoxPriceLabelView class="fix-scrolling-touch"
-      productBinding="selected"}}
   {{/if}}
 
 </div>
@@ -110,13 +103,16 @@
 
       </div>
 
+    {{else}}
+
+      {{#if hasDescription}}
+        <div class="detail-text box-padding">
+          {{selected.description}}
+        </div>
+      {{/if}}
+
     {{/if}}
 
-    {{#if hasDescription}}
-      <div class="detail-text box-padding">
-        {{selected.description}}
-      </div>
-    {{/if}}
 
 </div>
 
