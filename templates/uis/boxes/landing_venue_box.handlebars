@@ -1,0 +1,75 @@
+{{#with view }}
+
+<div class="venue-box-top box-content low-bottom three-column-table">
+
+  <div class="left-column">
+    {{view Yn.SquareImageView class="fix-scrolling-touch is-big" 
+      contentBinding="brand" withIcon=true}}
+  </div>
+
+  <div class="middle-column">
+
+    <div class="main-text">
+      {{selected.name}}
+    </div>
+
+    <div class="detail-text">
+      {{brand.name}}
+    </div>
+
+  </div>
+
+  <div class="control right-column">
+
+
+  </div>
+
+</div>
+
+
+<div class="venue-box-products">
+
+  {{view Yn.VenueBoxProductSwipeView 
+    venueBinding="venue"
+    contentBinding="products"
+    selectedBinding="selected"}}
+
+  {{view Yn.CarouselCirclesView class="fix-scrolling-touch"
+    contentBinding="products"
+    selectedBinding="selected"}}
+
+  {{view Yn.VenueBoxPriceLabelView class="fix-scrolling-touch"
+    productBinding="selected"}}
+
+</div>
+
+<div class="venue-box-bottom">
+
+    {{#if hasPeople}}
+
+      <div class="box-content title two-column-table text is-small is-font-black">
+        <div class="left-column main">
+          {{I18n venue_people_title}} {{brand.name}}
+        </div>
+        {{view Yn.SeeMoreButtonView contentBinding="venue" action="goToFriendsNearby"}}
+      </div>
+
+      <div class="images h-scroller">
+
+        <div class="h-scroller-container">
+          {{#each person in people}}
+            {{view Yn.VenueNearUserSquareImageView class="is-normal touchable inline fix-scrolling-touch"
+              contentBinding="person"
+              venueBinding="view.venue"
+              withPhoto=true }}
+          {{/each}}
+        </div>
+
+      </div>
+
+    {{/if}}
+
+</div>
+
+
+{{/with}}
