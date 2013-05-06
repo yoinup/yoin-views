@@ -1,13 +1,14 @@
 {{#with view}}
 
-
-	<div class="three-column-table">
+	<div class="two-column-table">
 
     <div class="picture left-column">
-      {{view Yn.SquareImageView classBinding="imagetype"
+
+       {{view Yn.SquareImageView classBinding="imagetype"
         contentBinding="contentPhoto"
         isFBUserBinding="isFbUser"
         withPhoto=true }}
+
     </div>
 
 		<div class="name middle-column">
@@ -17,19 +18,6 @@
       </span>
 
 		</div>
-
-    {{#if hasInviteButton }}
-
-      <div class="action-button right-column">
-      
-        {{view Yn.AdaptativeButtonView class="is-blue button-text is-small is-font-white" 
-          contentI18n="invite" 
-          action="invite" 
-          actionContentBinding="content"}}
-
-      </div>
-
-    {{/if}}	
 
 </div>
 

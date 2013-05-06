@@ -1,0 +1,36 @@
+{{#with view}}
+
+
+	<div class="three-column-table">
+
+    <div class="picture left-column">
+
+      {{view Yn.SquareImageView classBinding="imagetype"
+        contentBinding="contentPhoto"
+        isFBUserBinding="isFBUser"
+        withPhoto=true }}
+
+    </div>
+
+		<div class="name middle-column">
+
+      <span class="main-text">
+        {{userName}}
+      </span>
+
+		</div>
+
+
+    <div class="action-button right-column">
+    
+      {{view Yn.AdaptativeButtonView class="is-blue button-text is-small is-font-white" 
+        contentI18n="invite" 
+        action="invite" 
+        actionContentBinding="content"}}
+
+    </div>
+
+
+</div>
+
+{{/with}}
