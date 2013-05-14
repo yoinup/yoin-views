@@ -38,42 +38,48 @@
 
     > .venue-box-products {
 
-      height: @product-height;
       width: 100%;
-      //background-color: red;
+      height: @product-height;
       overflow: hidden;
 
       border-top: 1px solid @grey09;
       border-bottom: 1px solid @grey09;
 
+      -webkit-transform: translateZ(0);
 
 
       > .venue-box-products-swipe {
 
         position:relative;
-        height: 100%;
+        height: @product-height;
         overflow: visible;
 
+        -webkit-transform: translateZ(0);
         -webkit-transition: -webkit-transform 200ms ease-in-out;
-
 
         > .venue-product {
 
           position: absolute;
           width: 100%;
-          height: 100%;
+          height: @product-height;
 
+          //-webkit-overflow-scrolling: touch;
           -webkit-transform: translateZ(0);
 
-          background-color: @grey05;
+
+          background-size: 100% @product-height;
+          background-repeat: no-repeat;
 
         }
 
         > .venue-product.is-loading {
 
+          background-color: @grey05;
+/*
           background-image: url('./assets/images/product_default.png');
-          background-size: 100%;
+          background-size: 100% @product-height;
           background-repeat: no-repeat;
+          */
 
         }
 
