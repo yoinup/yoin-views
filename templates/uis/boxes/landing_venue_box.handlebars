@@ -45,33 +45,34 @@
 
 </div>
 
+{{#if hasPeople}}
+
 <div class="venue-box-bottom">
 
-    {{#if hasPeople}}
+  <div class="box-content title two-column-table text is-small is-font-black">
+    <div class="left-column main">
+      {{I18n venue_people_title}} {{brand.name}}
+    </div>
+    {{view Yn.SeeMoreButtonView contentBinding="venue" action="goToFriendsNearby"}}
+  </div>
 
-      <div class="box-content title two-column-table text is-small is-font-black">
-        <div class="left-column main">
-          {{I18n venue_people_title}} {{brand.name}}
-        </div>
-        {{view Yn.SeeMoreButtonView contentBinding="venue" action="goToFriendsNearby"}}
-      </div>
+  <div class="images h-scroller">
 
-      <div class="images h-scroller">
+    <div class="h-scroller-container">
+      {{#each person in people}}
+        {{view Yn.VenueNearUserSquareImageView class="is-normal touchable inline fix-scrolling-touch"
+          contentBinding="person"
+          venueBinding="view.venue"
+          withPhoto=true }}
+      {{/each}}
+    </div>
 
-        <div class="h-scroller-container">
-          {{#each person in people}}
-            {{view Yn.VenueNearUserSquareImageView class="is-normal touchable inline fix-scrolling-touch"
-              contentBinding="person"
-              venueBinding="view.venue"
-              withPhoto=true }}
-          {{/each}}
-        </div>
-
-      </div>
-
-    {{/if}}
+  </div>
 
 </div>
+
+
+{{/if}}
 
 
 {{/with}}
