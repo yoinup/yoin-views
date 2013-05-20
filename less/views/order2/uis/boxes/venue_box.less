@@ -5,7 +5,7 @@
 @import 'paddings';
 @import 'radius';
 
-@product-height: 109px;
+//@product-height: 109px;
 
 .venue-box {
 
@@ -14,9 +14,8 @@
   > .venue-box-top {
 
     position: relative;
-    z-index: 1;
-
     border-bottom: 1px solid rgba(255, 255, 255, 0.7);	
+    z-index: 1;
 
     > .left-column {
 
@@ -30,6 +29,10 @@
     }
 
     > .middle-column {
+      padding-left: 8px;
+    }
+
+    > .middle-column.has-brand-picture {
       padding-left: @size-square-image-is-big + 1px;
     }
 
@@ -39,7 +42,7 @@
     > .venue-box-products {
 
       width: 100%;
-      height: @product-height;
+      //height: @product-height;
       overflow: hidden;
 
       border-top: 1px solid @grey09;
@@ -51,7 +54,7 @@
       > .venue-box-products-swipe {
 
         position:relative;
-        height: @product-height;
+        //height: @product-height;
         overflow: visible;
 
         -webkit-transform: translateZ(0);
@@ -61,25 +64,17 @@
 
           position: absolute;
           width: 100%;
-          height: @product-height;
-
+          //height: @product-height;
           //-webkit-overflow-scrolling: touch;
           -webkit-transform: translateZ(0);
 
 
-          background-size: 100% @product-height;
-          background-repeat: no-repeat;
 
         }
 
         > .venue-product.is-loading {
 
           background-color: @grey05;
-/*
-          background-image: url('./assets/images/product_default.png');
-          background-size: 100% @product-height;
-          background-repeat: no-repeat;
-          */
 
         }
 
@@ -90,7 +85,7 @@
 
         position: absolute;
         float: right;
-        margin-top: @product-height*(-1) - 1px;
+        //margin-top: @product-height*(-1) - 1px;
         right: @box-padding-horizontal;
 
       }
@@ -132,3 +127,9 @@
 
 }
 
+
+
+.venue-box.has-brand-picture {
+
+
+}

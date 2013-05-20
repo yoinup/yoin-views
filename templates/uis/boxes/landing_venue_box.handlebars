@@ -2,12 +2,14 @@
 
 <div class="venue-box-top box-content low-bottom three-column-table">
 
-  <div class="left-column">
-    {{view Yn.SquareImageView class="fix-scrolling-touch is-big" 
-      contentBinding="brand" withIcon=true}}
-  </div>
+  {{#if brand.picture }}
+    <div class="left-column">
+        {{view Yn.SquareImageView class="fix-scrolling-touch is-big" 
+          contentBinding="brand" withIcon=true}}
+    </div>
+  {{/if}}
 
-  <div class="middle-column">
+  <div {{bindAttr class=":middle-column brand.picture:has-brand-picture"}} >
 
     <div class="main-text">
       {{selected.name}}
