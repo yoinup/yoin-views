@@ -29,7 +29,7 @@
     }
 
     > .middle-column {
-      padding-left: 8px;
+      padding-left: @box-padding-horizontal;
     }
 
     > .middle-column.has-brand-picture {
@@ -69,6 +69,9 @@
           //-webkit-overflow-scrolling: touch;
           -webkit-transform: translateZ(0);
 
+          background-size: 100% 100%;
+          background-repeat: no-repeat;
+
 
 
         }
@@ -104,12 +107,46 @@
 
 }
 
+
+.venue-box {
+
+    > .venue-box-products {
+
+      border-bottom-left-radius: @border-box-radius-size;
+      border-bottom-right-radius: @border-box-radius-size;
+
+      > .venue-box-products-swipe {
+
+        > .venue-product {
+
+          border-bottom-left-radius: @border-box-radius-size;
+          border-bottom-right-radius: @border-box-radius-size;
+
+        }
+
+      }
+    }
+
+}
+
+
 .venue-box.has-description, .venue-box.has-people {
 
     > .venue-box-products {
       border-bottom: 1px solid @grey09;
       border-bottom-left-radius: 0;
       border-bottom-right-radius: 0;
+
+      > .venue-box-products-swipe {
+
+        > .venue-product {
+
+          border-bottom-left-radius: 0;
+          border-bottom-right-radius: 0;
+
+        }
+
+      }
     }
 
     > .venue-box-bottom {
