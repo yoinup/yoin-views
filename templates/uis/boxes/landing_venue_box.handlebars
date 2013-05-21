@@ -31,6 +31,9 @@
 
 <div class="venue-box-products">
 
+  {{view Yn.VenueBoxPriceLabelView class="fix-scrolling-touch"
+    productBinding="selected"}}
+
   {{view Yn.VenueBoxProductSwipeView 
     venueBinding="venue"
     contentBinding="products"
@@ -40,8 +43,6 @@
     contentBinding="products"
     selectedBinding="selected"}}
 
-  {{view Yn.VenueBoxPriceLabelView class="fix-scrolling-touch"
-    productBinding="selected"}}
 
 </div>
 
