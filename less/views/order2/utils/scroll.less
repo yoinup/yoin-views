@@ -6,6 +6,20 @@
   -webkit-overflow-scrolling: touch;
 }
 
+#app.is-gestures-blocked {
+
+  .scroller {
+    overflow-y: visible;
+    -webkit-overflow-scrolling: auto;
+  }
+
+  .h-scroller {
+    overflow-x: visible;
+    -webkit-overflow-scrolling: auto;
+  }
+
+}
+
 .scroller::-webkit-scrollbar, .h-scroller::-webkit-scrollbar  {
   display: none; 
 }
