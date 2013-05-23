@@ -1,0 +1,19 @@
+{{#with view}}
+
+  <div class="left-column">
+    <span class="icon button-text is-font-white" {{bindAttr icon="icon"}} ></span>
+  </div>
+
+  <div class="main-text-menu middle-column">
+    {{text}}
+  </div>
+
+  <div class="control right-column">
+    {{#if counter }}
+      <div class="menu-counter-label">
+        {{counter}}
+      </div>
+    {{/if }}
+  </div>
+
+{{/with}}
