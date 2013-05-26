@@ -1,5 +1,6 @@
 @import 'sizes';
 @import 'colors';
+@import 'gradients';
 
 
 
@@ -10,12 +11,8 @@
 
 .toogle-circle-button-inner-style (@button-color:white) {
 
-  background-color: @button-color;
-  background-image: url(assets/images/BG2.png), -moz-linear-gradient(top, rgba(255,255,255,0.45) 0%, rgba(255,255,255,0.2) 50%, rgba(255,255,255,0) 100%); 
-  background-image: url(assets/images/BG2.png), -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(255,255,255,0.45)), color-stop(50%,rgba(255,255,255,0.2)), color-stop(100%,rgba(255,255,255,0))); 
-
+  .ui-fill(@button-color);
   box-shadow:inset 0px 1px 1px darken(@button-color, 30%), 0px 1px 1px @white00;
-
 
 }
 
