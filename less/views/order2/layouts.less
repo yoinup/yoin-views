@@ -53,7 +53,7 @@
 }
 
 
-.two-column-table, .three-column-table {
+.one-column-table, .two-column-table, .three-column-table {
 
 	position: relative;
 	width:100%;
@@ -107,6 +107,16 @@
 
   > .right-column.control.has-tap:active, > .right-column.control.has-tap.touch, > .right-column.control.has-tap.is-pending {
     .text-is-font-black-style;
+  }
+
+}
+
+
+.one-column-table {
+
+	> .main {
+    .box-padding-horizontal;
+    width: 100%;
   }
 
 }

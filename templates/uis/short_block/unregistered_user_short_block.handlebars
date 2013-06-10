@@ -1,0 +1,28 @@
+{{#with view}}
+
+  {{#if invitation.creationFbId }}
+
+    <div class="two-column-table">
+      <div class="picture left-column">
+        {{view Yn.SquareImageView classBinding="imagetype"
+          contentBinding="invitation.creationFbId"
+          isFBUser=true
+          withPhoto=true }}
+      </div>
+
+      <div class="main-text main middle-column">
+        {{invitation.creationUsername}}
+      </div>
+    </div>
+
+  {{else}}
+
+    <div class="one-column-table">
+      <div class="main-text main middle-column">
+        {{invitation.creationUsername}}
+      </div>
+    </div>
+
+  {{/if}}
+
+{{/with}}
