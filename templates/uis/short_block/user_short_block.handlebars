@@ -5,8 +5,7 @@
     <div class="picture left-column">
 
        {{view Yn.SquareImageView classBinding="imagetype"
-        contentBinding="contentPhoto"
-        isFBUserBinding="isFbUser"
+        contentBinding="content"
         withPhoto=true }}
 
     </div>
@@ -14,7 +13,7 @@
 		<div class="name middle-column">
 
       <span class="main-text">
-        {{userName}}
+        {{content.name}}
       </span>
 
 		</div>
