@@ -17,13 +17,22 @@
 
 .box {
 	
-	border-radius: @border-box-radius-size;
 	//The MARGIN is in the Media Query Files
+
+	border-radius: @border-box-radius-size;
+	border: 1px solid @grey07;
 
 	background-color: @white00;
 	background-image: url(assets/images/BG_25.png);
-	border: 1px solid @grey07;
 
+
+}
+
+
+.box.is-half {
+
+  margin: 0 auto;
+  width: 50%;
 
 }
 
