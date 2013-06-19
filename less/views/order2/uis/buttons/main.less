@@ -5,6 +5,7 @@
 @import 'gradients';
 
 
+@main-button-height: @big-button-height + 4;
 
 // ------------------------------- local functions
 
@@ -15,7 +16,7 @@
   // equals than common buttons
   position:relative;
 	border-radius: @border-box-radius-size;
-	height: @big-button-height - 2;
+	height: @main-button-height - 2;
 	
 
   background-color: @grey03;
@@ -27,13 +28,13 @@
 		position: relative;
 		border-radius: @border-single-radius-size;
 
-    height: @big-button-height - 2 - @inner-v-margin*2 ;
+    height: @main-button-height - 2 - @inner-v-margin*2 ;
 		width: 96%;
 
 		top: @inner-v-margin;
 		left: 2%;
 
-    line-height: @big-button-height - 2 - @inner-v-margin*2 ;
+    line-height: @main-button-height - 2 - @inner-v-margin*2 ;
 		text-align: center;
 
 	}
