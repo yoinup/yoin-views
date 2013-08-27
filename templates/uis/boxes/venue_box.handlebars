@@ -68,6 +68,20 @@
       contentBinding="products"
       selectedBinding="selected"}}
 
+    {{#if isConsumed }}
+
+      <div class="product-is-consumed">
+        <div class="product-text text is-font-white is-center">CONSUMED</div>
+        <div class="product-date text is-font-white is-center">
+          {{humanize dateBinding="selected.dateConsumed" capitalize=true}}
+        </div>
+        <div class="product-consumed-icon-section">
+          <div class="product-consumed-icon icon"></div>
+        </div>
+      </div>
+
+    {{/if}}
+
 
   {{/if}}
 
