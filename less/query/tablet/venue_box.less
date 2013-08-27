@@ -1,9 +1,10 @@
 
+@consumed-icon-size-tablet: 60px;
+
+
 @media only screen and (min-width: 600px) and (max-width: 960px) {
 
 .venue-box {
-
-	> .venue-box-content {
 
 		> .venue-box-top {
 
@@ -21,16 +22,40 @@
 
 				height: 220px;
 
+        > .product-is-consumed {
+
+          > .product-text {
+            font-size: @consumed-icon-size-tablet;
+          }
+          > .product-date {
+            font-size: @consumed-icon-size-tablet/2;
+          }
+
+          > .product-consumed-icon-section {
+
+            > .product-consumed-icon.icon {
+
+              -webkit-border-radius: @consumed-icon-size-tablet;
+              border-radius: @consumed-icon-size-tablet;
+              width: @consumed-icon-size-tablet;
+              height: @consumed-icon-size-tablet;
+              line-height: @consumed-icon-size-tablet;
+            }
+
+            > .product-consumed-icon.icon:before {
+              font-size: @consumed-icon-size-tablet;
+            }
+
+          }
+
+        }
+
 		}
 
-	}
 }
 
 
 .venue-box.has-description {
-
-	> .venue-box-content {
-
 
 		> .venue-box-bottom {
 
@@ -47,7 +72,6 @@
 
 		}
 
-	}
 
 }
 
