@@ -68,15 +68,27 @@
       contentBinding="products"
       selectedBinding="selected"}}
 
-    {{#if isConsumed }}
+    {{#if isConsumedOrExpired }}
 
-      <div class="product-is-consumed">
-        <div class="product-text text is-font-white is-center">CONSUMED</div>
-        <div class="product-date text is-font-white is-center">
-          {{format_date dateBinding="isConsumedDate"}}
+      <div class="product-is-consumed-or-expired">
+        <div class="product-text text is-font-white is-center">
+
+          {{#if isConsumed }}
+          CONSUMED
+          {{else}}
+          EXPIRED
+          {{/if}}
+
         </div>
-        <div class="product-consumed-icon-section">
-          <div class="product-consumed-icon icon"></div>
+        <div class="product-date text is-font-white is-center">
+          {{#if isConsumed }}
+          {{format_date dateBinding="selected.dateConsumed"}}
+          {{else}}
+          {{format_date dateBinding="selected.product.validUntil"}}
+          {{/if}}
+        </div>
+        <div class="product-icon-section">
+          <div class="product-icon icon"></div>
         </div>
       </div>
 

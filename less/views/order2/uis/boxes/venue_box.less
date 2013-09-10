@@ -51,7 +51,7 @@
 
       -webkit-transform: translateZ(0);
 
-      > .product-is-consumed {
+      > .product-is-consumed-or-expired {
         position: absolute;
         width: 100%;
         height: 100%;
@@ -61,7 +61,7 @@
         -webkit-transform: translate3d(0,0,0);
         background-color: rgba(115, 115, 115, .7);
 
-        > .product-text, > .product-date, > .product-consumed-icon-section {
+        > .product-text, > .product-date, > .product-icon-section {
           position: absolute;
           width: 100%;
           height: auto;
@@ -76,10 +76,10 @@
           font-size: @consumed-icon-size/2;
         }
 
-        > .product-consumed-icon-section {
+        > .product-icon-section {
           top: 70%;
 
-          > .product-consumed-icon.icon {
+          > .product-icon.icon {
 
             -webkit-border-radius: @consumed-icon-size;
             border-radius: @consumed-icon-size;
@@ -90,7 +90,7 @@
             margin: 0 auto;
           }
 
-          > .product-consumed-icon.icon:before {
+          > .product-icon.icon:before {
             content: 'x';
             color: @orange01;
             font-size: @consumed-icon-size;
