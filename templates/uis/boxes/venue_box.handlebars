@@ -82,7 +82,9 @@
         </div>
         <div class="product-date text is-font-white is-center">
           {{#if isConsumed }}
-          {{format_date dateBinding="selected.dateConsumed"}}
+            {{#unless isProductUnit}}
+              {{format_date dateBinding="selected.dateConsumed"}}
+            {{/unless}}
           {{else}}
           {{format_date dateBinding="selected.product.validUntil"}}
           {{/if}}
